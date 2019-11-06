@@ -115,3 +115,19 @@ h1,h2,h3,h4,h5,h6 {
 ul.a {
   list-style-position: outside;
 }
+
+.input-group {
+  width: 320px;
+}
+.input-group-addon {
+  background-color: #ebb810;
+  height:38px;
+  border-radius: 15px 0 0 15px;
+  border: 1px solid #ccc;
+}
+.input-group > input {
+  height:40px;
+  padding-left: 15px;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #ccc;
+}
