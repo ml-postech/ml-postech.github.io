@@ -19,12 +19,12 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-home navbar-default navbar-fixed-top" role="navigation">
     <a class="navbar-brand" href="/">
-       <img src="img/logo.png" height="30px" class="pull-left" style="margin-top: -3px;"/>
+       <img id="logo" src="img/logo.png" height="30px" class="pull-left" style="margin-top: -3px;"/>
        <span style="padding-left:30px; color:#333"> ML Lab @ Postech </span>
     </a>
-    <ul class="nav nav-tabs pull-right">
+    <ul class="nav nav-tabs-home nav-tabs pull-right">
       <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
       <li><a href="#people" data-toggle="tab">People</a></li>
       <li><a href="#publication" data-toggle="tab">Publications</a></li>
@@ -36,9 +36,13 @@
     <div id="people" class="tab-pane fade"></div>
     <div id="publication" class="tab-pane fade"></div>
     <div id="contact" class="tab-pane fade"></div>
-    <!-- <div id="contact" class="tab-pane fade"></div> -->
   </div>
 </body>
+<footer>
+  <div class="pull-right" style="padding: 0 30px;">
+  <i class="far fa-copyright"></i> Template designed by <a href="https://shinminjeong.github.io/">Minjeong Shin</a> | Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" stitle="Flaticon">www.flaticon.com</a>
+  </div>
+</footer>
 </html>
 <script>
 $(function(){
@@ -46,5 +50,17 @@ $(function(){
   $("#people").load("people.html");
   $("#publication").load("pub.html");
   $("#contact").load("contact.html");
+});
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href") // activated tab
+  if (target == "#home") {
+    console.log("home!")
+    $(".navbar").addClass("navbar-home");
+    $(".nav").addClass("nav-tabs-home");
+  } else {
+    console.log("Not home!")
+    $(".navbar").removeClass("navbar-home");
+    $(".nav").removeClass("nav-tabs-home")
+  }
 });
 </script>
