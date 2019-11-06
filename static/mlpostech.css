@@ -78,13 +78,13 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Montserrat";
   padding-top: 100px;
 }
-.title {
+.home-header {
   text-align: center;
   font-size: 70px;
   font-weight: bold;
   color: black;
 }
-.sub {
+.home-sub {
   text-align: center;
   font-size: 18px;
 }
@@ -110,4 +110,8 @@ h1,h2,h3,h4,h5,h6 {
 .profile-info {
   float:left;
   margin-left: 25px;
+}
+
+ul.a {
+  list-style-position: outside;
 }

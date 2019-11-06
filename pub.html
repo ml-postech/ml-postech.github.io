@@ -1,8 +1,40 @@
+<script type="text/javascript" src="https://cdn.rawgit.com/pcooksey/bibtex-js/a802616/src/bibtex_js.js"></script>
+<bibtex src="pub.bib"></bibtex>
+
 <div class="content">
   <div class="row">
     <div class="col-sm-12">
-      <h3 class="header"># Publication</h3>
-      <iframe width="100%" height="2000px" frameBorder="0" src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/ml-postech/ml-postech.github.io/master/pub.bib"></iframe>
+      <!-- <h3 class="header"># Publication</h3> -->
+      <div id="bibtex_display" style="padding: 0 50px;"></div>
+
+      <div class="bibtex_structure">
+        <div class="group year" extra="DESC number">
+          <div class="row" style="padding-top: 30px">
+            <div class="col-sm-2" style="font-weight:bold">
+              <div class="title"></div>
+            </div>
+            <div class="col-sm-10">
+              <div class="templates"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bibtex_template">
+        <ul>
+          <li class="if author" style="font-weight: normal;">
+            <!-- <span class="if year">
+              <span class="year"></span>,
+            </span> -->
+            <span class="author"></span>
+            <span class="title"></span>
+            <span class="if url" style="margin-left: 2px">
+              <a class="url" style="font-size:16px"><i class="fa fa-link" aria-hidden="true"></i></a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>
