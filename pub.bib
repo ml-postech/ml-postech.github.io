@@ -1,8 +1,224 @@
-@inproceedings{kim2016probabilistic,
-  title={Probabilistic Knowledge Graph Construction: Compositional and Incremental Approaches},
-  author={Kim, Dongwoo and Xie, Lexing and Ong, Cheng Soon},
-  booktitle={Proceedings of the 25th ACM International on Conference on Information and Knowledge Management},
-  pages={2257--2262},
-  year={2016},
-  organization={ACM}
+@Article{Kim2019,
+author="Kim, Dongwoo
+and Graham, Timothy
+and Wan, Zimin
+and Rizoiu, Marian-Andrei",
+title="Analysing user identity via time-sensitive semantic edit distance (t-SED): a case study of Russian trolls on Twitter",
+journal="Journal of Computational Social Science",
+year="2019",
+month="Jul",
+day="01",
+volume="2",
+number="2",
+pages="331--351",
+abstract="In the digital era, individuals are increasingly profiled and grouped based on the traces that they leave behind in online social networks such as Twitter and Facebook. In this paper, we develop and evaluate a novel text analysis approach for studying user identity and social roles by redefining identity as a sequence of timestamped items (e.g., tweet texts). We operationalise this idea by developing a novel text distance metric, the time-sensitive semantic edit distance (t-SED), which accounts for the temporal context across multiple traces. To evaluate this method, we undertake a case study of Russian online-troll activity within US political discourse. The novel metric allows us to classify the social roles of trolls based on their traces, in this case tweets, into one of the predefined categories left-leaning, right-leaning, and news feed. We show the effectiveness of the t-SED metric to measure the similarities between tweets while accounting for the temporal context, and we use novel data visualisation techniques and qualitative analysis to uncover new empirical insights into Russian troll activity that have not been identified in the previous work. In addition, we highlight a connection with the field of actor--network theory and the related hypotheses of Gabriel Tarde, and we discuss how social sequence analysis using t-SED may provide new avenues for tackling a longstanding problem in social theory: how to analyse society without separating reality into micro vs. macro-levels.",
+issn="2432-2725",
+doi="10.1007/s42001-019-00051-x",
+url="https://doi.org/10.1007/s42001-019-00051-x"
+}
+
+@inproceedings{Shin:2019:VGD:3289600.3290616,
+ author = {Shin, Minjeong and Kim, Dongwoo and Lee, Jae Hee and Bista, Umanga and Xie, Lexing},
+ title = {Visualizing Graph Differences from Social Media Streams},
+ booktitle = {Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining},
+ series = {WSDM '19},
+ year = {2019},
+ isbn = {978-1-4503-5940-5},
+ location = {Melbourne VIC, Australia},
+ pages = {806--809},
+ numpages = {4},
+ url = {http://doi.acm.org/10.1145/3289600.3290616},
+ doi = {10.1145/3289600.3290616},
+ acmid = {3290616},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {graph diff, relation extraction, relational data comparison},
+} 
+
+@InProceedings{walder18a,
+  title = 	 {Neural Dynamic Programming for Musical Self Similarity},
+  author = 	 {Walder, Christian and Kim, Dongwoo},
+  booktitle = 	 {Proceedings of the 35th International Conference on Machine Learning},
+  pages = 	 {5105--5113},
+  year = 	 {2018},
+  editor = 	 {Dy, Jennifer and Krause, Andreas},
+  volume = 	 {80},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Stockholmsmässan, Stockholm Sweden},
+  month = 	 {10--15 Jul},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v80/walder18a/walder18a.pdf},
+  url = 	 {http://proceedings.mlr.press/v80/walder18a.html},
+  abstract = 	 {We present a neural sequence model designed specifically for symbolic music. The model is based on a learned edit distance mechanism which generalises a classic recursion from computer science, leading to a neural dynamic program. Repeated motifs are detected by learning the transformations between them. We represent the arising computational dependencies using a novel data structure, the edit tree; this perspective suggests natural approximations which afford the scaling up of our otherwise cubic time algorithm. We demonstrate our model on real and synthetic data; in all cases it out-performs a strong stacked long short-term memory benchmark.}
+}
+
+
+@InProceedings{kim18c,
+  title = 	 {Self-Bounded Prediction Suffix Tree via Approximate String Matching},
+  author = 	 {Kim, Dongwoo and Walder, Christian},
+  booktitle = 	 {Proceedings of the 35th International Conference on Machine Learning},
+  pages = 	 {2659--2667},
+  year = 	 {2018},
+  editor = 	 {Dy, Jennifer and Krause, Andreas},
+  volume = 	 {80},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Stockholmsmässan, Stockholm Sweden},
+  month = 	 {10--15 Jul},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v80/kim18c/kim18c.pdf},
+  url = 	 {http://proceedings.mlr.press/v80/kim18c.html},
+  abstract = 	 {Prediction suffix trees (PST) provide an effective tool for sequence modelling and prediction. Current prediction techniques for PSTs rely on exact matching between the suffix of the current sequence and the previously observed sequence. We present a provably correct algorithm for learning a PST with approximate suffix matching by relaxing the exact matching condition. We then present a self-bounded enhancement of our algorithm where the depth of suffix tree grows automatically in response to the model performance on a training sequence. Through experiments on synthetic datasets as well as three real-world datasets, we show that the approximate matching PST results in better predictive performance than the other variants of PST.}
+}
+
+
+@Article{Kim2017,
+author="\textbf{Dongwoo Kim}
+and Alice Oh",
+title="Hierarchical Dirichlet scaling process",
+journal="Machine Learning",
+year="2017",
+volume="106",
+number="3",
+pages="387--418",
+abstract="We present the hierarchical Dirichlet scaling process (HDSP), a Bayesian nonparametric mixed membership model. The HDSP generalizes the hierarchical Dirichlet process to model the correlation structure between metadata in the corpus and mixture components. We construct the HDSP based on the normalized gamma representation of the Dirichlet process, and this construction allows incorporating a scaling function that controls the membership probabilities of the mixture components. We develop two scaling methods to demonstrate that different modeling assumptions can be expressed in the HDSP. We also derive the corresponding approximate posterior inference algorithms using variational Bayes. Through experiments on datasets of newswire, medical journal articles, conference proceedings, and product reviews, we show that the HDSP results in a better predictive performance than labeled LDA, partially labeled LDA, and author topic model and a better negative review classification performance than the supervised topic model and SVM.",
+issn="1573-0565",
+doi="10.1007/s10994-016-5621-5",
+url="http://dx.doi.org/10.1007/s10994-016-5621-5"
+}
+
+@Article{Q17-1014,
+  author = 	"Kim, Jooyeon
+		and Kim, Dongwoo
+		and Oh, Alice",
+  title = 	"Joint Modeling of Topics, Citations, and Topical Authority in Academic Corpora",
+  journal = 	"Transactions of the Association for Computational Linguistics",
+  year = 	"2017",
+  volume = 	"5",
+  pages = 	"191--204",
+  url = 	"http://aclweb.org/anthology/Q17-1014"
+}
+
+
+@inproceedings{jin2017hcomp,
+title={Leveraging Side Information to Improve Crowd-sourcing},
+author={Yuan Jin and Mark Carman and \textbf{Dongwoo Kim} and Lexing Xie},
+booktitle={The fifth AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},
+year={2017}
+}
+
+
+@inproceedings{chen2017recsys,
+title={PathRec: Visual Analysis of Travel Route Recommendations},
+author={Dawei Chen and \textbf{Dongwoo Kim} and Lexing Xie and Minjeong Shin and Aditya Menon and Cheng Soon Ong and Iman Avazpour and John Grundy},
+booktitle={The ACM Conference on Recommender Systems (RecSys)},
+year={2017}
+}
+
+
+
+@inproceedings{kim2016cikm,
+title={Probabilistic Knowledge Graph Construction: Compositional and Incremental Approaches},
+author={\textbf{Dongwoo Kim} and Lexing Xie and Cheng Soon Ong},
+booktitle={The ACM Conference on Information and Knowledge Managment (CIKM)},
+year={2016}
+}
+
+@article{walder2016computer,
+  title={Computer Assisted Composition with Recurrent Neural Networks},
+  author={Walder, Christian and Kim, Dongwoo},
+  journal={arXiv preprint arXiv:1612.00092},
+  year={2016}
+}
+
+@inproceedings{jojic2016hierarchical,
+  title={Hierarchical learning of grids of microtopics},
+  author={Nebojsa Jojic and Alessandro Perina and \textbf{Dongwoo Kim}},
+  booktitle={The Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year={2016}
+}
+
+@inproceedings{kim2014icml,
+ title={Hierarchical Dirichlet Scaling Process},
+ author={\textbf{Dongwoo Kim} and Alice Oh},
+ booktitle={Proceedings of the 31th International Conference on Machine Learning (ICML)},
+ year={2014}
+}
+
+@inproceedings{jooyeon2014,
+title={Diversity-seeking users and their influence on social news sites},
+author={Jooyeon Kim and Joon Hee Kim and \textbf{Dongwoo Kim} and Alice Oh},
+booktitle={Workshop on Data Science for News Publishing (NewsKDD) at KDD 2014},
+year={2014}
+}
+
+@inproceedings{alessandro2014a,
+title={Skim-reading thousands of documents in one minute: Data indexing and visualization for multifarious search},
+author={Alessandro Perina and \textbf{Dongwoo Kim} and Andrzej Turski and Nebojssa Jojic},
+booktitle={Workshop on Interactive Data Exploration and Analytics (IDEA'14) at KDD 2014},
+year={2014}
+}
+
+@inproceedings{kim2013ijcai,
+ title={Context-Dependent Conceptualization},
+ author={\textbf{Dongwoo Kim} and Haixun Wang and Alice Oh},
+ booktitle={Proceedings of the 23th International Joint Conference on Aritifical Intelligence (IJCAI)},
+ year={2013}
+ }
+
+@inproceedings{bak2012distributed,
+title={Distributed Online Learning for Latent Dirichlet Allocation},
+author={JinYeong Bak and \textbf{Dongwoo Kim} and Alice Oh},
+booktitle={Workshop on Big Learning : Algorithms, Systems, and Tools at the NIPS.},
+year={2012}
+}
+
+@inproceedings{kim2012icml,
+author={\textbf{Dongwoo Kim} and Suin Kim and Alice Oh},
+title={Dirichlet Process with Mixed Random Measures: a Nonparametric Topic Model for Labeled Data},
+booktitle={Proceedings of the 29th International Conference on Machine Learning (ICML)},
+year={2012}
+}
+
+@inproceedings{kim2012cikm,
+  title={Modeling topic hierarchies with the recursive Chinese restaurant process},
+  author={Joon Hee Kim and \textbf{Dongwoo Kim} and Suin Kim and Alice Oh},
+  booktitle={Proceedings of the 21th ACM Conference on Information and Knowledge Management (CIKM)},
+  year={2012}
+}
+
+@article{kim2012arxiv,
+author={\textbf{Dongwoo Kim} and Yeonseung Chung and Alice Oh},
+title={Variable Selection for Latent Dirichlet Allocation},
+journal={arXiv ePrints:1205.1053},
+year={2012}
+}
+
+@inproceedings{kim2011cikm,
+title={Accounting for Data Dependencies within a Hierarchical Dirichlet Process Mixture Model},
+author={\textbf{Dongwoo Kim} and Alice Oh},
+booktitle={Proceedings of the 20th ACM Conference on Information and Knowledge Management (CIKM)},
+year={2011}
+}
+
+@inproceedings{kim2011cicling,
+author={\textbf{Dongwoo Kim} and Alice Oh},
+title={Topic Chains for Understanding a News Corpus},
+booktitle={Proceedings of the 12th International Conference on Intelligent Text Processing and Computational Linguistics (CICLING)},
+year={2011}
+}
+
+@inproceedings{kim2010chi,
+    author = {\textbf{Dongwoo Kim} and Yohan Jo and Il-Chul Moon and Alice Oh},
+    title = {Analysis of Twitter Lists as a potential source for discovering latent characteristics of users},
+    booktitle={Workshop on Microblogging at the ACM Conference on Human Factors in Computer Systems},
+    year = {2010}
+}
+
+@inproceedings{moon2010learning,
+  title={Learning Influence Propagation of Personal Blogs with Content and Network Analyses},
+  author={Il-Chul Moon and \textbf{Dongwoo Kim} and Yohan Jo and Alice Oh},
+  booktitle={2010 IEEE Second International Conference on Social Computing (SocialCom)},
+  pages={669--674},
+  year={2010},
+  organization={IEEE}
 }
