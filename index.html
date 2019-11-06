@@ -21,7 +21,7 @@
 <body>
   <nav class="navbar navbar-home navbar-default navbar-fixed-top" role="navigation">
     <a class="navbar-brand" href="/">
-       <img id="logo" src="img/logo.png" height="30px" class="pull-left" style="margin-top: -3px;"/>
+       <img id="logo" src="img/logo_0.png" height="30px" class="pull-left" style="margin-top: -5px;"/>
        <span style="padding-left:30px; color:#333"> ML Lab @ Postech </span>
     </a>
     <ul class="nav nav-tabs-home nav-tabs pull-right">
@@ -54,13 +54,13 @@ $(function(){
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
   if (target == "#home") {
-    console.log("home!")
     $(".navbar").addClass("navbar-home");
     $(".nav").addClass("nav-tabs-home");
   } else {
-    console.log("Not home!")
     $(".navbar").removeClass("navbar-home");
     $(".nav").removeClass("nav-tabs-home")
   }
+  logos = ["#home", "#people", "#publication", "#contact"];
+  $("#logo")[0].src = "img/logo_"+logos.indexOf(target)+".png"
 });
 </script>
