@@ -139,13 +139,20 @@ footer {
 
 .profile-image {
   float:left;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 80px;
   background-color: #fff;
-  border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 30px;
 }
+.profile-image img {
+  width: 100%;
+  height: auto;
+}
+
 .profile-info {
   float:left;
   margin-left: 25px;
