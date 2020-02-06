@@ -145,7 +145,6 @@ footer {
   border: 1px solid #eee;
   border-radius: 80px;
   background-color: #fff;
-  margin-bottom: 20px;
   margin-left: 30px;
 }
 .profile-image img {
@@ -155,7 +154,10 @@ footer {
 
 .profile-info {
   float:left;
+  width: 350px;
+  height: 160px;
   margin-left: 25px;
+  margin-bottom: 25px;
 }
 
 .research {
