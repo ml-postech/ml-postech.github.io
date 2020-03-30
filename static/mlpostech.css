@@ -23,14 +23,6 @@ footer {
   font-weight: normal;
   color: #aaa;
 }
-.content {
-  width: 80%;
-  min-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
-}
-
 
 .navbar {
   font-family: "Montserrat";
@@ -102,32 +94,59 @@ footer {
   position: relative;
   overflow: hidden;
   height: 300px;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .front-image {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../img/front_image.jpg");
-  background-position: center 60%;
+  background-image: url("../img/banner1.jpg");
+  background-position: center 68%;
   background-size: cover;
-  opacity: 60%;
+  opacity: 70%;
   z-index: -1;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1501px) {
+  .front-image {
+    background-position: center 71%;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .front-image {
+    background-position: center 72%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .front-image {
+    background-position: center 78%;
+  }
 }
 .front-title {
   font-family: "Montserrat";
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .home-header {
   text-align: center;
   font-size: 70px;
   font-weight: bold;
+  text-shadow: 1px 1px 1px;
   color: black;
 }
 .home-sub {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+  color:black;
 }
-
+@media screen and (max-width: 991px) {
+  .home-header {
+    font-size:50px;
+  }
+  .home-sub {
+    font-size:16px;
+  }
+}
 .header {
   padding-top: 5px;
   padding-bottom: 20px;
