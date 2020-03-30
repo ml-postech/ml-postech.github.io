@@ -1,5 +1,5 @@
 <div class="front-panel">
-  <div class="front-image"></div>
+  <div class="front-image" style="background-image: url('../img/banner1.jpg');"></div>
   <div class="front-title container">
     <div class="home-header">Machine Learning Lab.</div>
     <div class="home-sub">"We strive to understand human intelligence through the computational lens."</div>
@@ -92,3 +92,20 @@
     </div>
   </div>
 </div>
+<script>
+  var currentBackground = 1;
+  // preload images
+  var pic = new Image();
+  var pic2 = new Image();
+  pic.src="../img/banner1.jpg";
+  pic2.src="../img/banner2.jpg";
+  setInterval(function() {
+    if (currentBackground === 1) {
+      $(".front-image").css({ "background-image": "url(../img/banner1.jpg)" });
+      currentBackground = 2;
+    } else {
+      $(".front-image").css({ "background-image": "url(../img/banner2.jpg)" });
+      currentBackground = 1;
+    }
+  }, 3000);
+</script>
