@@ -97,14 +97,14 @@
   // preload images
   var pic = new Image();
   var pic2 = new Image();
-  pic.src="../img/banner1.jpg";
-  pic2.src="../img/banner2.jpg";
+  pic.src="/img/banner1.jpg";
+  pic2.src="/img/banner2.jpg";
   setInterval(function() {
     if (currentBackground === 1) {
-      $(".front-image").css({ "background-image": "url(../img/banner1.jpg)" });
+      $(".front-image").css({ "background-image": "url(/img/banner1.jpg)" });
       currentBackground = 2;
     } else {
-      $(".front-image").css({ "background-image": "url(../img/banner2.jpg)" });
+      $(".front-image").css({ "background-image": "url(/img/banner2.jpg)" });
       currentBackground = 1;
     }
   }, 3000);

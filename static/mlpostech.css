@@ -101,7 +101,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("../img/banner1.jpg");
+  background-image: url("/img/banner1.jpg");
   background-position: center 68%;
   background-size: cover;
   opacity: 70%;
