@@ -156,27 +156,58 @@ footer {
   padding: 10px 40px 0 40px;
 }
 
-.profile-image {
+.profile-image-prof {
   float:left;
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   overflow: hidden;
   border: 1px solid #eee;
-  border-radius: 80px;
+  border-radius: 50px;
   background-color: #fff;
   margin-left: 30px;
 }
-.profile-image img {
+.profile-image-prof img {
   width: 100%;
   height: auto;
 }
-
-.profile-info {
+.profile-info-prof {
   float:left;
   width: 350px;
   height: 160px;
   margin-left: 25px;
   margin-bottom: 25px;
+}
+
+
+.profile-image-stud {
+  float:left;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 45px;
+  background-color: #fff;
+  margin-left: 30px;
+}
+.profile-image-stud img {
+  width: 100%;
+  height: auto;
+}
+.profile-info-stud {
+  float:left;
+  width: 350px;
+  height: 160px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+.name-stud {
+  margin-top: 0px;
+}
+.sub-text-course {
+  font-weight: normal;
+  color: #aaa;
+  font-size: small;
+  margin: 10px 0px 0px 0px;
 }
 
 .research {
