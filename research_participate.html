@@ -1,9 +1,29 @@
+<script> 
+    /* Function to use lastModified property */ 
+    document.getElementById("last-updated").innerHTML = formatDate(document.lastModified);
+
+    function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+    }
+</script> 
+
+
 <div class="content container">
   <div class="row" style="padding-top: 40px;">
     <div class="col-sm-12">
         <h3 class="header"># 연구 참여</h3>
         <p class="sub-text">
-        MLLab은 학부생들의 연구참여를 언제나 환영합니다. 아래 프로젝트들은 현재 연구실에서 관심을 가지고 진행하려 하는 연구참여 주제들 입니다. 관심있는 학부생들은 연구참여에 지원하기전 리스트를 확인 후 해당 지도교수님께 이메일을 통해 연락주세요. 이 페이지는 지속적으로 업데이트 될 예정입니다.
+        MLLab은 학부생들의 연구참여를 언제나 환영합니다. 아래 프로젝트들은 현재 연구실에서 관심을 가지고 진행하려 하는 연구참여 주제들 입니다. 관심있는 학부생들은 연구참여에 지원하기전 리스트를 확인 후 해당 지도교수님께 이메일을 통해 연락주세요. 이 페이지는 지속적으로 업데이트 될 예정입니다. (Last modified <span id="last-updated"></span>)
         </p>
     </div>
   </div>
