@@ -50,7 +50,7 @@ footer {
   font-size: 24px;
 }
 .nav-tabs {
-  margin-right: 30px;
+  margin-right: 0px;
   border: none;
   padding-top: 10px;
 }
@@ -99,7 +99,7 @@ footer {
   position: relative;
   overflow: hidden;
   height: 300px;
-  max-width: 1500px;
+  max-width: 100%;
   margin: 0 auto;
 }
 .front-image {
