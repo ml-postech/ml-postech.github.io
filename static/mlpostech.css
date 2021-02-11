@@ -19,6 +19,11 @@ footer {
   background-color: white;
 }
 
+.normal-text {
+  font-weight: normal;
+  color: #454545;
+}
+
 .sub-text {
   font-weight: normal;
   color: #aaa;
@@ -235,7 +240,6 @@ footer {
 .research-4 {
   background-image: url("../img/research-4.png");
 }
-
 ul.a {
   list-style-position: outside;
 }
@@ -255,4 +259,8 @@ ul.a {
   padding-left: 15px;
   border-radius: 0 15px 15px 0;
   border: 1px solid #ccc;
+}
+
+.img-header {
+  padding: 60px 10px 60px 50px;
 }

@@ -29,6 +29,7 @@
       <li><a href="#people" data-toggle="tab">People</a></li>
       <li><a href="#publication" data-toggle="tab">Publications</a></li>
       <li><a href="#contact" data-toggle="tab">Contact</a></li>
+      <li><a href="#research_participate" data-toggle="tab">연구참여</a></li>
     </ul>
   </nav>
   <div class="tab-content" id="nav-tabContent">
@@ -36,6 +37,7 @@
     <div id="people" class="tab-pane fade"></div>
     <div id="publication" class="tab-pane fade"></div>
     <div id="contact" class="tab-pane fade"></div>
+    <div id="research_participate" class="tab-pane fade"></div>
   </div>
 </body>
 <footer>
@@ -50,6 +52,7 @@ $(function(){
   $("#people").load("people.html");
   $("#publication").load("pub.html");
   $("#contact").load("contact.html");
+  $("#research_participate").load("research_participate.html");
 
   var hash = window.location.hash;
   hash && $('ul.nav a[href="' + hash + '"]').tab('show');
@@ -70,7 +73,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $(".navbar").removeClass("navbar-home");
     $(".nav").removeClass("nav-tabs-home")
   }
-  logos = ["#home", "#people", "#publication", "#contact"];
+  logos = ["#home", "#people", "#publication", "#contact", "#research_participate"];
   $("#logo")[0].src = "img/logo_"+logos.indexOf(target)+".png"
 });
 </script>
