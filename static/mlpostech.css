@@ -266,8 +266,35 @@ ul.a {
 }
 
 
-@media (min-width: 768px)
-.container {
-    /* width: 750px; */
-    width: 980px;
+@media (min-width: 300px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 96%;
+    margin-left: 2%;
+    margin-left: 2%;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 85%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
