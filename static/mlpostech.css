@@ -266,6 +266,11 @@ ul.a {
 }
 
 
+.bibtexentry {
+  text-align: justify;
+}
+
+
 @media (min-width: 300px) {
   .container {
     width: 100%;
