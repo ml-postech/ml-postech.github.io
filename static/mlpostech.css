@@ -272,6 +272,10 @@ ul.a {
   text-align: justify;
 }
 
+.text-small-caps{
+  font-variant: small-caps;
+}
+
 
 @media (min-width: 300px) {
   .container {
