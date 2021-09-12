@@ -3,6 +3,7 @@ a {
 }
 body {
   font-size: 18px;
+  font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -309,3 +310,13 @@ ul.a {
     margin-right: auto;
   }
 }
+
+
+.badge-info {
+  font-size: 0.8em;
+  font-weight: normal;
+  color:#fff;
+  background-color:#6c757d;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
