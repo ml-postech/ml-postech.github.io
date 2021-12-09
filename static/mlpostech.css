@@ -231,6 +231,8 @@ footer {
 .research-content {
   padding-left: 25px;
 }
+
+/*
 .research-1 {
   background-image: url("../img/research-1.png");
 }
@@ -243,6 +245,8 @@ footer {
 .research-4 {
   background-image: url("../img/research-4.png");
 }
+*/
+
 ul.a {
   list-style-position: outside;
 }
