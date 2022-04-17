@@ -100,7 +100,7 @@ footer {
 .front-panel {
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: 400px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -108,8 +108,8 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/img/banner1.jpg");
-  background-position: center 68%;
+  background-image: url("img/banners/1.jpg");
+  background-position: center 50%;
   background-size: cover;
   opacity: 70%;
   z-index: -1;
@@ -132,7 +132,7 @@ footer {
 }
 .front-title {
   font-family: "Montserrat";
-  padding-top: 100px;
+  padding-top: 150px;
 }
 .home-header {
   text-align: center;
