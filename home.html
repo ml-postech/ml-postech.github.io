@@ -256,6 +256,10 @@
 <script>
   var currentBackground = 1;
   // preload images
+  for(let i = 1; i <= 8; i++) {
+    var pic = new Image();
+    pic.src = "img/banners/" + i + ".jpg";
+  }
   setInterval(function() {
     $(".front-image").css({"background-image": "url(img/banners/" + currentBackground + ".jpg)"});
     currentBackground = (currentBackground % 8) + 1
