@@ -350,3 +350,11 @@ ul.a {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.badge-link {
+  font-size: 0.8em;
+  font-weight: normal;
+  color:#fff;
+  background-color:#ebb810;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
