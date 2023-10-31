@@ -41,7 +41,42 @@
       </div>
 
       <div class="bibtex_template">
-        <ul>
+        <ul style="list-style-type:none">
+          <li class="if author" style="font-weight: normal;">
+            <b><span class="title"></span></b>,<br/>
+            <span class="author"></span>,
+            <span class="if booktitle">
+              <span class="booktitle"></span>,
+            </span>
+            <span class="if journal">
+              <span class="journal"></span>,
+            </span>
+            <span class="year"></span>
+            <span class="if url" style="margin-left: 2px; font-size:16px">
+              <a class="url" target="_blank">
+                <i class="fa fa-link" aria-hidden="true"></i></a>
+            </span>
+            <span class="if url_paper" style="margin-left: 2px; font-size:16px">
+              <a class="url_paper" target="_blank">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+            </span>
+            <span class="if url_code" style="margin-left: 2px; font-size:16px">
+              <a class="url_code" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i></a>
+            </span>
+            <span class="if url_slides" style="margin-left: 2px; font-size:16px">
+              <a class="url_slides" target="_blank">
+                <i class="fa fa-newspaper-o"></i></a>
+            </span>
+            <span class="if abstract" style="margin-left: 2px;">
+              <div class="morepage" >
+                <span class="bibtexkey"></span>
+                <span class="abstract noread"></span>
+              </div>
+            </span>
+          </li>
+        </ul>
+        <!-- <ul>
           <li class="if author" style="font-weight: normal;">
             <span class="author"></span>,
             "<span class="title"></span>",
@@ -58,7 +93,7 @@
               <a class="url" style="font-size:16px"><i class="fa fa-link" aria-hidden="true"></i></a>
             </span>
           </li>
-        </ul>
+        </ul> -->
       </div>
 
     </div>
