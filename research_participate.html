@@ -29,6 +29,7 @@
         }
         return cached;
     }
+
     function randomizeList()
     {
         var list = document.getElementById("rpList");
@@ -42,6 +43,8 @@
         }
         list.style.display="block";
     }
+
+    randomizeList()
 </script> 
 
 
@@ -61,14 +64,14 @@
         <img class="img-responsive img-header" src="img/reseach_participate/smiley.png" alt=""  />
     </div>
     <div class="col-sm-10">
-        <h4 class="header"># Machine Learning Free Topics - Advisors: Jungseul Ok / Dongwoo Kim / Sungsoo Ahn / Namhoon Lee / Sangdon Park </h4>
+        <h4 class="header"># Machine Learning Free Topics - Advisors: All </h4>
         <p class="normal-text">
             Any other interesting research ideas other than the topics listed below? It looks interesting, but are you wondering if this is also machine learning research? If you want to learn machine learning but don't know where to start, feel free to contact us anytime!
         </p>
     </div>
 </div>
 
-<ul id="rpList" style="list-style-type:none;">
+<ul id="rpList" style="list-style-type:none; padding-left: 0;">
     <li>
       <div class="row" style="padding-top: 40px;">
         <div class="col-sm-2" >
@@ -80,185 +83,185 @@
                 As shown in the recent case of 이루다, machine learning algorithms always have problems that can expose personal and sensitive information. The simplest way to solve this problem is to train the model anew after removing such sensitive information, but this re-learning is only a workaround for solving problems that may arise at any time. Machine Unlearning is a methodology for selectively removing specific information from an already trained model. Students will study what conditions must be satisfied for successful unlearning through participation in this study.
             </p>
             <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Nguyen, Quoc Phong, Bryan Kian Hsiang Low, and Patrick Jaillet. <a href="https://arxiv.org/abs/2010.12883">"Variational Bayesian Unlearning."</a> NuerIPS 2020. </li>
-                    <li> Golatkar, Aditya, Alessandro Achille, and Stefano Soatto. <a href="https://arxiv.org/abs/1911.04933">"Eternal Sunshine of the Spotless Net: Selective Forgetting in Deep Networks."</a> CVPR 2020.</li>
-                    <li> Yoon, Youngsik, et al. <a href="https://arxiv.org/abs/2205.15567">"Few-Shot Unlearning by Model Inversion."</a> arXiv preprint 2022</li>
-                </ol>
-            </div>
-        </div>
-    </li>
-
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2">
-            <img class="img-responsive img-header" src="img/reseach_participate/federated_learning.png" alt=""  />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Privacy Leakage in Federated Learning - Advisor: Jungseul Ok </h4>
-            <p class="normal-text">
-                Federated Learning is a machine learning framework that enables multiple users to learn large-scale models without worrying about personal information leakage by enabling learning without sending personal data to a central server. For this large-scale learning, only the learning signal (the differential value of the neural net model) is transmitted to the server, not the data transmission, and according to various recent research results, even this method is not 100% safe from personal information leakage. Participation in this study aims to find out under what circumstances information leakage can be aggravated and what methodologies can be used to solve these problems.
-                <!--            연합학습은 개인데이터를 중앙 서버로 보내지 않고서도 학습을 가능하게 함으로써 여러 사용자들이 개인정보 유출 걱정없이 대규모 모델을 학습하는데 힘을 보탤수 있는 기계학습 프레임워크 입니다. 이러한 대규모 학습을 위해 데이터 전송이 아닌 학습 시그널(뉴럴넷 모델의 미분값)만을 서버로 전송하는데 최근 다양한 연구결과들에 따르면 이러한 방식조차 개인정보유출로부터 100% 안전한 상황이 아니라는 것이 밝혀졌습니다. 본 연구참여는 어떤 상황에서 정보 유출이 심화될 수 있으며 이러한 문제를 해결하기 위해 어떤 방법론들이 사용될 수 있는지에 대하여 알아보는 것을 목표로 합니다. -->
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Jinwoo Jeon*, Jaechang Kim*, Kangwook Lee, Sewoong Oh, and Jungseul Ok, <a href="https://arxiv.org/abs/2110.14962">"Gradient Inversion with Generative Image Prior"</a>, NeurIPS, 2021  </li>
-                </ol>        
-            </div>
-        </div>
-    </li>
-
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2">
-            <img class="img-responsive img-header" src="img/reseach_participate/implicit_function.png" alt=""  />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Implicit Function for Natural Data (Sound/Image) - Advisor: Jungseul Ok </h4>
-            <p class="normal-text">
-                Traditionally, natural signals have been presented discretely, such as pixels in images and sampling frequencies in sound. However, if the implicit function is used, the analog signal of nature can be expressed continuously. Specifically, it represents the coordinate values and their corresponding signals as a continuous function. In this way, natural data such as sound/image can be expressed regardless of resolution, and furthermore, infinite resolution expression can be expected. This study aims to find out what methodologies can be used to effectively map natural data to implicit functions and aims to utilize INR for various tasks by increasing its representation power.
-                <!--        	전통적으로 자연 신호는 이미지에서의 픽셀, 소리에서의 샘플링 주파수와 같이 불연속적으로 표현되었습니다. 그러나 implicit function을 활용한다면 자연의 아날로그 신호를 연속적으로 표현할 수 있습니다. 구체적으로 좌표 값과 이에 대응하는 신호를 연속 함수로 나타냅니다. 이와 같은 방식을 통해 소리/이미지와 같은 자연 데이터를 해상도(resolution)에 구애 받지 않고 나타낼 수 있고, 더 나아가서 무한의 해상도(resolution) 표현도 기대할 수 있습니다. 본 연구는 자연 데이터를 implicit function으로 효과적으로 맵핑하기 위해서 어떠한 방법론들이 사용될 수 있는 지에 대하여 알아보는 것을 목표로 합니다. -->
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Vincent Sitzmann, et al. <a href="https://arxiv.org/abs/2006.09661">"Implicit Neural Representations with Periodic Activation Functions"</a> NeurIPS 2020. </li>
-                    <li> Ben Mildenhall, et al. <a href="https://arxiv.org/abs/2003.08934">"NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"</a> ECCV 2020. </li>
-                    <li> Jaechang Kim*, Yunjoo Lee*, Seunghoon Hong, and Jungseul Ok, <a href="https://arxiv.org/abs/2111.00195">"Learning Continuous Representation of Audio for Arbitrary Scale Super Resolution" </a>, ICASSP 2022.  </li>
-                </ol>        
-            </div>    
-        </div> 
-    </li>
-
-    <li>
-       <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2">
-            <img class="img-responsive img-header" src="img/reseach_participate/DRL.png" alt=""  />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Deep Reinforcement Learning with Prior- Advisor: Jungseul Ok </h4>
-            <p class="normal-text">
-                Deep reinforcement learning (DRL) is a learning method which approximates functions in traditional reinforcement learning (RL) algorithms using deep neural networks. By virtue of deep learning, DRL can outperform traditional RL methods and solve problems difficult for traditional RL to deal with. However, low data efficiency and poor generalization performance remain major challenges in DRL. In this work, students aim to increase sample-efficiency of DRL using pre-existing algorithms, or to increase generalization performance using prior knowledge like data augmentation or Lipschitz continuity.
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Krishan Rana, et al. <a href="https://arxiv.org/abs/2003.05117">"Multiplicative Controller Fusion: Leveraging Algorithmic Priors for Sample-efficient Reinforcement Learning and Safe Sim-To-Real Transfer"</a> IROS 2020. </li>
-                    <li> Nicklas Hansen, and Xiaolong Wang. <a href="https://arxiv.org/abs/2011.13389">"Generalization in Reinforcement Learning by Soft Data Augmentation"</a> ICRA 2021. </li>
-                    <li> Roberta Raileanu, and Rob Fergus.<a href="https://arxiv.org/abs/2102.10330">"Decoupling Value and Policy for Generalization in Reinforcement Learning"</a> ICML 2021. </li>
-                </ol>
-            </div>    
-        </div> 
-    </li>
-
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2" >
-            <img class="img-responsive img-header" src="img/reseach_participate/crowdsourcing.png" alt="" />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Deep Learning from Crowds - Advisor: Jungseul Ok </h4>
-            <p class="normal-text">
-                Crowdsourcing enables us to collect large-scale datasets for machine learning at a low cost. However, low-paid workers easily provide noisy labels due to mistakes or malice, which undermines the performance of neural networks. Furthermore, workers can provide only a few noisy labels, and they want to receive tasks that are easy to label. In this work, we aim to design frameworks that take these realistic behaviors of workers into account.
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Cai, Lile, et al. <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Cai_Revisiting_Superpixels_for_Active_Learning_in_Semantic_Segmentation_With_Realistic_CVPR_2021_paper.html">"Revisiting Superpixels for Active Learning in Semantic Segmentation with Realistic Annotation Costs."</a> CVPR 2021. </li>
-                    <li> Hoyoung Kim*, Seunghyuk Cho*, Dongwoo Kim, and Jungseul Ok, <a href="https://arxiv.org/abs/2111.00734">"Robust Deep Learning from Crowds with Belief Propagation."</a> AISTATS 2022. </li>            
-                </ol>
-            </div>
-        </div>
-    </li>
-
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2" >
-            <img class="img-responsive img-header" src="img/reseach_participate/gnn.png" alt="" />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Graph Neural Network - Advisors: Sungsoo Ahn / Dongwoo Kim </h4>
-            <p class="normal-text">
-                Graph neural networks (GNNs) generalize the existing deep learning techniques to graph structured data including biological networks, molecular graphs, academic networks, and knowledge graphs. In this project, we aim to improve the existing GNNs to be more expressive and sample-efficient. We are particularly interested in directions like architecture design, data augmentation, and self-supervised learning. 
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Kipf, Thomas N., and Max Welling. <a href="https://arxiv.org/abs/1609.02907">"Semi-supervised Classification with Graph Convolutional Networks."</a> ICLR 2017. </li>
-                    <li> Xu, Keyulu, et al. <a href="https://openreview.net/forum?id=ryGs6iA5Km">"How Powerful are Graph Neural Networks?."</a> ICLR 2019. </li>            
-                </ol>
-            </div>
-        </div>
-    </li>
-
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2" >
-            <img class="img-responsive img-header" src="img/reseach_participate/poincare_disk.png" alt="" />
-        </div>    
-        <div class="col-sm-10">
-          <h4 class="header"># Machine Learning in Non-Euclidean Spaces - Advisor: Dongwoo Kim </h4>
-          <p class="normal-text">
-            Most of well-known machine learning algorithms are working in Euclidean space. However, many scientific fields study data whose underlying structure is non-Euclidean. Through this research paticipation, students will study different types of non-Euclidean spaces and develop a new machine learning algorithm working in these spaces.
-        </p>
-        <span class="sub-text"> References </span>
             <ol class="sub-text">
-                <li> Michael M Bronstein, Joan Bruna, Yann LeCun, Arthur Szlam, Pierre Vandergheynst, <a href="https://ieeexplore.ieee.org/abstract/document/7974879"> Geometric Deep Learning: Going beyond Euclidean data</a> </li>
-                <li> Seunghyuk Cho, Juyong Lee, Jaesik Park, Dongwoo Kim, <a href="https://arxiv.org/abs/2205.13371">A Rotated Hyperbolic Wrapped Normal Distribution for Hierarchical Representation Learning</a> NeurIPS 2022. </li>
-                <li> Seunghyuk Cho, Juyong Lee, Dongwoo Kim, <a href="https://arxiv.org/abs/2209.15217">Hyperbolic VAE via Latent Gaussian Distributions</a> NeurIPS 2023. </li>
+                <li> Nguyen, Quoc Phong, Bryan Kian Hsiang Low, and Patrick Jaillet. <a href="https://arxiv.org/abs/2010.12883">"Variational Bayesian Unlearning."</a> NuerIPS 2020. </li>
+                <li> Golatkar, Aditya, Alessandro Achille, and Stefano Soatto. <a href="https://arxiv.org/abs/1911.04933">"Eternal Sunshine of the Spotless Net: Selective Forgetting in Deep Networks."</a> CVPR 2020.</li>
+                <li> Yoon, Youngsik, et al. <a href="https://arxiv.org/abs/2205.15567">"Few-Shot Unlearning by Model Inversion."</a> arXiv preprint 2022</li>
             </ol>
-            </div>      
         </div>
-    </li>
+    </div>
+</li>
 
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2" >
-            <img class="img-responsive img-header" src="img/reseach_participate/universe.png" alt="" />
-        </div>    
-        <div class="col-sm-10">
-          <h4 class="header"># Machine Learning for Dynamics System Discovery - Advisor: Dongwoo Kim </h4>
-          <p class="normal-text">
-            Research to discover underlying dynamical systems using machine learning gets increasing attention to understand and predict various physical phenomena. The main problems are incorporating physical knowledge well into the neural net and handling the various characteristics of real-world data. We are particularly interested in finding the coordinates that provide the most simple representation of the system and dealing with noisy data or data from various environments.
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2">
+        <img class="img-responsive img-header" src="img/reseach_participate/federated_learning.png" alt=""  />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Privacy Leakage in Federated Learning - Advisor: Jungseul Ok </h4>
+        <p class="normal-text">
+            Federated Learning is a machine learning framework that enables multiple users to learn large-scale models without worrying about personal information leakage by enabling learning without sending personal data to a central server. For this large-scale learning, only the learning signal (the differential value of the neural net model) is transmitted to the server, not the data transmission, and according to various recent research results, even this method is not 100% safe from personal information leakage. Participation in this study aims to find out under what circumstances information leakage can be aggravated and what methodologies can be used to solve these problems.
+            <!--            연합학습은 개인데이터를 중앙 서버로 보내지 않고서도 학습을 가능하게 함으로써 여러 사용자들이 개인정보 유출 걱정없이 대규모 모델을 학습하는데 힘을 보탤수 있는 기계학습 프레임워크 입니다. 이러한 대규모 학습을 위해 데이터 전송이 아닌 학습 시그널(뉴럴넷 모델의 미분값)만을 서버로 전송하는데 최근 다양한 연구결과들에 따르면 이러한 방식조차 개인정보유출로부터 100% 안전한 상황이 아니라는 것이 밝혀졌습니다. 본 연구참여는 어떤 상황에서 정보 유출이 심화될 수 있으며 이러한 문제를 해결하기 위해 어떤 방법론들이 사용될 수 있는지에 대하여 알아보는 것을 목표로 합니다. -->
         </p>
         <span class="sub-text"> References </span>
-            <ol class="sub-text">
-                <li> Yuan Yin, Vincent LE GUEN, Jérémie DONA, Emmanuel de Bezenac, Ibrahim Ayed, Nicolas THOME, patrick gallinari, <a href="https://openreview.net/forum?id=kmG8vRXTFv">Augmenting Physical Models with Deep Networks for Complex Dynamics Forecasting</a> </li>          
-                <li> Matthieu Kirchmeyer, Yuan Yin, Jeremie Dona, Nicolas Baskiotis, Alain Rakotomamonjy, Patrick Gallinari, <a href="https://proceedings.mlr.press/v162/kirchmeyer22a.html">Generalizing to New Physical Systems via Context-Informed Dynamics Model</a> </li>          
-                <li> Steven L. Brunton, Joshua L. Proctor, J. Nathan Kutz, <a href="https://www.pnas.org/doi/10.1073/pnas.1517384113">Discovering governing equations from data by sparse identification of nonlinear dynamical systems</a> </li>      
-                </ol>    
-            </div>      
-        </div>
-    </li>
+        <ol class="sub-text">
+            <li> Jinwoo Jeon*, Jaechang Kim*, Kangwook Lee, Sewoong Oh, and Jungseul Ok, <a href="https://arxiv.org/abs/2110.14962">"Gradient Inversion with Generative Image Prior"</a>, NeurIPS, 2021  </li>
+        </ol>        
+    </div>
+</div>
+</li>
 
-    <li>
-        <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/Google_JAX_logo.png" alt="" />
-            </div>
-            <div class="col-sm-10">
-                <h4 class="header"># JAX - Advisor: Namhoon Lee </h4>
-                <p class="normal-text">
-                    <a href="https://github.com/google/jax">JAX</a> is a new framework developed by Google for high-performance ML research;
-                    it is becoming increasingly more popular with its acceleration and being adopted by major subfields that require large-scale scientific computing.
-                    Student researchers on this project will work on implementing and evaluating ML algorithms using JAX, and the topics will include, but not be limited to, deep learning and distributed optimization.
-                    This post is ideally for CS majors or those who have some experience in functional programming.
-                </p>
-            </div>
-        </div>
-    </li>
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2">
+        <img class="img-responsive img-header" src="img/reseach_participate/implicit_function.png" alt=""  />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Implicit Function for Natural Data (Sound/Image) - Advisor: Jungseul Ok </h4>
+        <p class="normal-text">
+            Traditionally, natural signals have been presented discretely, such as pixels in images and sampling frequencies in sound. However, if the implicit function is used, the analog signal of nature can be expressed continuously. Specifically, it represents the coordinate values and their corresponding signals as a continuous function. In this way, natural data such as sound/image can be expressed regardless of resolution, and furthermore, infinite resolution expression can be expected. This study aims to find out what methodologies can be used to effectively map natural data to implicit functions and aims to utilize INR for various tasks by increasing its representation power.
+            <!--        	전통적으로 자연 신호는 이미지에서의 픽셀, 소리에서의 샘플링 주파수와 같이 불연속적으로 표현되었습니다. 그러나 implicit function을 활용한다면 자연의 아날로그 신호를 연속적으로 표현할 수 있습니다. 구체적으로 좌표 값과 이에 대응하는 신호를 연속 함수로 나타냅니다. 이와 같은 방식을 통해 소리/이미지와 같은 자연 데이터를 해상도(resolution)에 구애 받지 않고 나타낼 수 있고, 더 나아가서 무한의 해상도(resolution) 표현도 기대할 수 있습니다. 본 연구는 자연 데이터를 implicit function으로 효과적으로 맵핑하기 위해서 어떠한 방법론들이 사용될 수 있는 지에 대하여 알아보는 것을 목표로 합니다. -->
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Vincent Sitzmann, et al. <a href="https://arxiv.org/abs/2006.09661">"Implicit Neural Representations with Periodic Activation Functions"</a> NeurIPS 2020. </li>
+            <li> Ben Mildenhall, et al. <a href="https://arxiv.org/abs/2003.08934">"NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"</a> ECCV 2020. </li>
+            <li> Jaechang Kim*, Yunjoo Lee*, Seunghoon Hong, and Jungseul Ok, <a href="https://arxiv.org/abs/2111.00195">"Learning Continuous Representation of Audio for Arbitrary Scale Super Resolution" </a>, ICASSP 2022.  </li>
+        </ol>        
+    </div>    
+</div> 
+</li>
 
-    <li>
-        <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/sparseNN.png" alt="" />
-            </div>    
-            <div class="col-sm-10">
-                <h4 class="header"># Optimization for sparse neural network training - Advisor: Namhoon Lee </h4>
-                <p class="normal-text">
-                  Today’s deep neural networks require large memory and inference cost. Introducing sparsity can remedy the problem by skipping unnecessary computations. This project aims to fill the gap in existing methods by inducing sparsity based on various optimization principles during the training of neural networks.
-              </p>
-          </div>
+<li>
+ <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2">
+        <img class="img-responsive img-header" src="img/reseach_participate/DRL.png" alt=""  />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Deep Reinforcement Learning with Prior- Advisor: Jungseul Ok </h4>
+        <p class="normal-text">
+            Deep reinforcement learning (DRL) is a learning method which approximates functions in traditional reinforcement learning (RL) algorithms using deep neural networks. By virtue of deep learning, DRL can outperform traditional RL methods and solve problems difficult for traditional RL to deal with. However, low data efficiency and poor generalization performance remain major challenges in DRL. In this work, students aim to increase sample-efficiency of DRL using pre-existing algorithms, or to increase generalization performance using prior knowledge like data augmentation or Lipschitz continuity.
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Krishan Rana, et al. <a href="https://arxiv.org/abs/2003.05117">"Multiplicative Controller Fusion: Leveraging Algorithmic Priors for Sample-efficient Reinforcement Learning and Safe Sim-To-Real Transfer"</a> IROS 2020. </li>
+            <li> Nicklas Hansen, and Xiaolong Wang. <a href="https://arxiv.org/abs/2011.13389">"Generalization in Reinforcement Learning by Soft Data Augmentation"</a> ICRA 2021. </li>
+            <li> Roberta Raileanu, and Rob Fergus.<a href="https://arxiv.org/abs/2102.10330">"Decoupling Value and Policy for Generalization in Reinforcement Learning"</a> ICML 2021. </li>
+        </ol>
+    </div>    
+</div> 
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/crowdsourcing.png" alt="" />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Deep Learning from Crowds - Advisor: Jungseul Ok </h4>
+        <p class="normal-text">
+            Crowdsourcing enables us to collect large-scale datasets for machine learning at a low cost. However, low-paid workers easily provide noisy labels due to mistakes or malice, which undermines the performance of neural networks. Furthermore, workers can provide only a few noisy labels, and they want to receive tasks that are easy to label. In this work, we aim to design frameworks that take these realistic behaviors of workers into account.
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Cai, Lile, et al. <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Cai_Revisiting_Superpixels_for_Active_Learning_in_Semantic_Segmentation_With_Realistic_CVPR_2021_paper.html">"Revisiting Superpixels for Active Learning in Semantic Segmentation with Realistic Annotation Costs."</a> CVPR 2021. </li>
+            <li> Hoyoung Kim*, Seunghyuk Cho*, Dongwoo Kim, and Jungseul Ok, <a href="https://arxiv.org/abs/2111.00734">"Robust Deep Learning from Crowds with Belief Propagation."</a> AISTATS 2022. </li>            
+        </ol>
+    </div>
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/gnn.png" alt="" />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Graph Neural Network - Advisors: Sungsoo Ahn / Dongwoo Kim </h4>
+        <p class="normal-text">
+            Graph neural networks (GNNs) generalize the existing deep learning techniques to graph structured data including biological networks, molecular graphs, academic networks, and knowledge graphs. In this project, we aim to improve the existing GNNs to be more expressive and sample-efficient. We are particularly interested in directions like architecture design, data augmentation, and self-supervised learning. 
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Kipf, Thomas N., and Max Welling. <a href="https://arxiv.org/abs/1609.02907">"Semi-supervised Classification with Graph Convolutional Networks."</a> ICLR 2017. </li>
+            <li> Xu, Keyulu, et al. <a href="https://openreview.net/forum?id=ryGs6iA5Km">"How Powerful are Graph Neural Networks?."</a> ICLR 2019. </li>            
+        </ol>
+    </div>
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/poincare_disk.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Machine Learning in Non-Euclidean Spaces - Advisor: Dongwoo Kim </h4>
+      <p class="normal-text">
+        Most of well-known machine learning algorithms are working in Euclidean space. However, many scientific fields study data whose underlying structure is non-Euclidean. Through this research paticipation, students will study different types of non-Euclidean spaces and develop a new machine learning algorithm working in these spaces.
+    </p>
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Michael M Bronstein, Joan Bruna, Yann LeCun, Arthur Szlam, Pierre Vandergheynst, <a href="https://ieeexplore.ieee.org/abstract/document/7974879"> Geometric Deep Learning: Going beyond Euclidean data</a> </li>
+        <li> Seunghyuk Cho, Juyong Lee, Jaesik Park, Dongwoo Kim, <a href="https://arxiv.org/abs/2205.13371">A Rotated Hyperbolic Wrapped Normal Distribution for Hierarchical Representation Learning</a> NeurIPS 2022. </li>
+        <li> Seunghyuk Cho, Juyong Lee, Dongwoo Kim, <a href="https://arxiv.org/abs/2209.15217">Hyperbolic VAE via Latent Gaussian Distributions</a> NeurIPS 2023. </li>
+    </ol>
+</div>      
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/universe.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Machine Learning for Dynamics System Discovery - Advisor: Dongwoo Kim </h4>
+      <p class="normal-text">
+        Research to discover underlying dynamical systems using machine learning gets increasing attention to understand and predict various physical phenomena. The main problems are incorporating physical knowledge well into the neural net and handling the various characteristics of real-world data. We are particularly interested in finding the coordinates that provide the most simple representation of the system and dealing with noisy data or data from various environments.
+    </p>
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Yuan Yin, Vincent LE GUEN, Jérémie DONA, Emmanuel de Bezenac, Ibrahim Ayed, Nicolas THOME, patrick gallinari, <a href="https://openreview.net/forum?id=kmG8vRXTFv">Augmenting Physical Models with Deep Networks for Complex Dynamics Forecasting</a> </li>          
+        <li> Matthieu Kirchmeyer, Yuan Yin, Jeremie Dona, Nicolas Baskiotis, Alain Rakotomamonjy, Patrick Gallinari, <a href="https://proceedings.mlr.press/v162/kirchmeyer22a.html">Generalizing to New Physical Systems via Context-Informed Dynamics Model</a> </li>          
+        <li> Steven L. Brunton, Joshua L. Proctor, J. Nathan Kutz, <a href="https://www.pnas.org/doi/10.1073/pnas.1517384113">Discovering governing equations from data by sparse identification of nonlinear dynamical systems</a> </li>      
+    </ol>    
+</div>      
+</div>
+</li>
+
+<li>
+    <div class="row" style="padding-top: 40px;">
+        <div class="col-sm-2" >
+            <img class="img-responsive img-header" src="img/reseach_participate/Google_JAX_logo.png" alt="" />
+        </div>
+        <div class="col-sm-10">
+            <h4 class="header"># JAX - Advisor: Namhoon Lee </h4>
+            <p class="normal-text">
+                <a href="https://github.com/google/jax">JAX</a> is a new framework developed by Google for high-performance ML research;
+                it is becoming increasingly more popular with its acceleration and being adopted by major subfields that require large-scale scientific computing.
+                Student researchers on this project will work on implementing and evaluating ML algorithms using JAX, and the topics will include, but not be limited to, deep learning and distributed optimization.
+                This post is ideally for CS majors or those who have some experience in functional programming.
+            </p>
+        </div>
+    </div>
+</li>
+
+<li>
+    <div class="row" style="padding-top: 40px;">
+        <div class="col-sm-2" >
+            <img class="img-responsive img-header" src="img/reseach_participate/sparseNN.png" alt="" />
+        </div>    
+        <div class="col-sm-10">
+            <h4 class="header"># Optimization for sparse neural network training - Advisor: Namhoon Lee </h4>
+            <p class="normal-text">
+              Today’s deep neural networks require large memory and inference cost. Introducing sparsity can remedy the problem by skipping unnecessary computations. This project aims to fill the gap in existing methods by inducing sparsity based on various optimization principles during the training of neural networks.
+          </p>
       </div>
-  </li>
+  </div>
+</li>
 
-  <li>
+<li>
     <div class="row" style="padding-top: 40px;">
         <div class="col-sm-2" >
             <img class="img-responsive img-header" src="img/reseach_participate/InterpretableML.png" alt="" />
@@ -271,112 +274,112 @@
                 In this project, we aim to the improve the existing models from both data-centric and model-centric view.
             </p>
             <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Pang Wei Koh et al. <a href="https://arxiv.org/abs/2007.04612">"Concept Bottleneck Models"</a> ICML 2020.</li>
-                </ol>
-                </div>
-            </div>
-        </li>
-
-        <li>
-          <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/SGD.png" alt="" />
-            </div>    
-            <div class="col-sm-10">
-              <h4 class="header"># Stochastic optimization for machine learning - Advisor: Namhoon Lee </h4>
-              <p class="normal-text">
-                Optimization algorithms, especially stochastic gradient descent (SGD) and its variants, play an important role in the success of deep neural networks. Why do such simple algorithms work well in practice? Evidence shows that their dynamical behaviors with implicit bias may drive to flat minima. We are interested in investigating more into their optimization dynamics via mathematical tools such as noise analysis, differential equation approximation, etc. This research project could potentially lead us to come up with new optimization algorithms for large-scale machine learning problems.
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Stanisław Jastrzębski et al. <a href="https://arxiv.org/abs/1711.04623">"Three factors influencing minima in SGD"</a> ICANN 2018</li>          
-                    <li> Lei Wu, Mingze Wang, Weijie Su. <a href="https://arxiv.org/abs/2207.02628">"When does SGD favor flat minima? A quantitative characterization via linear stability"</a> NeurIPS 2022</li>          
-                    <li> Sadhika Malladi et al. <a href="https://arxiv.org/abs/2205.10287">"On the SDEs and Scaling Rules for Adaptive Gradient Algorithms"</a> NeurIPS 2022</li>       
-                    </ol>   
-                </div>      
-            </div>
-        </li>
-
-        <li>
-          <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/loss_landscape.png" alt="" />
-            </div>    
-            <div class="col-sm-10">
-              <h4 class="header"># Improving neural network training based on loss landscape analysis - Advisor: Namhoon Lee </h4>
-              <p class="normal-text">
-                The sharpness of the loss surface is a good geometric property that captures the generalization of neural networks. Since the seminal work of Foret et al. (2021), sharpness-aware minimization — a class of algorithms that lead convergence to flat minima —  has been used in various machine learning applications to improve performance measures. However, existing algorithms to enforce flatness require a lot of computations, and in this project we explore numerical and computational tools in robust optimization to address such an issue.
-            </p>        
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Pierre Foret et al. <a href="https://arxiv.org/abs/2010.01412">"Sharpness-Aware Minimization for Efficiently Improving Generalization"</a> ICLR 2021</li>         
-                    </ol>       
-                </div>    
-            </div>
-        </li>
-
-        <li>
-          <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/gpt3.png" alt="" />
-            </div>    
-            <div class="col-sm-10">
-              <h4 class="header"># Enhancing Efficiency of Large Language Models - Advisor: Namhoon Lee </h4>
-              <p class="normal-text">
-                Large Language Models (LLMs), such as GPT, have shown remarkable progresses in Natural Language Processing (NLP) tasks. However, their over-parametrized nature leads to significant computational costs in terms of time and money, limiting their practicality. In this research project, our aim is to enhance the efficiency of LLMs by exploring methods such as parameter pruning and knowledge distillation.
-            </p>        
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Tom B. Brown et al. <a href="https://arxiv.org/abs/2005.14165">"Language Models are Few-Shot Learners"</a> NeurIPS 2020</li>         
-                    <li> Hugo Touvron et al. <a href="https://arxiv.org/abs/2302.13971">"LLaMA: Open and Efficient Foundation Language Models"</a> arXiv preprint 2023</li>  
-                    </ol>      
-                </div>    
-            </div>
-        </li>
-
-        <li>
-          <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-                <img class="img-responsive img-header" src="img/reseach_participate/gdl.png" alt="" />
-            </div>    
-            <div class="col-sm-10">
-              <h4 class="header"># Geometric Deep Learning - Advisor: Sungsoo Ahn </h4>
-              <p class="normal-text">
-                Geometric deep learning is a new field of machine learning that can learn from complex data like point clouds, graphs, mesh, and manifolds. It seeks for a ``general recipe'' to apply deep neural networks to 3D objects, graphs and manifolds. In this project, we will aim at studying the recent geometric deep learning literature and become the frontiers in this area. We are looking for students confident in mathematics, since since this project requires to study very basic topology, categorical theory, and group theory. See this <a href="https://www.youtube.com/playlist?list=PLn2-dEmQeTfRQXLKf9Fmlk3HmReGg3YZZ">link</a> for a tutorial on this subject.
-            </p>
-            <span class="sub-text"> References </span>
-                <ol class="sub-text">
-                    <li> Victor Garcia Satorras, Emiel Hoogeboom, Max Welling <a href="https://arxiv.org/abs/2102.09844">E(n) Graph Neural Networks
-                    </a> </li>
-                    <li> Jakob Hansen, Thomas Gebhart <a href="https://arxiv.org/abs/2012.06333">Sheaf Neural Networks
-                    </a> </li>
-                    <li> Cristian Bodnar, Fabrizio Frasca, Yu Guang Wang, Nina Otter, Guido Montúfar, Pietro Liò, Michael Bronstein <a href="https://arxiv.org/abs/2103.03212">Weisfeiler and Lehman Go Topological: Message Passing Simplicial Networks
-                    </a> </li>     
-                    </ol>     
-                </div>      
-            </div>
-        </li>
-
-        <li>
-          <div class="row" style="padding-top: 40px;">
-            <div class="col-sm-2" >
-              <img class="img-responsive img-header" src="img/reseach_participate/hallucination.png" alt="" />
-          </div>    
-          <div class="col-sm-10">
-              <h4 class="header"># Learning to Combat the Hallucination of Large Language Models - Advisor: Sangdon Park </h4>
-              <p class="normal-text">
-                Large Language Models (LLMs) confidently generate wrong information, which undermines the trust of LLMs as a knowledge base. How to mitigate this? 
-                This question has been actively emerged due to the power of ChatGPT.
-                In this research project, we will explore learning methods (e.g., conformal prediction) to answer this question.
-            </p>
-            <span class="sub-text"> References </span>
             <ol class="sub-text">
-                <li> Andrew Ng’s Twitter Post on <a href="https://twitter.com/AndrewYNg/status/1602725934565830657"> the overconfidence of LLMs</a> </li>
-                <li> Sangdon Park and Taesoo Kim <a href="https://arxiv.org/abs/2307.09254">PAC Neural Prediction Set Learning to Quantify the Uncertainty of Generative Language Models</a> arXiv 2023 </li>  
+                <li> Pang Wei Koh et al. <a href="https://arxiv.org/abs/2007.04612">"Concept Bottleneck Models"</a> ICML 2020.</li>
             </ol>
         </div>
     </div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/SGD.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Stochastic optimization for machine learning - Advisor: Namhoon Lee </h4>
+      <p class="normal-text">
+        Optimization algorithms, especially stochastic gradient descent (SGD) and its variants, play an important role in the success of deep neural networks. Why do such simple algorithms work well in practice? Evidence shows that their dynamical behaviors with implicit bias may drive to flat minima. We are interested in investigating more into their optimization dynamics via mathematical tools such as noise analysis, differential equation approximation, etc. This research project could potentially lead us to come up with new optimization algorithms for large-scale machine learning problems.
+    </p>
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Stanisław Jastrzębski et al. <a href="https://arxiv.org/abs/1711.04623">"Three factors influencing minima in SGD"</a> ICANN 2018</li>          
+        <li> Lei Wu, Mingze Wang, Weijie Su. <a href="https://arxiv.org/abs/2207.02628">"When does SGD favor flat minima? A quantitative characterization via linear stability"</a> NeurIPS 2022</li>          
+        <li> Sadhika Malladi et al. <a href="https://arxiv.org/abs/2205.10287">"On the SDEs and Scaling Rules for Adaptive Gradient Algorithms"</a> NeurIPS 2022</li>       
+    </ol>   
+</div>      
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/loss_landscape.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Improving neural network training based on loss landscape analysis - Advisor: Namhoon Lee </h4>
+      <p class="normal-text">
+        The sharpness of the loss surface is a good geometric property that captures the generalization of neural networks. Since the seminal work of Foret et al. (2021), sharpness-aware minimization — a class of algorithms that lead convergence to flat minima —  has been used in various machine learning applications to improve performance measures. However, existing algorithms to enforce flatness require a lot of computations, and in this project we explore numerical and computational tools in robust optimization to address such an issue.
+    </p>        
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Pierre Foret et al. <a href="https://arxiv.org/abs/2010.01412">"Sharpness-Aware Minimization for Efficiently Improving Generalization"</a> ICLR 2021</li>         
+    </ol>       
+</div>    
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/gpt3.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Enhancing Efficiency of Large Language Models - Advisor: Namhoon Lee </h4>
+      <p class="normal-text">
+        Large Language Models (LLMs), such as GPT, have shown remarkable progresses in Natural Language Processing (NLP) tasks. However, their over-parametrized nature leads to significant computational costs in terms of time and money, limiting their practicality. In this research project, our aim is to enhance the efficiency of LLMs by exploring methods such as parameter pruning and knowledge distillation.
+    </p>        
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Tom B. Brown et al. <a href="https://arxiv.org/abs/2005.14165">"Language Models are Few-Shot Learners"</a> NeurIPS 2020</li>         
+        <li> Hugo Touvron et al. <a href="https://arxiv.org/abs/2302.13971">"LLaMA: Open and Efficient Foundation Language Models"</a> arXiv preprint 2023</li>  
+    </ol>      
+</div>    
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/gdl.png" alt="" />
+    </div>    
+    <div class="col-sm-10">
+      <h4 class="header"># Geometric Deep Learning - Advisor: Sungsoo Ahn </h4>
+      <p class="normal-text">
+        Geometric deep learning is a new field of machine learning that can learn from complex data like point clouds, graphs, mesh, and manifolds. It seeks for a ``general recipe'' to apply deep neural networks to 3D objects, graphs and manifolds. In this project, we will aim at studying the recent geometric deep learning literature and become the frontiers in this area. We are looking for students confident in mathematics, since since this project requires to study very basic topology, categorical theory, and group theory. See this <a href="https://www.youtube.com/playlist?list=PLn2-dEmQeTfRQXLKf9Fmlk3HmReGg3YZZ">link</a> for a tutorial on this subject.
+    </p>
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Victor Garcia Satorras, Emiel Hoogeboom, Max Welling <a href="https://arxiv.org/abs/2102.09844">E(n) Graph Neural Networks
+        </a> </li>
+        <li> Jakob Hansen, Thomas Gebhart <a href="https://arxiv.org/abs/2012.06333">Sheaf Neural Networks
+        </a> </li>
+        <li> Cristian Bodnar, Fabrizio Frasca, Yu Guang Wang, Nina Otter, Guido Montúfar, Pietro Liò, Michael Bronstein <a href="https://arxiv.org/abs/2103.03212">Weisfeiler and Lehman Go Topological: Message Passing Simplicial Networks
+        </a> </li>     
+    </ol>     
+</div>      
+</div>
+</li>
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+      <img class="img-responsive img-header" src="img/reseach_participate/hallucination.png" alt="" />
+  </div>    
+  <div class="col-sm-10">
+      <h4 class="header"># Learning to Combat the Hallucination of Large Language Models - Advisor: Sangdon Park </h4>
+      <p class="normal-text">
+        Large Language Models (LLMs) confidently generate wrong information, which undermines the trust of LLMs as a knowledge base. How to mitigate this? 
+        This question has been actively emerged due to the power of ChatGPT.
+        In this research project, we will explore learning methods (e.g., conformal prediction) to answer this question.
+    </p>
+    <span class="sub-text"> References </span>
+    <ol class="sub-text">
+        <li> Andrew Ng’s Twitter Post on <a href="https://twitter.com/AndrewYNg/status/1602725934565830657"> the overconfidence of LLMs</a> </li>
+        <li> Sangdon Park and Taesoo Kim <a href="https://arxiv.org/abs/2307.09254">PAC Neural Prediction Set Learning to Quantify the Uncertainty of Generative Language Models</a> arXiv 2023 </li>  
+    </ol>
+</div>
+</div>
 </li>
 
 <li>
@@ -387,14 +390,14 @@
   <div class="col-sm-10">
       <h4 class="header"># Uncertainty Learning via Conformal Prediction - Advisor: Sangdon Park </h4>
       <p class="normal-text">
-         As ML models are used in practical environments, e.g., ChatGPT or drones, the concerns on the trustworthiness of model predictions have been greatly emerged. In particular, we are interested in rigorous uncertainty learning as the basis for the correctness of predictions, and conformal prediction is a promising method for rigorous uncertainty learning. However, its correctness guarantees depend on the assumptions of data distributions. In this research project, we explore and design practical learning algorithms for conformal prediction under various distributional assumptions.
-     </p>
-     <span class="sub-text"> References </span>
-     <ol class="sub-text">
-        <li> Vladimir Vovk et al. <a href="http://alrw.net/">Algorithmic Learning in a Random World</a> 2005 </li>
-        <li> Anastasios Angelopoulos et al. <a href="https://arxiv.org/abs/2009.14193">Uncertainty Sets for Image Classifiers using Conformal Prediction</a> ICLR 2021 </li>
-        <li> Sangdon Park et al. <a href="https://arxiv.org/abs/2001.00106">PAC Confidence Sets for Deep Neural Networks via Calibrated Prediction</a> ICLR 2020 </li>  
-    </ol>
+       As ML models are used in practical environments, e.g., ChatGPT or drones, the concerns on the trustworthiness of model predictions have been greatly emerged. In particular, we are interested in rigorous uncertainty learning as the basis for the correctness of predictions, and conformal prediction is a promising method for rigorous uncertainty learning. However, its correctness guarantees depend on the assumptions of data distributions. In this research project, we explore and design practical learning algorithms for conformal prediction under various distributional assumptions.
+   </p>
+   <span class="sub-text"> References </span>
+   <ol class="sub-text">
+    <li> Vladimir Vovk et al. <a href="http://alrw.net/">Algorithmic Learning in a Random World</a> 2005 </li>
+    <li> Anastasios Angelopoulos et al. <a href="https://arxiv.org/abs/2009.14193">Uncertainty Sets for Image Classifiers using Conformal Prediction</a> ICLR 2021 </li>
+    <li> Sangdon Park et al. <a href="https://arxiv.org/abs/2001.00106">PAC Confidence Sets for Deep Neural Networks via Calibrated Prediction</a> ICLR 2020 </li>  
+</ol>
 </div>
 </div>
 </li>
@@ -407,16 +410,16 @@
   <div class="col-sm-10">
       <h4 class="header"># Security and Privacy of LLMs - Advisor: Sangdon Park </h4>
       <p class="normal-text">
-         The power of LLMs and their daily life use bring concerns on security and privacy issues (e.g., vulnerable code generation and privacy leakage). Then, how severe are the security and privacy issues? How to efficiently and effectively unlearn the issues in LLMs? In this project, we will evaluate LLMs security and privacy concerns and design learning algorithms for mitigation.
-     </p>
+       The power of LLMs and their daily life use bring concerns on security and privacy issues (e.g., vulnerable code generation and privacy leakage). Then, how severe are the security and privacy issues? How to efficiently and effectively unlearn the issues in LLMs? In this project, we will evaluate LLMs security and privacy concerns and design learning algorithms for mitigation.
+   </p>
 <!--      <span class="sub-text"> References </span>
       <ol class="sub-text">
         <li> Vladimir Vovk et al. <a href="http://alrw.net/">Algorithmic Learning in a Random World</a> 2005 </li>
 	<li> Anastasios Angelopoulos et al. <a href="https://arxiv.org/abs/2009.14193">Uncertainty Sets for Image Classifiers using Conformal Prediction</a> ICLR 2021 </li>
         <li> Sangdon Park et al. <a href="https://arxiv.org/abs/2001.00106">PAC Confidence Sets for Deep Neural Networks via Calibrated Prediction</a> ICLR 2020 </li>  
       </ol>
-      -->
-  </div>
+  -->
+</div>
 </div>
 </li>
 
@@ -428,16 +431,16 @@
   <div class="col-sm-10">
       <h4 class="header"># LLMs for Code Vulnerability Discovery - Advisor: Sangdon Park </h4>
       <p class="normal-text">
-         Finding source or binary code vulnerabilities is a long-standing and never-ending problem. The recent advance in LLMs potentially provides clues to further advance the current code vulnerability discovery performance. In this project, we will explore the potentials of LLMs in finding code vulnerabilities.
-     </p>
+       Finding source or binary code vulnerabilities is a long-standing and never-ending problem. The recent advance in LLMs potentially provides clues to further advance the current code vulnerability discovery performance. In this project, we will explore the potentials of LLMs in finding code vulnerabilities.
+   </p>
 <!--      <span class="sub-text"> References </span>
       <ol class="sub-text">
         <li> Vladimir Vovk et al. <a href="http://alrw.net/">Algorithmic Learning in a Random World</a> 2005 </li>
 	<li> Anastasios Angelopoulos et al. <a href="https://arxiv.org/abs/2009.14193">Uncertainty Sets for Image Classifiers using Conformal Prediction</a> ICLR 2021 </li>
         <li> Sangdon Park et al. <a href="https://arxiv.org/abs/2001.00106">PAC Confidence Sets for Deep Neural Networks via Calibrated Prediction</a> ICLR 2020 </li>  
       </ol>
-      -->
-  </div>
+  -->
+</div>
 </div>
 </li>
 </ul>
