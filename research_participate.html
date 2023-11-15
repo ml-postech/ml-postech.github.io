@@ -114,19 +114,17 @@
 <li>
   <div class="row" style="padding-top: 40px;">
     <div class="col-sm-2">
-        <img class="img-responsive img-header" src="img/reseach_participate/implicit_function.png" alt=""  />
+        <img class="img-responsive img-header" src="img/reseach_participate/LLM_sound.png" alt=""  />
     </div>
     <div class="col-sm-10">
-        <h4 class="header"># Implicit Function for Natural Data (Sound/Image) - Advisor: Jungseul Ok </h4>
+        <h4 class="header"># Language Aided Audio Style Transformation - Advisor: Jungseul Ok </h4>
         <p class="normal-text">
-            Traditionally, natural signals have been presented discretely, such as pixels in images and sampling frequencies in sound. However, if the implicit function is used, the analog signal of nature can be expressed continuously. Specifically, it represents the coordinate values and their corresponding signals as a continuous function. In this way, natural data such as sound/image can be expressed regardless of resolution, and furthermore, infinite resolution expression can be expected. This study aims to find out what methodologies can be used to effectively map natural data to implicit functions and aims to utilize INR for various tasks by increasing its representation power.
-            <!--        	전통적으로 자연 신호는 이미지에서의 픽셀, 소리에서의 샘플링 주파수와 같이 불연속적으로 표현되었습니다. 그러나 implicit function을 활용한다면 자연의 아날로그 신호를 연속적으로 표현할 수 있습니다. 구체적으로 좌표 값과 이에 대응하는 신호를 연속 함수로 나타냅니다. 이와 같은 방식을 통해 소리/이미지와 같은 자연 데이터를 해상도(resolution)에 구애 받지 않고 나타낼 수 있고, 더 나아가서 무한의 해상도(resolution) 표현도 기대할 수 있습니다. 본 연구는 자연 데이터를 implicit function으로 효과적으로 맵핑하기 위해서 어떠한 방법론들이 사용될 수 있는 지에 대하여 알아보는 것을 목표로 합니다. -->
+            Multi-modal deep learning trains models to perform diverse tasks by using data from various modalities like text, images, audio, and sensors. Our research, focused on Language-Guided Audio Style Transformation, aims to modify sound clips using text queries (e.g., "change it to an electric guitar") and sound data (e.g., acoustic guitar clips). The model will be able to transform the style of arbitrary sounds by applying knowledge learned from known sources, even if target sounds are not explicitly included in the training data.
         </p>
         <span class="sub-text"> References </span>
         <ol class="sub-text">
-            <li> Vincent Sitzmann, et al. <a href="https://arxiv.org/abs/2006.09661">"Implicit Neural Representations with Periodic Activation Functions"</a> NeurIPS 2020. </li>
-            <li> Ben Mildenhall, et al. <a href="https://arxiv.org/abs/2003.08934">"NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis"</a> ECCV 2020. </li>
-            <li> Jaechang Kim*, Yunjoo Lee*, Seunghoon Hong, and Jungseul Ok, <a href="https://arxiv.org/abs/2111.00195">"Learning Continuous Representation of Audio for Arbitrary Scale Super Resolution" </a>, ICASSP 2022.  </li>
+            <li> Xubo Liu, et al. <a href="https://arxiv.org/abs/2203.15147">"Separate What You Describe: Language-Queried Audio Source Separation"</a> Interspeech 2022. </li>
+            <li> Eric Grinstein, et al. <a href="https://arxiv.org/abs/1710.11385">"Audio style transfer"</a> ICASSP 2018. </li>
         </ol>        
     </div>    
 </div> 
@@ -138,19 +136,42 @@
         <img class="img-responsive img-header" src="img/reseach_participate/DRL.png" alt=""  />
     </div>
     <div class="col-sm-10">
-        <h4 class="header"># Deep Reinforcement Learning with Prior- Advisor: Jungseul Ok </h4>
+        <h4 class="header"># Data-Efficient Deep Reinforcement Learning using Data Augmentation - Advisor: Jungseul Ok </h4>
         <p class="normal-text">
-            Deep reinforcement learning (DRL) is a learning method which approximates functions in traditional reinforcement learning (RL) algorithms using deep neural networks. By virtue of deep learning, DRL can outperform traditional RL methods and solve problems difficult for traditional RL to deal with. However, low data efficiency and poor generalization performance remain major challenges in DRL. In this work, students aim to increase sample-efficiency of DRL using pre-existing algorithms, or to increase generalization performance using prior knowledge like data augmentation or Lipschitz continuity.
+            Deep reinforcement learning (RL) has demonstrated superior performance over traditional RL methods by leveraging deep neural networks. However, training deep RL agents often necessitates a substantial number of interactions with the environment, leading to low sample-efficiency. This challenge is further exacerbated in specific scenarios:
+            1) when the agent must process high-dimensional sensory inputs, such as images, within a sparse-reward environment.
+            2) when multiple agents are simultaneously learning in cooperative and/or competitive multi-agent systems.
+            In this work, students aim to increase sample-efficiency of deep RL using effective and dynamic data augmentation strategies.
         </p>
         <span class="sub-text"> References </span>
         <ol class="sub-text">
-            <li> Krishan Rana, et al. <a href="https://arxiv.org/abs/2003.05117">"Multiplicative Controller Fusion: Leveraging Algorithmic Priors for Sample-efficient Reinforcement Learning and Safe Sim-To-Real Transfer"</a> IROS 2020. </li>
             <li> Nicklas Hansen, and Xiaolong Wang. <a href="https://arxiv.org/abs/2011.13389">"Generalization in Reinforcement Learning by Soft Data Augmentation"</a> ICRA 2021. </li>
-            <li> Roberta Raileanu, and Rob Fergus.<a href="https://arxiv.org/abs/2102.10330">"Decoupling Value and Policy for Generalization in Reinforcement Learning"</a> ICML 2021. </li>
+            <li> Sumyeong Ahn, et al.<a href="https://arxiv.org/abs/2302.05499">"CUDA: Curriculum of Data Augmentation for Long-Tailed Recognition"</a> ICLR 2023. </li>
         </ol>
     </div>    
 </div> 
 </li>
+
+<li>
+    <div class="row" style="padding-top: 40px;">
+       <div class="col-sm-2">
+           <img class="img-responsive img-header" src="img/reseach_participate/rl_exploration.png" alt=""  />
+       </div>
+       <div class="col-sm-10">
+           <h4 class="header"># Exploration with Prior in Reinfocement Learning - Advisor: Jungseul Ok </h4>
+           <p class="normal-text">
+            Exploration plays a key element in Reinforcement Learning, as it allows agents to adapt to new environments while aiming to discover optimal policies. While traditional methods like epsilon-greedy, involving random actions, work in general settings, they often be inefficient when prior knowledge is available. Therefore, in this study, we focuse on developing sample-efficient exploration strategies by leveraging prior knowledge in diverse contexts, including structured bandit problems and goal-conditioned RL.
+           </p>
+           <span class="sub-text"> References </span>
+           <ol class="sub-text">
+               <li> Peter Auer, et al. <a href="https://link.springer.com/article/10.1023/A:1013689704352">"Finite-time Analysis of the Multiarmed Bandit Problem"</a> Machine Learning 2002. </li>
+               <li> Jungseul Ok, et al. <a href="https://arxiv.org/abs/1806.00775">"Exploration in Structured Reinforcement Learning"</a> NeurIPS 2018. </li>
+               <li> Allison C.Tam, et al.<a href="https://arxiv.org/abs/2204.05080">"Semantic Exploration from Language Abstractions and Pretrained Representations"</a> NeurIPS 2022. </li>
+           </ol>
+       </div>    
+   </div> 
+   </li>
+
 
 <li>
   <div class="row" style="padding-top: 40px;">
