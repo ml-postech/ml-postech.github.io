@@ -100,7 +100,7 @@ footer {
 .front-panel {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 450px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -117,17 +117,17 @@ footer {
 }
 @media screen and (min-width: 1501px) {
   .front-image {
-    background-position: center 71%;
+    background-position: center 88%;
   }
 }
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
   .front-image {
-    background-position: center 72%;
+    background-position: center 90%;
   }
 }
 @media screen and (max-width: 1200px) {
   .front-image {
-    background-position: center 78%;
+    background-position: center 95%;
   }
 }
 .front-title {
