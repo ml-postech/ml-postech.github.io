@@ -72,25 +72,28 @@
 </div>
 
 <ul id="rpList" style="list-style-type:none; padding-left: 0;">
-    <li>
-      <div class="row" style="padding-top: 40px;">
-        <div class="col-sm-2" >
-            <img class="img-responsive img-header" src="img/reseach_participate/unlearning.png" alt=""  />
-        </div>
-        <div class="col-sm-10">
-            <h4 class="header"># Machine Unlearning - Advisors: Jungseul Ok / Sangdon Park </h4>
-            <p class="normal-text">
-                As shown in the recent case of 이루다, machine learning algorithms always have problems that can expose personal and sensitive information. The simplest way to solve this problem is to train the model anew after removing such sensitive information, but this re-learning is only a workaround for solving problems that may arise at any time. Machine Unlearning is a methodology for selectively removing specific information from an already trained model. Students will study what conditions must be satisfied for successful unlearning through participation in this study.
-            </p>
-            <span class="sub-text"> References </span>
-            <ol class="sub-text">
-                <li> Nguyen, Quoc Phong, Bryan Kian Hsiang Low, and Patrick Jaillet. <a href="https://arxiv.org/abs/2010.12883">"Variational Bayesian Unlearning."</a> NuerIPS 2020. </li>
-                <li> Golatkar, Aditya, Alessandro Achille, and Stefano Soatto. <a href="https://arxiv.org/abs/1911.04933">"Eternal Sunshine of the Spotless Net: Selective Forgetting in Deep Networks."</a> CVPR 2020.</li>
-                <li> Yoon, Youngsik, et al. <a href="https://arxiv.org/abs/2205.15567">"Few-Shot Unlearning by Model Inversion."</a> arXiv preprint 2022</li>
-            </ol>
-        </div>
+
+<!--
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2" >
+        <img class="img-responsive img-header" src="img/reseach_participate/unlearning.png" alt=""  />
     </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Machine Unlearning - Advisors: Jungseul Ok / Sangdon Park </h4>
+        <p class="normal-text">
+            As shown in the recent case of 이루다, machine learning algorithms always have problems that can expose personal and sensitive information. The simplest way to solve this problem is to train the model anew after removing such sensitive information, but this re-learning is only a workaround for solving problems that may arise at any time. Machine Unlearning is a methodology for selectively removing specific information from an already trained model. Students will study what conditions must be satisfied for successful unlearning through participation in this study.
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Nguyen, Quoc Phong, Bryan Kian Hsiang Low, and Patrick Jaillet. <a href="https://arxiv.org/abs/2010.12883">"Variational Bayesian Unlearning."</a> NuerIPS 2020. </li>
+            <li> Golatkar, Aditya, Alessandro Achille, and Stefano Soatto. <a href="https://arxiv.org/abs/1911.04933">"Eternal Sunshine of the Spotless Net: Selective Forgetting in Deep Networks."</a> CVPR 2020.</li>
+            <li> Yoon, Youngsik, et al. <a href="https://arxiv.org/abs/2205.15567">"Few-Shot Unlearning by Model Inversion."</a> arXiv preprint 2022</li>
+        </ol>
+    </div>
+  </div>
 </li>
+-->
 
   <li>
     <div class="row" style="padding-top: 40px;">
@@ -104,14 +107,15 @@
           </p>
           <span class="sub-text"> References </span>
           <ol class="sub-text">
-              <li> Moon, Saemi, Seunghyuk Cho, and Dongwoo Kim. <a href="https://arxiv.org/abs/2205.15567">"Feature Unlearning for Pre-trained GANs and VAEs."</a> AAAI 2024</li>
-              <li> Kumari, Nupur, et al. <a href="https://arxiv.org/abs/2303.13516">"Ablating concepts in text-to-image diffusion models."</a> NuerIPS 2023. </li>
-              <li> Gandikota, Rohit, et al. <a href="https://arxiv.org/abs/2303.07345">"Erasing Concepts from Diffusion Models."</a> ICCV 2023.</li>
+              <li> Moon, Saemi, Seunghyuk Cho, and Dongwoo Kim. <a href="https://arxiv.org/abs/2205.15567">"Feature Unlearning for Pre-trained GANs and VAEs"</a> AAAI 2024. </li>
+              <li> Kumari, Nupur, et al. <a href="https://arxiv.org/abs/2303.13516">"Ablating Concepts in Text-to-Image Diffusion Models"</a> NeurIPS 2023. </li>
+              <li> Gandikota, Rohit, et al. <a href="https://arxiv.org/abs/2303.07345">"Erasing Concepts from Diffusion Models"</a> ICCV 2023. </li>
           </ol>
       </div>
   </div>
 </li>
 
+<!--
 <li>
   <div class="row" style="padding-top: 40px;">
     <div class="col-sm-2">
@@ -121,16 +125,36 @@
         <h4 class="header"># Privacy Leakage in Federated Learning - Advisor: Jungseul Ok </h4>
         <p class="normal-text">
             Federated Learning is a machine learning framework that enables multiple users to learn large-scale models without worrying about personal information leakage by enabling learning without sending personal data to a central server. For this large-scale learning, only the learning signal (the differential value of the neural net model) is transmitted to the server, not the data transmission, and according to various recent research results, even this method is not 100% safe from personal information leakage. Participation in this study aims to find out under what circumstances information leakage can be aggravated and what methodologies can be used to solve these problems.
-            <!--            연합학습은 개인데이터를 중앙 서버로 보내지 않고서도 학습을 가능하게 함으로써 여러 사용자들이 개인정보 유출 걱정없이 대규모 모델을 학습하는데 힘을 보탤수 있는 기계학습 프레임워크 입니다. 이러한 대규모 학습을 위해 데이터 전송이 아닌 학습 시그널(뉴럴넷 모델의 미분값)만을 서버로 전송하는데 최근 다양한 연구결과들에 따르면 이러한 방식조차 개인정보유출로부터 100% 안전한 상황이 아니라는 것이 밝혀졌습니다. 본 연구참여는 어떤 상황에서 정보 유출이 심화될 수 있으며 이러한 문제를 해결하기 위해 어떤 방법론들이 사용될 수 있는지에 대하여 알아보는 것을 목표로 합니다. -->
         </p>
         <span class="sub-text"> References </span>
         <ol class="sub-text">
             <li> Jinwoo Jeon*, Jaechang Kim*, Kangwook Lee, Sewoong Oh, and Jungseul Ok, <a href="https://arxiv.org/abs/2110.14962">"Gradient Inversion with Generative Image Prior"</a>, NeurIPS, 2021  </li>
         </ol>        
     </div>
-</div>
+  </div>
+</li>
+-->
+
+<li>
+  <div class="row" style="padding-top: 40px;">
+    <div class="col-sm-2">
+        <img class="img-responsive img-header" src="img/reseach_participate/robot.png" alt=""  />
+    </div>
+    <div class="col-sm-10">
+        <h4 class="header"># Advanced Planning for Robots with Multimodal Large Language Models - Advisor: Jungseul Ok, Mentor: Hyejin Park </h4>
+        <p class="normal-text">
+          Recent advances in AI have enabled robots to perform simple tasks based on language instructions. However, they struggle to handle long-term tasks in complex environments, due to difficulties in integrating visual observations with language instructions, and planning subsequent actions accordingly. In this study, we develop methods leveraging multimodal large language models to help robots interpret their visual surroundings and plan more effectively, ultimately enabling them to perform real-world tasks successfully.
+        </p>
+        <span class="sub-text"> References </span>
+        <ol class="sub-text">
+            <li> Zhou, Gengze, et al. <a href="https://arxiv.org/abs/2407.12366">"NavGPT-2: Unleashing Navigational Reasoning Capability for Large Vision-Language Models"</a> ECCV 2024. </li>
+            <li> Li, Zaijing, et al. <a href="https://arxiv.org/abs/2408.03615">"Optimus-1: Hybrid Multimodal Memory Empowered Agents Excel in Long-Horizon Tasks"</a> NeurIPS 2024. </li>
+        </ol>        
+    </div>
+  </div>
 </li>
 
+<!--
 <li>
   <div class="row" style="padding-top: 40px;">
     <div class="col-sm-2">
@@ -149,7 +173,9 @@
     </div>    
 </div> 
 </li>
+-->
 
+<!--
 <li>
  <div class="row" style="padding-top: 40px;">
     <div class="col-sm-2">
@@ -171,6 +197,7 @@
     </div>    
 </div> 
 </li>
+-->
 
 <li>
     <div class="row" style="padding-top: 40px;">
@@ -178,15 +205,15 @@
            <img class="img-responsive img-header" src="img/reseach_participate/rl_exploration.png" alt=""  />
        </div>
        <div class="col-sm-10">
-           <h4 class="header"># Exploration with Prior in Reinfocement Learning - Advisor: Jungseul Ok </h4>
+           <h4 class="header"># Hierarchical Planning for Efficient Exploration - Advisor: Jungseul Ok, Mentor: Youngsik Yoon </h4>
            <p class="normal-text">
-            Exploration plays a key element in Reinforcement Learning, as it allows agents to adapt to new environments while aiming to discover optimal policies. While traditional methods like epsilon-greedy, involving random actions, work in general settings, they often be inefficient when prior knowledge is available. Therefore, in this study, we focuse on developing sample-efficient exploration strategies by leveraging prior knowledge in diverse contexts, including structured bandit problems and goal-conditioned RL.
+            Hierarchical planning is essential for efficient exploration in Reinforcement Learning (RL), as it helps agents structure decisions across different levels. By focusing on high-level goals before refining low-level actions, it enables smarter exploration in complex environments. For example, in path planning tasks, hierarchical strategies can optimize route selection, while in LLM-based planning, they can help structure tasks into manageable subgoals. This approach is particularly effective in long-horizon tasks and sparse reward settings, where traditional methods often lead to inefficient exploration and slow learning. In this study, we explore how hierarchical planning can accelerate exploration and improve learning efficiency in RL.
            </p>
            <span class="sub-text"> References </span>
            <ol class="sub-text">
-               <li> Peter Auer, et al. <a href="https://link.springer.com/article/10.1023/A:1013689704352">"Finite-time Analysis of the Multiarmed Bandit Problem"</a> Machine Learning 2002. </li>
-               <li> Jungseul Ok, et al. <a href="https://arxiv.org/abs/1806.00775">"Exploration in Structured Reinforcement Learning"</a> NeurIPS 2018. </li>
-               <li> Allison C.Tam, et al.<a href="https://arxiv.org/abs/2204.05080">"Semantic Exploration from Language Abstractions and Pretrained Representations"</a> NeurIPS 2022. </li>
+               <li> Ok, Jungseul, et al. <a href="https://arxiv.org/abs/1806.00775">"Exploration in Structured Reinforcement Learning"</a> NeurIPS 2018. </li>
+               <li> Yoon, Youngsik, et al. <a href="https://proceedings.mlr.press/v235/yoon24d.html">"Breadth-First Exploration on Adaptive Grid for Reinforcement Learning"</a> ICML 2024. </li>
+               <li> Sungjae Lee*, Hyejin Park, Jaechang Kim, and Jungseul Ok. <a href="https://arxiv.org/abs/2501.05752">"Semantic Exploration with Adaptive Gating for Efficient Problem Solving with Language Models"</a> arXiv 2025. </li>
            </ol>
        </div>    
    </div> 
