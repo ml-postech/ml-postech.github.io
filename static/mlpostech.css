@@ -218,6 +218,17 @@ footer {
   margin: 10px 0px 0px 0px;
 }
 
+.advisor-text {
+  font-size: small;
+  color: #666;
+  margin-top: 5px;
+}
+
+.advisor-name {
+  font-weight: bold;
+  color: #333;
+}
+
 .profile-image-alumni {
   float:left;
   width: 150px;
