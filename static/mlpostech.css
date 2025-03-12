@@ -235,6 +235,7 @@ footer {
   color: #666;
   margin-top: 5px;
 }
+
 .advisor-name-1 {
   font-weight: normal;
   color: #444; 
@@ -257,11 +258,12 @@ footer {
   margin-top: 5px;
 }
 
-.advisor-name {
+.advisor-name-3 {
   font-style: italic;
   font-weight: normal;
   color: #666;
 }
+
 
 .profile-image-alumni {
   float:left;
