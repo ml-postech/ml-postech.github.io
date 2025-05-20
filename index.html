@@ -24,10 +24,15 @@
 <body>
   <nav class="navbar navbar-home navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-    <a class="navbar-brand" href="/">
-       <img id="logo" src="img/logo_0.png" height="30px" class="pull-left" style="margin-top: -5px;"/>
-       <span style="padding-left:30px; color:#333"> ML Lab @ Postech </span>
-    </a>
+    <div class="navbar-brand">
+      <a href="/">
+        <img id="logo" src="img/logo_0.png" height="30px" class="pull-left" style="margin-top: -5px;"/>
+        <span style="padding-left:30px; color:#333"> ML Lab @ </span> 
+      </a>  
+      <a href="https://www.postech.ac.kr/">
+        <img id="postech-logo" src="img/POSTECH.png" height="17px" class="pull-right" style="margin-top: 3px; margin-left: 5px;"/>
+      </a>
+    </div>
     <ul class="nav nav-tabs-home nav-tabs pull-right">
       <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
       <li><a href="#people" data-toggle="tab">People</a></li>
@@ -45,11 +50,31 @@
     <div id="research_participate" class="tab-pane fade"></div>
   </div>
 </body>
-<footer>
-  <div class="pull-right" style="padding: 0 30px;">
+<!-- <footer>
+  <div class="pull-left" style="padding: 0 30px;">
+    <a href="https://www.postech.ac.kr/">
+      <img id="postech-logo" src="img/POSTECH.png" height="17px" style="margin-top: 3px; margin-left: 5px;"/>
+    </a>
   <small><i class="far fa-copyright"></i> Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a>, <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a>, <a href="https://www.flaticon.com/free-icons/thought" title="thought icons">Smashicons</a> <a href="https://www.flaticon.com/free-icons/security" title="security icons">srip</a> from <a href="https://www.flaticon.com/" stitle="Flaticon">www.flaticon.com</a>
   </small></div>
-</footer>
+
+</footer> -->
+
+<div class="footer">
+  <div class="footer-content">
+      <div class="footer-logo">
+          <a href="https://www.postech.ac.kr/"><img src="img/POSTECH.png" alt="POSTECH"></a>
+      </div>
+      <div class="footer-mllab-logo">
+        <a href="/"><img src="img/MLLAB_logo.png" alt="ML Lab"></a>
+      </div>
+      <div class="footer-text">
+        RIST Research Building IV, POSTECH 67 Cheongam-ro, Nam-gu, Pohang, Gyeongbuk, Korea (37673) &nbsp; <br> 
+        E-Mail: <a href="mailto:ml-lab@postech.ac.kr">ml-lab@postech.ac.kr</a><br>
+        Copyright © 2019. Machine Learning Lab. All rights reserved.
+      </div>
+  </div>
+</div>
 </html>
 <script>
 $(function(){
