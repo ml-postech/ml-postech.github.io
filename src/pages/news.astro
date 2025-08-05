@@ -29,7 +29,7 @@ const news = (await getCollection("news")).toSorted(
       {
         news.map((item) => (
           <li>
-            <h2 class:list={["text-lg"]}>
+            <h2 class:list={["text-lg", "flex", "gap-4"]}>
               <span class:list={["text-gray-700", "font-mono"]}>
                 {item.data.date.toLocaleDateString("en-US", {
                   year: "numeric",
