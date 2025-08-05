@@ -1,14 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import coverImage from "../assets/cover.jpg";
-
-const news = (await getCollection("news"))
-  .toSorted((a, b) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-  })
-  .slice(0, 8);
 ---
 
 <Layout>
@@ -63,53 +56,6 @@ const news = (await getCollection("news"))
       alt="Cover Image"
       class:list={["w-full", "md:h-screen", "object-cover", "object-bottom"]}
     />
-    <div class:list={["grid", "grid-cols-12", "gap-4", "mx-4"]}>
-      <div class:list={["col-span-12 md:col-span-6"]}>
-        <h2 class:list={["border-b", "border-black", "mb-2"]}>Latest News</h2>
-        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-          {
-            news.map((item) => (
-              <li>
-                <span>{item.data.title}</span>
-              </li>
-            ))
-          }
-          <li>
-            <a href="/news" class:list={["underline"]}>...</a>
-          </li>
-        </ul>
-      </div>
-      <div class:list={["col-span-6 md:col-span-3"]}>
-        <h2 class:list={["border-b", "border-black", "mb-2"]}>About Us</h2>
-        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-          <li>
-            <a href="/people" class:list={["underline"]}>People</a>
-          </li>
-          <li>
-            <a href="/publications" class:list={["underline"]}>Publications</a>
-          </li>
-          <li>
-            <a href="/research" class:list={["underline"]}>Research</a>
-          </li>
-          <li>
-            <a href="/news" class:list={["underline"]}>News</a>
-          </li>
-        </ul>
-      </div>
-      <div class:list={["col-span-6 md:col-span-3"]}>
-        <h2 class:list={["border-b", "border-black", "mb-2"]}>Follow Us</h2>
-        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-          <li>
-            <a
-              href="https://github.com/ml-postech"
-              target="_blank"
-              rel="noopener noreferrer"
-              class:list={["underline"]}>GitHub</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
   </main>
 </Layout>
 
