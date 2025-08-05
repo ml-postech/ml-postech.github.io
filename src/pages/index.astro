@@ -56,9 +56,7 @@ const news = (await getCollection("news"))
           {
             news.map((item) => (
               <li>
-                <a href={`/news/${item.id}`} class:list={["underline"]}>
-                  {item.data.title}
-                </a>
+                <span>{item.data.title}</span>
               </li>
             ))
           }
