@@ -24,9 +24,10 @@ const alumni = defineCollection({
       course: z.string(),
       email: z.string().email(),
       image: image(),
-      enrollment: z.date(),
+      graduate: z.date(),
       interest: z.string().optional(),
       website: z.string().url().optional(),
+      status: z.string().optional(),
     }),
 });
 

@@ -1,0 +1,288 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+const faculty = (await getCollection("faculty")).toSorted((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+
+const students = (await getCollection("students")).toSorted((a, b) => {
+  if (a.data.course !== b.data.course) {
+    const courseOrder: Record<string, number> = {
+      "Ph.D.": 0,
+      "M.S./Ph.D.": 1,
+      "M.S.": 2,
+    };
+    return courseOrder[a.data.course] - courseOrder[b.data.course];
+  }
+  if (a.data.enrollment !== b.data.enrollment) {
+    return (
+      new Date(b.data.enrollment).getTime() -
+      new Date(a.data.enrollment).getTime()
+    );
+  }
+  return a.data.name.localeCompare(b.data.name);
+});
+
+const alumni = (await getCollection("alumni")).toSorted((a, b) => {
+  if (a.data.graduate !== b.data.graduate) {
+    return (
+      new Date(b.data.graduate).getTime() - new Date(a.data.graduate).getTime()
+    );
+  }
+  return a.data.name.localeCompare(b.data.name);
+});
+
+const staff = (await getCollection("staff")).toSorted((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+---
+
+<Layout>
+  <main class:list={["space-y-4 md:space-y-8", "my-8"]}>
+    <h1
+      class:list={[
+        "mx-4",
+        "mt-8",
+        "md:leading-none",
+        "text-4xl md:text-6xl",
+        "font-semibold",
+      ]}
+    >
+      People@ML
+    </h1>
+    <h2
+      class:list={[
+        "mx-4",
+        "md:leading-none",
+        "text-2xl md:text-4xl",
+        "font-semibold",
+      ]}
+    >
+      Faculty
+    </h2>
+    <ul
+      class:list={[
+        "mx-4",
+        "grid",
+        "grid-cols-2",
+        "md:grid-cols-4",
+        "lg:grid-cols-6",
+        "xl:grid-cols-6",
+        "gap-4",
+      ]}
+    >
+      {
+        faculty.map((item) => (
+          <li>
+            <Image
+              src={item.data.image}
+              alt={item.data.name}
+              width={512}
+              height={512}
+              class:list={["object-cover", "aspect-square", "w-full"]}
+            />
+            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+              {item.data.name}
+            </h3>
+            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+              <li class:list={["mb-2"]}>{item.data.role}</li>
+              <li>
+                <a
+                  class:list={["underline"]}
+                  href={`mailto:${item.data.email}`}
+                >
+                  {item.data.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={item.data.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class:list={["underline"]}
+                >
+                  {item.data.website}
+                </a>
+              </li>
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+    <h2
+      class:list={[
+        "mx-4",
+        "md:leading-none",
+        "text-2xl md:text-4xl",
+        "font-semibold",
+      ]}
+    >
+      Students
+    </h2>
+    <ul
+      class:list={[
+        "mx-4",
+        "grid",
+        "grid-cols-2",
+        "md:grid-cols-4",
+        "lg:grid-cols-6",
+        "xl:grid-cols-6",
+        "gap-4",
+      ]}
+    >
+      {
+        students.map((item) => (
+          <li>
+            <Image
+              src={item.data.image}
+              alt={item.data.name}
+              width={512}
+              height={512}
+              class:list={["object-cover", "aspect-square", "w-full"]}
+            />
+            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+              {item.data.name}
+            </h3>
+            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+              <li>{item.data.enrollment.getFullYear()}</li>
+              <li>{item.data.course} Course</li>
+              <li class:list={["mb-2"]}>{item.data.interest}</li>
+              <li>
+                <a
+                  class:list={["underline"]}
+                  href={`mailto:${item.data.email}`}
+                >
+                  {item.data.email}
+                </a>
+              </li>
+              {item.data.website && (
+                <li>
+                  <a
+                    href={item.data.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class:list={["underline"]}
+                  >
+                    {item.data.website}
+                  </a>
+                </li>
+              )}
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+    <h2
+      class:list={[
+        "mx-4",
+        "md:leading-none",
+        "text-2xl md:text-4xl",
+        "font-semibold",
+      ]}
+    >
+      Alumni
+    </h2>
+    <ul
+      class:list={[
+        "mx-4",
+        "grid",
+        "grid-cols-2",
+        "md:grid-cols-4",
+        "lg:grid-cols-6",
+        "xl:grid-cols-6",
+        "gap-4",
+      ]}
+    >
+      {
+        alumni.map((item) => (
+          <li>
+            <Image
+              src={item.data.image}
+              alt={item.data.name}
+              width={512}
+              height={512}
+              class:list={["object-cover", "aspect-square", "w-full"]}
+            />
+            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+              {item.data.name}
+            </h3>
+            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+              <li>{item.data.graduate.getFullYear()}</li>
+              <li class:list={["mb-2"]}>{item.data.course}</li>
+              <li>
+                <a
+                  class:list={["underline"]}
+                  href={`mailto:${item.data.email}`}
+                >
+                  {item.data.email}
+                </a>
+              </li>
+              {item.data.status && <li>{item.data.status}</li>}
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+    <h2
+      class:list={[
+        "mx-4",
+        "md:leading-none",
+        "text-2xl md:text-4xl",
+        "font-semibold",
+      ]}
+    >
+      Staff
+    </h2>
+    <ul
+      class:list={[
+        "mx-4",
+        "grid",
+        "grid-cols-2",
+        "md:grid-cols-4",
+        "lg:grid-cols-6",
+        "xl:grid-cols-6",
+        "gap-4",
+      ]}
+    >
+      {
+        staff.map((item) => (
+          <li>
+            <Image
+              src={item.data.image}
+              alt={item.data.name}
+              width={512}
+              height={512}
+              class:list={["object-cover", "aspect-square", "w-full"]}
+            />
+            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+              {item.data.name}
+            </h3>
+            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+              <li class:list={["mb-2"]}>{item.data.role}</li>
+              <li>
+                <a
+                  class:list={["underline"]}
+                  href={`mailto:${item.data.email}`}
+                >
+                  {item.data.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={item.data.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class:list={["underline"]}
+                >
+                  {item.data.website}
+                </a>
+              </li>
+            </ul>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
