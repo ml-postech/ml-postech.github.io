@@ -2,6 +2,11 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import coverImage from "../assets/cover.jpg";
+import { getCollection } from "astro:content";
+
+const representativeStudent = (await getCollection("students")).find(
+  (item) => item.data.email === "kkm959595@postech.ac.kr"
+);
 ---
 
 <Layout>
@@ -43,20 +48,26 @@ import coverImage from "../assets/cover.jpg";
           </span>
         </h2>
         <p class:list={["text-xs", "text-gray-500"]}>
+          Pohang University of Science and Technology (POSTECH)
+        </p>
+        <p class:list={["text-xs", "text-gray-500"]}>
           Research Building IV 4309/4429, 67 Cheongam-ro, Nam-gu, Pohang-si,
           Republic of Korea
         </p>
         <p class:list={["text-xs", "text-gray-500"]}>
-          Pohang University of Science and Technology (POSTECH)
+          <a
+            href={`mailto:${representativeStudent?.data.email}`}
+            class:list={["underline"]}>{representativeStudent?.data.email}</a
+          >
         </p>
       </div>
     </div>
-    <Image
-      src={coverImage}
-      alt="Cover Image"
-      class:list={["w-full", "md:h-screen", "object-cover", "object-bottom"]}
-    />
   </main>
+  <Image
+    src={coverImage}
+    alt="Cover Image"
+    class:list={["w-full", "md:h-screen", "object-cover", "object-bottom"]}
+  />
 </Layout>
 
 <script>
