@@ -43,14 +43,19 @@ const staff = (await getCollection("staff")).toSorted((a, b) =>
   <main class:list={["space-y-4 md:space-y-8", "my-8"]}>
     <h1
       class:list={[
+        "uppercase",
         "mx-4",
         "mt-8",
         "md:leading-none",
         "text-4xl md:text-6xl",
         "font-semibold",
+        "overflow-hidden",
       ]}
     >
-      People@ML
+      <span class:list={["enter-bottom-to-top", "inline-block"]}>People</span
+      ><span class:list={["enter-bottom-to-top", "inline-block"]}>@</span><span
+        class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
+      >
     </h1>
     <h2
       class:list={[
@@ -286,3 +291,25 @@ const staff = (await getCollection("staff")).toSorted((a, b) =>
     </ul>
   </main>
 </Layout>
+
+<script>
+  import { animate } from "motion";
+
+  document
+    .querySelectorAll(".enter-bottom-to-top")
+    .forEach((element, index) => {
+      animate(
+        element,
+        {
+          transform: ["translateY(256px)", "translateY(0px)"],
+        },
+        {
+          duration: 0.25,
+          delay: index * 0.05,
+          type: "spring",
+          stiffness: 64,
+          damping: 16,
+        }
+      );
+    });
+</script>
