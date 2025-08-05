@@ -40,16 +40,27 @@ const staff = (await getCollection("staff")).toSorted((a, b) =>
 ---
 
 <Layout>
-  <main class:list={["space-y-4 md:space-y-8", "my-8"]}>
+  <main
+    class:list={[
+      "space-y-4 md:space-y-8",
+      "my-8",
+      "md:grid",
+      "md:grid-cols-2",
+      "md:mx-4",
+      "gap-4",
+    ]}
+  >
     <h1
       class:list={[
+        "md:fixed",
+        "md:top-20",
         "uppercase",
-        "mx-4",
-        "mt-8",
+        "max-md:mx-4",
         "md:leading-none",
         "text-4xl md:text-6xl",
         "font-semibold",
         "overflow-hidden",
+        "md:w-full",
       ]}
     >
       <span class:list={["enter-bottom-to-top", "inline-block"]}>People</span
@@ -57,112 +68,32 @@ const staff = (await getCollection("staff")).toSorted((a, b) =>
         class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
       >
     </h1>
-    <h2
-      class:list={[
-        "mx-4",
-        "md:leading-none",
-        "text-2xl md:text-4xl",
-        "font-semibold",
-      ]}
-    >
-      Faculty
-    </h2>
-    <ul
-      class:list={[
-        "mx-4",
-        "grid",
-        "grid-cols-2",
-        "md:grid-cols-4",
-        "lg:grid-cols-6",
-        "xl:grid-cols-6",
-        "gap-4",
-      ]}
-    >
-      {
-        faculty.map((item) => (
-          <li>
-            <Image
-              src={item.data.image}
-              alt={item.data.name}
-              width={512}
-              height={512}
-              class:list={["object-cover", "aspect-square", "w-full"]}
-            />
-            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
-              {item.data.name}
-            </h3>
-            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
-              <li class:list={["mb-2"]}>{item.data.role}</li>
-              <li>
-                <a
-                  class:list={["underline"]}
-                  href={`mailto:${item.data.email}`}
-                >
-                  {item.data.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={item.data.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class:list={["underline"]}
-                >
-                  {item.data.website}
-                </a>
-              </li>
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
-    <h2
-      class:list={[
-        "mx-4",
-        "md:leading-none",
-        "text-2xl md:text-4xl",
-        "font-semibold",
-      ]}
-    >
-      Students
-    </h2>
-    <ul
-      class:list={[
-        "mx-4",
-        "grid",
-        "grid-cols-2",
-        "md:grid-cols-4",
-        "lg:grid-cols-6",
-        "xl:grid-cols-6",
-        "gap-4",
-      ]}
-    >
-      {
-        students.map((item) => (
-          <li>
-            <Image
-              src={item.data.image}
-              alt={item.data.name}
-              width={512}
-              height={512}
-              class:list={["object-cover", "aspect-square", "w-full"]}
-            />
-            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
-              {item.data.name}
-            </h3>
-            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
-              <li>{item.data.enrollment.getFullYear()}</li>
-              <li>{item.data.course} Course</li>
-              <li class:list={["mb-2"]}>{item.data.interest}</li>
-              <li>
-                <a
-                  class:list={["underline"]}
-                  href={`mailto:${item.data.email}`}
-                >
-                  {item.data.email}
-                </a>
-              </li>
-              {item.data.website && (
+    <div class:list={["md:w-full", "max-md:mx-4", "space-y-8", "col-start-2"]}>
+      <h2 class:list={["border-b", "border-black", "mb-2"]}>Faculty</h2>
+      <ul class:list={["grid", "grid-cols-2", "md:grid-cols-4", "gap-4"]}>
+        {
+          faculty.map((item) => (
+            <li>
+              <Image
+                src={item.data.image}
+                alt={item.data.name}
+                width={512}
+                height={512}
+                class:list={["object-cover", "aspect-square", "w-full"]}
+              />
+              <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+                {item.data.name}
+              </h3>
+              <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+                <li class:list={["mb-2"]}>{item.data.role}</li>
+                <li>
+                  <a
+                    class:list={["underline"]}
+                    href={`mailto:${item.data.email}`}
+                  >
+                    {item.data.email}
+                  </a>
+                </li>
                 <li>
                   <a
                     href={item.data.website}
@@ -173,122 +104,129 @@ const staff = (await getCollection("staff")).toSorted((a, b) =>
                     {item.data.website}
                   </a>
                 </li>
-              )}
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
-    <h2
-      class:list={[
-        "mx-4",
-        "md:leading-none",
-        "text-2xl md:text-4xl",
-        "font-semibold",
-      ]}
-    >
-      Alumni
-    </h2>
-    <ul
-      class:list={[
-        "mx-4",
-        "grid",
-        "grid-cols-2",
-        "md:grid-cols-4",
-        "lg:grid-cols-6",
-        "xl:grid-cols-6",
-        "gap-4",
-      ]}
-    >
-      {
-        alumni.map((item) => (
-          <li>
-            <Image
-              src={item.data.image}
-              alt={item.data.name}
-              width={512}
-              height={512}
-              class:list={["object-cover", "aspect-square", "w-full"]}
-            />
-            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
-              {item.data.name}
-            </h3>
-            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
-              <li>{item.data.graduate.getFullYear()}</li>
-              <li class:list={["mb-2"]}>{item.data.course}</li>
-              <li>
-                <a
-                  class:list={["underline"]}
-                  href={`mailto:${item.data.email}`}
-                >
-                  {item.data.email}
-                </a>
-              </li>
-              {item.data.status && <li>{item.data.status}</li>}
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
-    <h2
-      class:list={[
-        "mx-4",
-        "md:leading-none",
-        "text-2xl md:text-4xl",
-        "font-semibold",
-      ]}
-    >
-      Staff
-    </h2>
-    <ul
-      class:list={[
-        "mx-4",
-        "grid",
-        "grid-cols-2",
-        "md:grid-cols-4",
-        "lg:grid-cols-6",
-        "xl:grid-cols-6",
-        "gap-4",
-      ]}
-    >
-      {
-        staff.map((item) => (
-          <li>
-            <Image
-              src={item.data.image}
-              alt={item.data.name}
-              width={512}
-              height={512}
-              class:list={["object-cover", "aspect-square", "w-full"]}
-            />
-            <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
-              {item.data.name}
-            </h3>
-            <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
-              <li class:list={["mb-2"]}>{item.data.role}</li>
-              <li>
-                <a
-                  class:list={["underline"]}
-                  href={`mailto:${item.data.email}`}
-                >
-                  {item.data.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={item.data.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class:list={["underline"]}
-                >
-                  {item.data.website}
-                </a>
-              </li>
-            </ul>
-          </li>
-        ))
-      }
-    </ul>
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <h2 class:list={["border-b", "border-black", "mb-2"]}>Students</h2>
+      <ul class:list={["grid", "grid-cols-2", "md:grid-cols-4", "gap-4"]}>
+        {
+          students.map((item) => (
+            <li>
+              <Image
+                src={item.data.image}
+                alt={item.data.name}
+                width={512}
+                height={512}
+                class:list={["object-cover", "aspect-square", "w-full"]}
+              />
+              <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+                {item.data.name}
+              </h3>
+              <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+                <li>{item.data.enrollment.getFullYear()}</li>
+                <li>{item.data.course} Course</li>
+                <li class:list={["mb-2"]}>{item.data.interest}</li>
+                <li>
+                  <a
+                    class:list={["underline"]}
+                    href={`mailto:${item.data.email}`}
+                  >
+                    {item.data.email}
+                  </a>
+                </li>
+                {item.data.website && (
+                  <li>
+                    <a
+                      href={item.data.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class:list={["underline"]}
+                    >
+                      {item.data.website}
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <h2 class:list={["border-b", "border-black", "mb-2"]}>Alumni</h2>
+      <ul class:list={["grid", "grid-cols-2", "md:grid-cols-4", "gap-4"]}>
+        {
+          alumni.map((item) => (
+            <li>
+              <Image
+                src={item.data.image}
+                alt={item.data.name}
+                width={512}
+                height={512}
+                class:list={["object-cover", "aspect-square", "w-full"]}
+              />
+              <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+                {item.data.name}
+              </h3>
+              <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+                <li>{item.data.graduate.getFullYear()}</li>
+                <li class:list={["mb-2"]}>{item.data.course}</li>
+                <li>
+                  <a
+                    class:list={["underline"]}
+                    href={`mailto:${item.data.email}`}
+                  >
+                    {item.data.email}
+                  </a>
+                </li>
+                {item.data.status && <li>{item.data.status}</li>}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+      <h2 class:list={["border-b", "border-black", "mb-2"]}>Staff</h2>
+
+      <ul class:list={["grid", "grid-cols-2", "md:grid-cols-4", "gap-4"]}>
+        {
+          staff.map((item) => (
+            <li>
+              <Image
+                src={item.data.image}
+                alt={item.data.name}
+                width={512}
+                height={512}
+                class:list={["object-cover", "aspect-square", "w-full"]}
+              />
+              <h3 class:list={["font-semibold", "text-lg", "mt-2"]}>
+                {item.data.name}
+              </h3>
+              <ul class:list={["text-sm", "truncate", "text-gray-700"]}>
+                <li class:list={["mb-2"]}>{item.data.role}</li>
+                <li>
+                  <a
+                    class:list={["underline"]}
+                    href={`mailto:${item.data.email}`}
+                  >
+                    {item.data.email}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={item.data.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class:list={["underline"]}
+                  >
+                    {item.data.website}
+                  </a>
+                </li>
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </main>
 </Layout>
 

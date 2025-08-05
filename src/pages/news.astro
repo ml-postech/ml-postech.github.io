@@ -8,16 +8,27 @@ const news = (await getCollection("news")).toSorted(
 ---
 
 <Layout>
-  <main class:list={["space-y-4 md:space-y-8", "my-8"]}>
+  <main
+    class:list={[
+      "space-y-4 md:space-y-8",
+      "my-8",
+      "md:grid",
+      "md:grid-cols-2",
+      "md:mx-4",
+      "gap-4",
+    ]}
+  >
     <h1
       class:list={[
+        "md:fixed",
+        "md:top-20",
         "uppercase",
-        "mx-4",
-        "mt-8",
+        "max-md:mx-4",
         "md:leading-none",
         "text-4xl md:text-6xl",
         "font-semibold",
         "overflow-hidden",
+        "md:w-full",
       ]}
     >
       <span class:list={["enter-bottom-to-top", "inline-block"]}>News</span
@@ -25,7 +36,7 @@ const news = (await getCollection("news")).toSorted(
         class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
       >
     </h1>
-    <ul class:list={["mx-4", "space-y-2"]}>
+    <ul class:list={["md:w-full", "max-md:mx-4", "space-y-2", "col-start-2"]}>
       {
         news.map((item) => (
           <li>
