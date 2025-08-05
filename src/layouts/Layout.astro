@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import "@fontsource/libre-caslon-condensed";
 import "../styles/global.css";
 ---
@@ -13,25 +14,7 @@ import "../styles/global.css";
     <title>Astro Basics</title>
   </head>
   <body>
-    <header class:list={["sticky", "top-0", "z-10", "bg-white", "text-xs"]}>
-      <div
-        class:list={[
-          "mx-4",
-          "py-2",
-          "border-b border-black",
-          "flex justify-between",
-        ]}
-      >
-        <a href="/">Machine Learning Lab</a>
-        <a
-          href="https://postech.ac.kr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          POSTECH</a
-        >
-      </div>
-    </header>
+    <Header />
     <slot />
   </body>
 </html>
