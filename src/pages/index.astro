@@ -1,11 +1,114 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import coverImage from "../assets/cover.jpg";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const news = (await getCollection("news"))
+  .toSorted((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  })
+  .slice(0, 8);
 ---
 
 <Layout>
-	<Welcome />
+  <header class:list={["sticky", "top-0", "z-10", "bg-white"]}>
+    <div
+      class:list={[
+        "mx-4",
+        "py-2",
+        "border-b border-black",
+        "flex justify-between",
+      ]}
+    >
+      <a href="/">Machine Learning Lab</a>
+      <a href="https://postech.ac.kr" target="_blank" rel="noopener noreferrer">
+        POSTECH</a
+      >
+    </div>
+  </header>
+  <main class:list={["space-y-8", "my-8"]}>
+    <div class:list={["mx-4", "md:grid gap-4 grid-cols-2", "mt-8 md:mt-32"]}>
+      <h1
+        class:list={[
+          "max-sm:my-4",
+          "md:-mx-4",
+          "md:-my-8",
+          "md:leading-none",
+          "text-6xl md:text-[16rem]",
+          "font-semibold",
+        ]}
+      >
+        ML
+      </h1>
+      <div class:list={["md:flex", "justify-end", "flex-col"]}>
+        <h2 class:list={["md:text-xl", "leading-tight", "mb-2 md:mb-4"]}>
+          Strive to Understand <i class:list={["font-serif"]}
+            >Human Intelligence</i
+          >
+          <br /> through the <i class:list={["font-serif"]}
+            >Computational Lens</i
+          >
+        </h2>
+        <p class:list={["text-xs", "text-gray-500"]}>
+          Research Building IV 4309/4429, 67 Cheongam-ro, Nam-gu, Pohang-si,
+          Republic of Korea
+        </p>
+        <p class:list={["text-xs", "text-gray-500"]}>
+          Pohang University of Science and Technology (POSTECH)
+        </p>
+      </div>
+    </div>
+    <Image
+      src={coverImage}
+      alt="Cover Image"
+      class:list={["w-full", "md:h-128", "object-cover", "object-bottom"]}
+    />
+    <div class:list={["grid", "grid-cols-12", "gap-4", "mx-4"]}>
+      <div class:list={["col-span-6"]}>
+        <h2 class:list={["border-b", "border-black", "mb-2"]}>Latest News</h2>
+        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
+          {
+            news.map((item) => (
+              <li>
+                <a href={`/news/${item.id}`} class:list={["underline"]}>
+                  {item.data.title}
+                </a>
+              </li>
+            ))
+          }
+          <li>
+            <a href="/news" class:list={["underline"]}>...</a>
+          </li>
+        </ul>
+      </div>
+      <div class:list={["col-span-3"]}>
+        <h2 class:list={["border-b", "border-black", "mb-2"]}>About Us</h2>
+        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
+          <li>
+            <a href="/people" class:list={["underline"]}>People</a>
+          </li>
+          <li>
+            <a href="/publications" class:list={["underline"]}>Publications</a>
+          </li>
+          <li>
+            <a href="/research" class:list={["underline"]}>Research</a>
+          </li>
+        </ul>
+      </div>
+      <div class:list={["col-span-3"]}>
+        <h2 class:list={["border-b", "border-black", "mb-2"]}>Follow Us</h2>
+        <ul class:list={["list-none", "space-y-1", "text-sm"]}>
+          <li>
+            <a
+              href="https://github.com/ml-postech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class:list={["underline"]}>GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
 </Layout>
