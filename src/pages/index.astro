@@ -12,21 +12,7 @@ const news = (await getCollection("news"))
 ---
 
 <Layout>
-  <header class:list={["sticky", "top-0", "z-10", "bg-white"]}>
-    <div
-      class:list={[
-        "mx-4",
-        "py-2",
-        "border-b border-black",
-        "flex justify-between",
-      ]}
-    >
-      <a href="/">Machine Learning Lab</a>
-      <a href="https://postech.ac.kr" target="_blank" rel="noopener noreferrer">
-        POSTECH</a
-      >
-    </div>
-  </header>
+
   <main class:list={["space-y-8", "my-8"]}>
     <div class:list={["mx-4", "md:grid gap-4 grid-cols-2", "mt-8 md:mt-32"]}>
       <h1
