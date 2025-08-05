@@ -1,6 +1,7 @@
 import { defineCollection, z } from "astro:content";
-
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
+import { Cite } from "@citation-js/core";
+import "@citation-js/plugin-bibtex";
 
 const news = defineCollection({
   loader: glob({
@@ -78,10 +79,20 @@ const students = defineCollection({
     }),
 });
 
+const publications = defineCollection({
+  loader: file("publications/publications.bib", {
+    parser: (fileContent) => {
+      const cite = new Cite(fileContent);
+      return cite.get();
+    },
+  }),
+});
+
 export const collections = {
   news,
   alumni,
   faculty,
+  publications,
   staff,
   students,
 };

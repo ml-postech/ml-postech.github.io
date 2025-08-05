@@ -1,0 +1,112 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import { Cite } from "@citation-js/core";
+import "@citation-js/plugin-bibtex";
+import "@citation-js/plugin-csl";
+
+const publications = (await getCollection("publications"))
+  .toSorted((a, b) => {
+    if (a.data.issued && b.data.issued && a.data.issued !== b.data.issued) {
+      return (
+        new Date(b.data.issued["date-parts"][0][0]).getTime() -
+        new Date(a.data.issued["date-parts"][0][0]).getTime()
+      );
+    }
+    return a.data.title.localeCompare(b.data.title);
+  })
+  .map((item) => new Cite(item.data));
+
+const publicationsByYear = publications.reduce((acc, cite) => {
+  const year = cite.data[0]?.issued?.["date-parts"]?.[0]?.[0] || "Others";
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(cite);
+  return acc;
+}, {});
+---
+
+<Layout>
+  <main
+    class:list={[
+      "space-y-4 md:space-y-8",
+      "my-8",
+      "md:grid",
+      "md:grid-cols-2",
+      "md:mx-4",
+      "gap-4",
+    ]}
+  >
+    <h1
+      class:list={[
+        "md:fixed",
+        "md:top-20",
+        "uppercase",
+        "max-md:mx-4",
+        "md:leading-none",
+        "text-4xl md:text-6xl",
+        "font-semibold",
+        "overflow-hidden",
+        "md:w-full",
+      ]}
+    >
+      <span class:list={["enter-bottom-to-top", "inline-block"]}
+        >Publications</span
+      ><span class:list={["enter-bottom-to-top", "inline-block"]}>@</span><span
+        class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
+      >
+    </h1>
+    <div class:list={["md:w-full", "max-md:mx-4", "space-y-8", "col-start-2"]}>
+      {
+        Object.entries(publicationsByYear)
+          .toSorted((a, b) => {
+            const yearA = a[0] === "Others" ? 0 : parseInt(a[0]);
+            const yearB = b[0] === "Others" ? 0 : parseInt(b[0]);
+            return yearB - yearA;
+          })
+          .map(([year, publications]) => {
+            return (
+              <div>
+                <h2 class:list={["border-b", "border-black", "mb-2"]}>
+                  {year}
+                </h2>
+                <ul class:list={["list-none", "space-y-4"]}>
+                  {publications.map((item) => (
+                    <li
+                      set:html={item.format("bibliography", {
+                        format: "html",
+                        template: "apa",
+                        lang: "en-US",
+                      })}
+                      class:list={["break-all"]}
+                    />
+                  ))}
+                </ul>
+              </div>
+            );
+          })
+      }
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import { animate } from "motion";
+
+  document
+    .querySelectorAll(".enter-bottom-to-top")
+    .forEach((element, index) => {
+      animate(
+        element,
+        {
+          transform: ["translateY(256px)", "translateY(0px)"],
+        },
+        {
+          duration: 0.25,
+          delay: index * 0.05,
+          type: "spring",
+          stiffness: 64,
+          damping: 16,
+        }
+      );
+    });
+</script>
