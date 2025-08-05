@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection, getEntry, render } from "astro:content";
+
+const researchTopics = (
+  await Promise.all(
+    (await getCollection("research")).map(async (item) => {
+      const advisor = await getEntry(item.data.advisor);
+      const mentor = item.data.mentor
+        ? await getEntry(item.data.mentor)
+        : undefined;
+      const { Content } = await render(item);
+      return {
+        ...item,
+        data: {
+          ...item.data,
+          advisor,
+          mentor,
+        },
+        Content,
+      };
+    })
+  )
+).toSorted((a, b) => {
+  if (a.data.advisor.data.name !== b.data.advisor.data.name) {
+    return a.data.advisor.data.name.localeCompare(b.data.advisor.data.name);
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
+---
+
+<Layout>
+  <main
+    class:list={[
+      "space-y-4 md:space-y-8",
+      "my-8",
+      "md:grid",
+      "md:grid-cols-2",
+      "md:mx-4",
+      "gap-4",
+    ]}
+  >
+    <h1
+      class:list={[
+        "md:fixed",
+        "md:top-20",
+        "uppercase",
+        "max-md:mx-4",
+        "md:leading-none",
+        "text-4xl md:text-6xl",
+        "font-semibold",
+        "overflow-hidden",
+        "md:w-full",
+      ]}
+    >
+      <span class:list={["enter-bottom-to-top", "inline-block"]}>Research</span
+      ><span class:list={["enter-bottom-to-top", "inline-block"]}>@</span><span
+        class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
+      >
+    </h1>
+    <div class:list={["md:w-full", "max-md:mx-4", "space-y-8", "col-start-2"]}>
+      {
+        researchTopics.map((item) => (
+          <div class:list={["space-y-2"]}>
+            <h2 class:list={["border-b", "border-black", "mb-2"]}>
+              {item.data.title}
+            </h2>
+            <p class:list={["text-sm", "text-gray-500"]}>
+              Advisor: {item.data.advisor.data.name}
+              {item.data.mentor
+                ? `, Mentor: ${item.data.mentor.data.name}`
+                : ""}
+            </p>
+            <item.Content
+              class:list={["prose", "max-w-none", "text-gray-700"]}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import { animate } from "motion";
+
+  document
+    .querySelectorAll(".enter-bottom-to-top")
+    .forEach((element, index) => {
+      animate(
+        element,
+        {
+          transform: ["translateY(256px)", "translateY(0px)"],
+        },
+        {
+          duration: 0.25,
+          delay: index * 0.05,
+          type: "spring",
+          stiffness: 64,
+          damping: 16,
+        }
+      );
+    });
+</script>

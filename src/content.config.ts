@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, reference, z } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { Cite } from "@citation-js/core";
 import "@citation-js/plugin-bibtex";
@@ -88,6 +88,17 @@ const publications = defineCollection({
   }),
 });
 
+const research = defineCollection({
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./research",
+  }),
+  schema: z.object({
+    title: z.string(),
+    advisor: reference("faculty"),
+    mentor: reference("students").optional(),
+  }),
+});
 export const collections = {
   news,
   alumni,
@@ -95,4 +106,5 @@ export const collections = {
   publications,
   staff,
   students,
+  research,
 };
