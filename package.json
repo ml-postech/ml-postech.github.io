@@ -9,6 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.8"
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.12.8",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@fontsource/libre-caslon-condensed": "^5.2.5"
   }
 }
