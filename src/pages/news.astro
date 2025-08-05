@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+const news = (await getCollection("news")).toSorted(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout>
+  <main class:list={["space-y-4 md:space-y-8", "my-8"]}>
+    <h1
+      class:list={[
+        "uppercase",
+        "mx-4",
+        "mt-8",
+        "md:leading-none",
+        "text-4xl md:text-6xl",
+        "font-semibold",
+        "overflow-hidden",
+      ]}
+    >
+      <span class:list={["enter-bottom-to-top", "inline-block"]}>News</span
+      ><span class:list={["enter-bottom-to-top", "inline-block"]}>@</span><span
+        class:list={["enter-bottom-to-top", "inline-block"]}>ML</span
+      >
+    </h1>
+    <ul class:list={["mx-4", "space-y-2"]}>
+      {
+        news.map((item) => (
+          <li>
+            <h2 class:list={["text-lg"]}>
+              <span class:list={["text-gray-700", "font-mono"]}>
+                {item.data.date.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })}
+              </span>
+              {item.data.title}
+            </h2>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<script>
+  import { animate } from "motion";
+
+  document
+    .querySelectorAll(".enter-bottom-to-top")
+    .forEach((element, index) => {
+      animate(
+        element,
+        {
+          transform: ["translateY(256px)", "translateY(0px)"],
+        },
+        {
+          duration: 0.25,
+          delay: index * 0.05,
+          type: "spring",
+          stiffness: 64,
+          damping: 16,
+        }
+      );
+    });
+</script>
