@@ -16,24 +16,38 @@ const news = (await getCollection("news"))
     <div class:list={["mx-4", "md:grid gap-4 grid-cols-2", "mt-8 md:mt-32"]}>
       <h1
         class:list={[
-          "max-sm:my-4",
+          "max-md:my-4",
           "md:-mx-4",
           "md:-my-8",
           "md:leading-none",
           "text-6xl md:text-[16rem]",
           "font-semibold",
+          "overflow-hidden",
         ]}
       >
-        ML
+        <span class:list={["enter-bottom-to-top", "inline-block"]}>M</span><span
+          class:list={["enter-bottom-to-top", "inline-block"]}>L</span
+        >
       </h1>
       <div class:list={["md:flex", "justify-end", "flex-col"]}>
         <h2 class:list={["md:text-xl", "leading-tight", "mb-2 md:mb-4"]}>
-          Strive to Understand <i class:list={["font-serif"]}
-            >Human Intelligence</i
-          >
-          <br /> through the <i class:list={["font-serif"]}
-            >Computational Lens</i
-          >
+          <span class:list={["overflow-hidden", "inline-block"]}>
+            <span class:list={["enter-bottom-to-top", "inline-block"]}
+              >Strive to Understand
+            </span>
+            <i class:list={["enter-bottom-to-top inline-block", "font-serif"]}
+              >Human Intelligence
+            </i>
+          </span>
+          <br /><span class:list={["overflow-hidden", "inline-block"]}>
+            <span class:list={["enter-bottom-to-top", "inline-block"]}>
+              through the
+            </span>
+            <i
+              class:list={["enter-bottom-to-top", "inline-block", "font-serif"]}
+              >Computational Lens</i
+            >
+          </span>
         </h2>
         <p class:list={["text-xs", "text-gray-500"]}>
           Research Building IV 4309/4429, 67 Cheongam-ro, Nam-gu, Pohang-si,
@@ -98,3 +112,25 @@ const news = (await getCollection("news"))
     </div>
   </main>
 </Layout>
+
+<script>
+  import { animate } from "motion";
+
+  document
+    .querySelectorAll(".enter-bottom-to-top")
+    .forEach((element, index) => {
+      animate(
+        element,
+        {
+          transform: ["translateY(256px)", "translateY(0px)"],
+        },
+        {
+          duration: 0.25,
+          delay: index * 0.05,
+          type: "spring",
+          stiffness: 64,
+          damping: 16,
+        }
+      );
+    });
+</script>

@@ -14,6 +14,7 @@
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "@fontsource/libre-caslon-condensed": "^5.2.5"
+    "@fontsource/libre-caslon-condensed": "^5.2.5",
+    "motion": "^12.23.12"
   }
 }
