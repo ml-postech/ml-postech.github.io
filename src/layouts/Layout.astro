@@ -40,7 +40,13 @@ import "../styles/global.css";
       }}
     />
   </head>
-  <body class:list={["selection:bg-[#c80150]", "selection:text-white"]}>
+  <body
+    class:list={[
+      "selection:bg-[#c80150]",
+      "selection:text-white",
+      "bg-[#fafafa]",
+    ]}
+  >
     <Header />
     <slot />
     <Footer />

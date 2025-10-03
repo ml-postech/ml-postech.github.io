@@ -1,15 +1,26 @@
-<header class:list={["sticky", "top-0", "z-10", "bg-white", "max-sm:text-xs"]}>
-  <div
-    class:list={[
-      "mx-4",
-      "py-2",
-      "border-b border-black",
-      "flex justify-between",
-    ]}
-  >
-    <a href="/">Machine Learning Lab</a>
+<header
+  class:list={[
+    "sticky",
+    "top-0",
+    "z-10",
+    "bg-[#fafafa]",
+    "border-b border-black border-black/50",
+    "px-10 py-5",
+    "text-sm",
+  ]}
+>
+  <div class:list={["grid grid-cols-12", "place-items-center"]}>
     <ul
-      class:list={["flex", "gap-4", "list-none", "m-0", "p-0", "max-md:hidden"]}
+      class:list={[
+        "col-span-4",
+        "flex justify-start",
+        "gap-4",
+        "list-none",
+        "m-0",
+        "p-0",
+        "max-md:hidden",
+        "w-full",
+      ]}
     >
       <li>
         <a class:list={["underline"]} href="/people">People</a>
@@ -24,8 +35,23 @@
         <a class:list={["underline"]} href="/research">Research</a>
       </li>
     </ul>
-    <a href="https://postech.ac.kr" target="_blank" rel="noopener noreferrer">
-      POSTECH</a
-    >
+    <div class:list={["col-span-4", "flex justify-center"]}>
+      <a
+        href="/"
+        class:list={["font-serif", "text-xl", "font-bold", "col-span-2"]}
+        >Machine Learning Lab</a
+      >
+    </div>
+
+    <div class:list={["col-span-4", "flex justify-end", "gap-4", "w-full"]}>
+      <a
+        class:list={["underline"]}
+        href="https://postech.ac.kr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        POSTECH</a
+      >
+    </div>
   </div>
 </header>

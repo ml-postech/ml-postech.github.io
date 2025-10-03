@@ -69,25 +69,3 @@ const representativeStudent = (await getCollection("students")).find(
     class:list={["w-full", "md:h-screen", "object-cover", "object-bottom"]}
   />
 </Layout>
-
-<script>
-  import { animate } from "motion";
-
-  document
-    .querySelectorAll(".enter-bottom-to-top")
-    .forEach((element, index) => {
-      animate(
-        element,
-        {
-          transform: ["translateY(256px)", "translateY(0px)"],
-        },
-        {
-          duration: 0.25,
-          delay: index * 0.05,
-          type: "spring",
-          stiffness: 64,
-          damping: 16,
-        }
-      );
-    });
-</script>
