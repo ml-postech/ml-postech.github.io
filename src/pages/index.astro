@@ -29,7 +29,6 @@ const representativeStudent = (await getCollection("students")).find(
           >Computational Lens</i
         >
       </h1>
-
       <Image
         src={coverImage}
         alt="Cover Image"
@@ -41,6 +40,24 @@ const representativeStudent = (await getCollection("students")).find(
           "brightness-50",
         ]}
       />
+    </div>
+    <div
+      class:list={[
+        "px-6 md:px-10",
+        "py-20",
+        "grid grid-cols-1 md:grid-cols-12 gap-4",
+      ]}
+    >
+      <h2 class:list={["col-span-6", "text-6xl", "font-bold", "font-serif"]}>
+        Mission
+      </h2>
+      <p class:list={["col-span-6", "text-2xl"]}>
+        At <i class:list={["font-serif"]}>Machine Learning Lab</i>, located at
+        POSTECH, we aim to push the boundaries of knowledge in the field of
+        machine learning. Our mission is to advance the field of machine
+        learning by conducting cutting-edge research and fostering collaboration
+        among researchers, students, and industry partners.
+      </p>
     </div>
   </main>
 </Layout>
