@@ -86,7 +86,7 @@ const { transparentOnTop = false } = Astro.props;
   const wordmarkBlack = document.getElementById("header-wordmark-black");
 
   function updateHeader() {
-    if (window.scrollY > window.innerHeight) {
+    if (window.scrollY > window.innerHeight / 2) {
       header?.classList.add("bg-[#fafafa]");
       header?.classList.add("text-black");
       header?.classList.add("border-black/50");
