@@ -4,6 +4,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource/libre-caslon-condensed";
 import "../styles/global.css";
+
+interface Props {
+  transparentHeaderOnTop?: boolean;
+}
+
+const { transparentHeaderOnTop = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -47,7 +53,7 @@ import "../styles/global.css";
       "bg-[#fafafa]",
     ]}
   >
-    <Header />
+    <Header transparentOnTop={transparentHeaderOnTop} />
     <slot />
     <Footer />
   </body>

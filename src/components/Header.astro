@@ -1,12 +1,24 @@
+---
+interface Props {
+  transparentOnTop?: boolean;
+}
+
+const { transparentOnTop = false } = Astro.props;
+---
+
 <header
+  id="header"
   class:list={[
-    "sticky",
+    "fixed",
     "top-0",
     "z-10",
     "bg-[#fafafa]",
     "border-b border-black border-black/50",
+    "transition-all",
     "px-10 py-5",
     "text-sm",
+    "w-full",
+    "text-black",
   ]}
 >
   <div class:list={["grid grid-cols-12", "place-items-center"]}>
@@ -55,3 +67,30 @@
     </div>
   </div>
 </header>
+
+<script define:vars={{ transparentOnTop }}>
+  const header = document.getElementById("header");
+
+  function updateHeader() {
+    if (window.scrollY > window.innerHeight) {
+      header?.classList.add("bg-[#fafafa]");
+      header?.classList.add("text-black");
+      header?.classList.add("border-black/50");
+      header?.classList.add("border-b");
+      header?.classList.remove("text-white");
+    } else {
+      header?.classList.remove("bg-[#fafafa]");
+      header?.classList.remove("text-black");
+      header?.classList.add("text-white");
+      header?.classList.remove("border-black/50");
+      header?.classList.remove("border-b");
+    }
+  }
+
+  if (transparentOnTop) {
+    updateHeader();
+    window.addEventListener("scroll", updateHeader);
+  } else {
+    window.removeEventListener("scroll", updateHeader);
+  }
+</script>

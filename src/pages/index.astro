@@ -9,63 +9,38 @@ const representativeStudent = (await getCollection("students")).find(
 );
 ---
 
-<Layout>
-  <main class:list={["space-y-8", "my-8"]}>
-    <div class:list={["mx-4", "md:grid gap-4 grid-cols-2", "mt-8 md:mt-32"]}>
+<Layout transparentHeaderOnTop>
+  <main class:list={[]}>
+    <div class:list={["w-full", "h-screen", "relative"]}>
       <h1
         class:list={[
-          "max-md:my-4",
-          "md:-mx-4",
-          "md:-my-8",
-          "md:leading-none",
-          "text-6xl md:text-[16rem]",
-          "font-semibold",
-          "overflow-hidden",
+          "text-white",
+          "text-2xl md:text-[64px]",
+          "font-serif",
+          "font-bold",
+          "absolute",
+          "bottom-6 md:bottom-10",
+          "left-6 md:left-10",
+          "z-10",
+          "w-1/2",
         ]}
       >
-        <span class:list={["enter-bottom-to-top", "inline-block"]}>M</span><span
-          class:list={["enter-bottom-to-top", "inline-block"]}>L</span
+        Strive to Understand <i>Human Intelligence</i> through the <i
+          >Computational Lens</i
         >
       </h1>
-      <div class:list={["md:flex", "justify-end", "flex-col"]}>
-        <h2 class:list={["md:text-xl", "leading-tight", "mb-2 md:mb-4"]}>
-          <span class:list={["overflow-hidden", "inline-block"]}>
-            <span class:list={["enter-bottom-to-top", "inline-block"]}
-              >Strive to Understand
-            </span>
-            <i class:list={["enter-bottom-to-top inline-block", "font-serif"]}
-              >Human Intelligence
-            </i>
-          </span>
-          <br /><span class:list={["overflow-hidden", "inline-block"]}>
-            <span class:list={["enter-bottom-to-top", "inline-block"]}>
-              through the
-            </span>
-            <i
-              class:list={["enter-bottom-to-top", "inline-block", "font-serif"]}
-              >Computational Lens</i
-            >
-          </span>
-        </h2>
-        <p class:list={["text-xs", "text-gray-500"]}>
-          Pohang University of Science and Technology (POSTECH)
-        </p>
-        <p class:list={["text-xs", "text-gray-500"]}>
-          Research Building IV 4309/4429, 67 Cheongam-ro, Nam-gu, Pohang-si,
-          Republic of Korea
-        </p>
-        <p class:list={["text-xs", "text-gray-500"]}>
-          <a
-            href={`mailto:${representativeStudent?.data.email}`}
-            class:list={["underline"]}>{representativeStudent?.data.email}</a
-          >
-        </p>
-      </div>
+
+      <Image
+        src={coverImage}
+        alt="Cover Image"
+        class:list={[
+          "w-full",
+          "h-full",
+          "object-cover",
+          "object-bottom",
+          "brightness-50",
+        ]}
+      />
     </div>
   </main>
-  <Image
-    src={coverImage}
-    alt="Cover Image"
-    class:list={["w-full", "md:h-screen", "object-cover", "object-bottom"]}
-  />
 </Layout>
