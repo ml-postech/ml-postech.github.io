@@ -1,4 +1,6 @@
 ---
+import Wordmark from "./Wordmark.astro";
+
 interface Props {
   transparentOnTop?: boolean;
 }
@@ -57,19 +59,31 @@ const { transparentOnTop = false } = Astro.props;
 
     <div class:list={["col-span-4", "flex justify-end", "gap-4", "w-full"]}>
       <a
-        class:list={["underline"]}
+        id="header-wordmark-white"
         href="https://postech.ac.kr"
         target="_blank"
         rel="noopener noreferrer"
+        class:list={["inline-block", "w-24", "absolute", "opacity-0"]}
       >
-        POSTECH</a
+        <Wordmark fill="#ffffff" />
+      </a>
+      <a
+        id="header-wordmark-black"
+        href="https://postech.ac.kr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class:list={["inline-block", "w-24", "absolute", "opacity-100"]}
       >
+        <Wordmark fill="#000000" />
+      </a>
     </div>
   </div>
 </header>
 
 <script define:vars={{ transparentOnTop }}>
   const header = document.getElementById("header");
+  const wordmarkWhite = document.getElementById("header-wordmark-white");
+  const wordmarkBlack = document.getElementById("header-wordmark-black");
 
   function updateHeader() {
     if (window.scrollY > window.innerHeight) {
@@ -78,12 +92,20 @@ const { transparentOnTop = false } = Astro.props;
       header?.classList.add("border-black/50");
       header?.classList.add("border-b");
       header?.classList.remove("text-white");
+      wordmarkWhite?.classList.add("opacity-0");
+      wordmarkWhite?.classList.remove("opacity-100");
+      wordmarkBlack?.classList.add("opacity-100");
+      wordmarkBlack?.classList.remove("opacity-0");
     } else {
       header?.classList.remove("bg-[#fafafa]");
       header?.classList.remove("text-black");
       header?.classList.add("text-white");
       header?.classList.remove("border-black/50");
       header?.classList.remove("border-b");
+      wordmarkWhite?.classList.add("opacity-100");
+      wordmarkWhite?.classList.remove("opacity-0");
+      wordmarkBlack?.classList.add("opacity-0");
+      wordmarkBlack?.classList.remove("opacity-100");
     }
   }
 

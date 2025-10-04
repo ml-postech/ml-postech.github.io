@@ -4,9 +4,14 @@ import Layout from "../layouts/Layout.astro";
 import coverImage from "../assets/cover.jpg";
 import { getCollection } from "astro:content";
 
-const representativeStudent = (await getCollection("students")).find(
-  (item) => item.data.email === "kkm959595@postech.ac.kr"
-);
+const news = (await getCollection("news"))
+  .toSorted((a, b) => {
+    if (a.data.date !== b.data.date) {
+      return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+    }
+    return a.data.title.localeCompare(b.data.title);
+  })
+  .slice(0, 5);
 ---
 
 <Layout transparentHeaderOnTop>
@@ -44,8 +49,8 @@ const representativeStudent = (await getCollection("students")).find(
     <div
       class:list={[
         "px-6 md:px-10",
-        "py-20",
-        "grid grid-cols-1 md:grid-cols-12 gap-4",
+        "my-20",
+        "grid grid-cols-1 md:grid-cols-12 gap-10",
       ]}
     >
       <h2 class:list={["col-span-6", "text-6xl", "font-bold", "font-serif"]}>
@@ -58,6 +63,33 @@ const representativeStudent = (await getCollection("students")).find(
         learning by conducting cutting-edge research and fostering collaboration
         among researchers, students, and industry partners.
       </p>
+    </div>
+    <div
+      class:list={[
+        "px-6 md:px-10",
+        "my-20",
+        "grid grid-cols-1 md:grid-cols-12 gap-10",
+      ]}
+    >
+      <h2 class:list={["col-span-6", "text-6xl", "font-bold", "font-serif"]}>
+        Latest News
+      </h2>
+      <ul class:list={["col-span-6", "space-y-4", "text-lg"]}>
+        {
+          news.map((item) => (
+            <li class:list={["border-t", "border-black/50", "pt-4"]}>
+              <span class:list={["text-xl"]}>{item.data.title}</span>
+              <p class:list={["text-sm", "italic"]}>
+                {new Date(item.data.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </main>
 </Layout>

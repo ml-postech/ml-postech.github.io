@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import postechWhiteWordmark from "../assets/postech-white.svg";
+import Wordmark from "./Wordmark.astro";
 ---
 
 <footer class:list={["bg-black", "text-white", "py-10"]}>
@@ -8,14 +7,6 @@ import postechWhiteWordmark from "../assets/postech-white.svg";
     <p class:list={["col-span-12 md:col-span-8", "mb-10"]}>
       <span class:list={["text-2xl", "font-serif", "block"]}
         >Machine Learning Lab</span
-      >
-      <br />
-      <a href="https://postech.ac.kr" target="_blank" rel="noopener noreferrer">
-        <Image
-          src={postechWhiteWordmark}
-          alt="at POSTECH"
-          class:list={["h-[0.5rem]", "w-fit", "place-self-start"]}
-        /></a
       >
     </p>
     <div class:list={["col-span-6 md:col-span-2"]}>
@@ -57,7 +48,14 @@ import postechWhiteWordmark from "../assets/postech-white.svg";
   <div
     class:list={["flex", "justify-between", "items-center", "px-10", "text-xs"]}
   >
-    <span class:list={["mb-2", "md:mb-0"]}>© 2025</span>
+    <a
+      href="https://postech.ac.kr"
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={["w-24", "max-smmb-2"]}
+    >
+      <Wordmark />
+    </a>
     <a
       href="https://www.postech.ac.kr/kor/usage-guide(privacy_policy.do"
       class:list={["underline"]}
