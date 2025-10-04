@@ -51,7 +51,12 @@ const tags = ["all", "vision", "language", "decision", "theory", "systems"];
           <li class:list={["inline", "text-sm"]}>
             <a
               href={`#${tag}`}
-              class:list={["border border-black/50", "px-2", "py-1"]}
+              class:list={[
+                "border border-black/50",
+                "px-2",
+                "py-1",
+                "capitalize",
+              ]}
             >
               {tag}
             </a>
