@@ -17,13 +17,21 @@ const { transparentOnTop = false } = Astro.props;
     "bg-[#fafafa]",
     "border-b border-black border-black/50",
     "transition-all",
-    "px-10 py-5",
+    "px-10 py-5 max-md:px-5 max-md:py-4",
     "text-sm",
     "w-full",
     "text-black",
+    "z-50",
   ]}
 >
-  <div class:list={["grid grid-cols-12", "place-items-center"]}>
+  <div
+    class:list={[
+      "grid grid-cols-12",
+      "place-items-center",
+      "max-md:flex max-md:justify-between",
+    ]}
+  >
+    <!-- Desktop navigation -->
     <ul
       class:list={[
         "col-span-4",
@@ -49,15 +57,38 @@ const { transparentOnTop = false } = Astro.props;
         <a class:list={["underline"]} href="/research">Research</a>
       </li>
     </ul>
-    <div class:list={["col-span-4", "flex justify-center"]}>
+
+    <!-- Logo -->
+    <div
+      class:list={[
+        "col-span-4",
+        "flex justify-center",
+        "max-md:flex-1",
+        "max-md:justify-start",
+      ]}
+    >
       <a
         href="/"
-        class:list={["font-serif", "text-xl", "font-bold", "col-span-2"]}
-        >Machine Learning Lab</a
+        class:list={[
+          "font-serif",
+          "text-xl",
+          "font-bold",
+          "col-span-2",
+          "max-md:text-lg",
+        ]}>Machine Learning Lab</a
       >
     </div>
 
-    <div class:list={["col-span-4", "flex justify-end", "gap-4", "w-full"]}>
+    <!-- Wordmark -->
+    <div
+      class:list={[
+        "col-span-4",
+        "flex justify-end",
+        "gap-4",
+        "w-full",
+        "max-md:hidden",
+      ]}
+    >
       <a
         id="header-wordmark-white"
         href="https://postech.ac.kr"
@@ -77,13 +108,72 @@ const { transparentOnTop = false } = Astro.props;
         <Wordmark fill="#000000" />
       </a>
     </div>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-button"
+      class:list={[
+        "md:hidden",
+        "z-20",
+        "flex flex-col gap-1.5 w-6 h-6 justify-center",
+      ]}
+      aria-label="Toggle menu"
+    >
+      <span class:list={["block h-0.5 w-full bg-current transition-all"]}
+      ></span>
+      <span class:list={["block h-0.5 w-full bg-current transition-all"]}
+      ></span>
+      <span class:list={["block h-0.5 w-full bg-current transition-all"]}
+      ></span>
+    </button>
   </div>
+
+  <!-- Mobile navigation menu -->
+  <nav
+    id="mobile-menu"
+    class:list={[
+      "md:hidden",
+      "absolute",
+      "left-0",
+      "right-0",
+      "top-full",
+      "bg-[#fafafa]",
+      "z-10",
+      "px-5",
+      "max-h-0",
+      "overflow-hidden",
+      "transition-all",
+      "duration-300",
+      "text-black",
+      "z-20",
+    ]}
+  >
+    <ul class:list={["flex flex-col gap-6 py-6", "list-none", "m-0", "p-0"]}>
+      <li>
+        <a class:list={["text-2xl", "underline"]} href="/people">People</a>
+      </li>
+      <li>
+        <a class:list={["text-2xl", "underline"]} href="/publications"
+          >Publications</a
+        >
+      </li>
+      <li>
+        <a class:list={["text-2xl", "underline"]} href="/news">News</a>
+      </li>
+      <li>
+        <a class:list={["text-2xl", "underline"]} href="/research">Research</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <script define:vars={{ transparentOnTop }}>
   const header = document.getElementById("header");
   const wordmarkWhite = document.getElementById("header-wordmark-white");
   const wordmarkBlack = document.getElementById("header-wordmark-black");
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let isMenuOpen = false;
 
   function updateHeader() {
     if (window.scrollY > window.innerHeight / 2) {
@@ -108,6 +198,47 @@ const { transparentOnTop = false } = Astro.props;
       wordmarkBlack?.classList.remove("opacity-100");
     }
   }
+
+  function toggleMobileMenu() {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+      if (mobileMenu) {
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+        mobileMenu.classList.add("border-b", "border-black", "border-black/50");
+      }
+
+      const spans = mobileMenuButton?.querySelectorAll("span");
+      if (spans) {
+        spans[0].style.transform = "rotate(45deg) translate(0.25rem, 0.5rem)";
+        spans[1].style.opacity = "0";
+        spans[2].style.transform = "rotate(-45deg) translate(0.25rem, -0.5rem)";
+      }
+    } else {
+      if (mobileMenu) {
+        mobileMenu.style.maxHeight = "0";
+        mobileMenu.classList.remove("border-b", "border-black", "border-black/50");
+      }
+
+      const spans = mobileMenuButton?.querySelectorAll("span");
+      if (spans) {
+        spans[0].style.transform = "";
+        spans[1].style.opacity = "";
+        spans[2].style.transform = "";
+      }
+    }
+  }
+
+  mobileMenuButton?.addEventListener("click", toggleMobileMenu);
+
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
 
   if (transparentOnTop) {
     updateHeader();
