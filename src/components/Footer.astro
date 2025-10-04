@@ -1,57 +1,68 @@
 ---
-import { getCollection } from "astro:content";
-
-const news = (await getCollection("news"))
-  .toSorted((a, b) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-  })
-  .slice(0, 8);
+import { Image } from "astro:assets";
+import postechWhiteWordmark from "../assets/postech-white.svg";
 ---
 
-<footer class:list={["grid", "grid-cols-12", "gap-4", "mx-4", "my-8"]}>
-  <div class:list={["col-span-12 md:col-span-6"]}>
-    <h2 class:list={["border-b", "border-black", "mb-2"]}>Latest News</h2>
-    <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-      {
-        news.map((item) => (
-          <li>
-            <span>{item.data.title}</span>
-          </li>
-        ))
-      }
-      <li>
-        <a href="/news" class:list={["underline"]}>...</a>
-      </li>
-    </ul>
+<footer class:list={["bg-black", "text-white", "py-10"]}>
+  <div class:list={["grid grid-cols-12", "px-10", "mb-10"]}>
+    <p class:list={["col-span-12 md:col-span-8", "mb-10"]}>
+      <span class:list={["text-2xl", "font-serif", "block"]}
+        >Machine Learning Lab</span
+      >
+      <br />
+      <a href="https://postech.ac.kr" target="_blank" rel="noopener noreferrer">
+        <Image
+          src={postechWhiteWordmark}
+          alt="at POSTECH"
+          class:list={["h-[0.5rem]", "w-fit", "place-self-start"]}
+        /></a
+      >
+    </p>
+    <div class:list={["col-span-6 md:col-span-2"]}>
+      <h2 class:list={["border-b", "border-black", "mb-2", "text-xs"]}>
+        About Us
+      </h2>
+      <ul class:list={["list-none", "space-y-1", "text-sm"]}>
+        <li>
+          <a href="/people" class:list={["underline"]}>People</a>
+        </li>
+        <li>
+          <a href="/publications" class:list={["underline"]}>Publications</a>
+        </li>
+        <li>
+          <a href="/research" class:list={["underline"]}>Research</a>
+        </li>
+        <li>
+          <a href="/news" class:list={["underline"]}>News</a>
+        </li>
+      </ul>
+    </div>
+    <div class:list={["col-span-6 md:col-span-2"]}>
+      <h2 class:list={["border-b", "border-black", "mb-2", "text-xs"]}>
+        Follow Us
+      </h2>
+      <ul class:list={["list-none", "space-y-1", "text-sm"]}>
+        <li>
+          <a
+            href="https://github.com/ml-postech"
+            target="_blank"
+            rel="noopener noreferrer"
+            class:list={["underline"]}>GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class:list={["col-span-6 md:col-span-3"]}>
-    <h2 class:list={["border-b", "border-black", "mb-2"]}>About Us</h2>
-    <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-      <li>
-        <a href="/people" class:list={["underline"]}>People</a>
-      </li>
-      <li>
-        <a href="/publications" class:list={["underline"]}>Publications</a>
-      </li>
-      <li>
-        <a href="/research" class:list={["underline"]}>Research</a>
-      </li>
-      <li>
-        <a href="/news" class:list={["underline"]}>News</a>
-      </li>
-    </ul>
-  </div>
-  <div class:list={["col-span-6 md:col-span-3"]}>
-    <h2 class:list={["border-b", "border-black", "mb-2"]}>Follow Us</h2>
-    <ul class:list={["list-none", "space-y-1", "text-sm"]}>
-      <li>
-        <a
-          href="https://github.com/ml-postech"
-          target="_blank"
-          rel="noopener noreferrer"
-          class:list={["underline"]}>GitHub</a
-        >
-      </li>
-    </ul>
+
+  <div
+    class:list={["flex", "justify-between", "items-center", "px-10", "text-xs"]}
+  >
+    <span class:list={["mb-2", "md:mb-0"]}>© 2025</span>
+    <a
+      href="https://www.postech.ac.kr/kor/usage-guide(privacy_policy.do"
+      class:list={["underline"]}
+    >
+      Privacy Policy
+    </a>
   </div>
 </footer>
