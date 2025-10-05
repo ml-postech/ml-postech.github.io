@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 
 const faculty = (await getCollection("faculty")).toSorted((a, b) =>
   a.data.name.localeCompare(b.data.name)
