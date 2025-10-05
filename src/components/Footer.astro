@@ -3,7 +3,7 @@ import Wordmark from "./Wordmark.astro";
 ---
 
 <footer class:list={["bg-black", "text-white", "py-10"]}>
-  <div class:list={["grid grid-cols-12", "px-10", "mb-10"]}>
+  <div class:list={["grid grid-cols-12", "px-6 md:px-10", "mb-10"]}>
     <p class:list={["col-span-12 md:col-span-8", "mb-10"]}>
       <span class:list={["text-2xl", "font-serif", "block"]}
         >Machine Learning Lab</span
@@ -46,7 +46,13 @@ import Wordmark from "./Wordmark.astro";
   </div>
 
   <div
-    class:list={["flex", "justify-between", "items-center", "px-10", "text-xs"]}
+    class:list={[
+      "flex",
+      "justify-between",
+      "items-center",
+      "px-6 md:px-10",
+      "text-xs",
+    ]}
   >
     <a
       href="https://postech.ac.kr"
