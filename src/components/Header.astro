@@ -11,11 +11,10 @@ const { transparentOnTop = false } = Astro.props;
 <header
   id="header"
   class:list={[
+    "bg-canvas",
     "fixed",
     "top-0",
     "z-10",
-    "bg-[#fafafa]",
-    "border-b border-black border-black/50",
     "transition-all",
     "px-10 py-5 max-md:px-5 max-md:py-4",
     "text-sm",
@@ -177,21 +176,15 @@ const { transparentOnTop = false } = Astro.props;
 
   function updateHeader() {
     if (window.scrollY > window.innerHeight / 2) {
-      header?.classList.add("bg-[#fafafa]");
-      header?.classList.add("text-black");
-      header?.classList.add("border-black/50");
-      header?.classList.add("border-b");
-      header?.classList.remove("text-white");
+      header?.classList.add("bg-canvas");
+      header?.classList.remove("bg-transparent");
       wordmarkWhite?.classList.add("opacity-0");
       wordmarkWhite?.classList.remove("opacity-100");
       wordmarkBlack?.classList.add("opacity-100");
       wordmarkBlack?.classList.remove("opacity-0");
     } else {
-      header?.classList.remove("bg-[#fafafa]");
-      header?.classList.remove("text-black");
-      header?.classList.add("text-white");
-      header?.classList.remove("border-black/50");
-      header?.classList.remove("border-b");
+      header?.classList.remove("bg-canvas");
+      header?.classList.add("bg-transparent");
       wordmarkWhite?.classList.add("opacity-100");
       wordmarkWhite?.classList.remove("opacity-0");
       wordmarkBlack?.classList.add("opacity-0");
@@ -251,3 +244,17 @@ const { transparentOnTop = false } = Astro.props;
     window.removeEventListener("scroll", updateHeader);
   }
 </script>
+
+<style>
+  header.bg-canvas {
+    background-color: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    color: black;
+  }
+
+  header.bg-transparent {
+    background-color: transparent;
+    border-bottom: none;
+    color: white;
+  }
+</style>
