@@ -14,71 +14,6 @@ const news = defineCollection({
   }),
 });
 
-const alumni = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "./alumni",
-  }),
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      course: z.string(),
-      email: z.string().email(),
-      image: image(),
-      graduate: z.date(),
-      interest: z.string().optional(),
-      website: z.string().url().optional(),
-      status: z.string().optional(),
-    }),
-});
-
-const faculty = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "./faculty",
-  }),
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      role: z.string(),
-      email: z.string().email(),
-      website: z.string().url().optional(),
-      image: image(),
-    }),
-});
-
-const staff = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "./staff",
-  }),
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      role: z.string(),
-      email: z.string().email(),
-      website: z.string().url().optional(),
-      image: image(),
-    }),
-});
-
-const students = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "./students",
-  }),
-  schema: ({ image }) =>
-    z.object({
-      name: z.string(),
-      course: z.string(),
-      email: z.string().email(),
-      image: image(),
-      enrollment: z.date(),
-      interest: z.string().optional(),
-      website: z.string().url().optional(),
-    }),
-});
-
 const publications = defineCollection({
   loader: file("publications/publications.bib", {
     parser: (fileContent) => {
@@ -99,12 +34,89 @@ const research = defineCollection({
     mentor: reference("students").optional(),
   }),
 });
+
+const advisors = defineCollection({
+  loader: glob({
+    pattern: "**/advisor-*.md",
+    base: "./people",
+  }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      role: z.string(),
+      email: z.string().email(),
+      webpage: z.string().url().optional(),
+      image: image(),
+    }),
+});
+
+const students = defineCollection({
+  loader: glob({
+    pattern: "**/student-*.md",
+    base: "./people",
+  }),
+  schema: ({ image }) =>
+    z
+      .object({
+        name: z.string(),
+        role: z.string(),
+        email: z.string().email(),
+        webpage: z.string().url().optional(),
+        enrollment_year: z.number(),
+        areas_of_interest: z.array(z.string()).optional(),
+        image: image(),
+      })
+      .transform(({ enrollment_year, areas_of_interest, ...data }) => ({
+        ...data,
+        enrollmentYear: enrollment_year,
+        areasOfInterest: areas_of_interest,
+      })),
+});
+
+const alumnis = defineCollection({
+  loader: glob({
+    pattern: "**/alumni-*.md",
+    base: "./people",
+  }),
+  schema: ({ image }) =>
+    z
+      .object({
+        name: z.string(),
+        role: z.string(),
+        email: z.string().email(),
+        webpage: z.string().url().optional(),
+        graduation_year: z.number(),
+        current_position: z.string().optional(),
+        image: image(),
+      })
+      .transform(({ graduation_year, current_position, ...data }) => ({
+        ...data,
+        graduationYear: graduation_year,
+        currentPosition: current_position,
+      })),
+});
+
+const officers = defineCollection({
+  loader: glob({
+    pattern: "**/officer-*.md",
+    base: "./people",
+  }),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      role: z.string(),
+      email: z.string().email(),
+      webpage: z.string().url().optional(),
+      image: image(),
+    }),
+});
+
 export const collections = {
   news,
-  alumni,
-  faculty,
   publications,
-  staff,
-  students,
   research,
+  advisors,
+  students,
+  alumnis,
+  officers,
 };
