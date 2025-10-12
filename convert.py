@@ -4,6 +4,7 @@
 #     "beautifulsoup4",
 #     "pydantic",
 #     "pyyaml",
+#     "pybtex",
 # ]
 # ///
 from __future__ import annotations
@@ -14,6 +15,7 @@ from typing import Iterator
 import base64
 import yaml
 import datetime
+import pybtex.database
 
 
 class NewsItem(BaseModel):
@@ -292,6 +294,28 @@ class Officers(list[Officer]):
             )
 
 
+class Publication(BaseModel):
+    bibtex: str
+    title: str
+
+
+class Publications(list[Publication]):
+    @staticmethod
+    def from_bibtex_file(bibtext_string: str) -> Iterator[Publication]:
+        bib_data = pybtex.database.parse_string(bibtext_string, "bibtex")
+        for entry_key, entry in bib_data.entries.items():
+            title = entry.fields.get("title", "No Title")
+            yield Publication(bibtex=str(entry.to_string("bibtex")), title=title)
+
+    def save(self, directory: Path) -> None:
+        directory.mkdir(parents=True, exist_ok=True)
+        # escape newlines in bibtex for TSV format
+        (directory / "publications.tsv").write_text(
+            "title\tbibtex\n"
+            + "\n".join([f"{pub.title}\t{pub.bibtex.replace(chr(10), chr(32))}" for pub in self])
+        )
+
+
 def _base64_url_from_img_tag(
     img_tag, base_directory: Path = Path(__file__).parent
 ) -> str:
@@ -327,6 +351,13 @@ def export_news():
         item.save(Path(__file__).parent / "news")
 
 
+def export_publications():
+    bibtex_string = (Path(__file__).parent / "pub.bib").read_text()
+    publications = Publications(Publications.from_bibtex_file(bibtex_string))
+    publications.save(Path(__file__).parent)
+
+
 if __name__ == "__main__":
+    export_publications()
     export_news()
     export_profiles()
