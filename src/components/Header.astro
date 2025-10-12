@@ -167,7 +167,7 @@ const { transparentOnTop = false } = Astro.props;
   </nav>
 </header>
 
-<script define:vars={{ transparentOnTop }}>
+<script is:inline define:vars={{ transparentOnTop }}>
   const header = document.getElementById("header");
   const wordmarkWhite = document.getElementById("header-wordmark-white");
   const wordmarkBlack = document.getElementById("header-wordmark-black");
@@ -217,7 +217,11 @@ const { transparentOnTop = false } = Astro.props;
     } else {
       if (mobileMenu) {
         mobileMenu.style.maxHeight = "0";
-        mobileMenu.classList.remove("border-b", "border-black", "border-black/50");
+        mobileMenu.classList.remove(
+          "border-b",
+          "border-black",
+          "border-black/50"
+        );
       }
 
       const spans = mobileMenuButton?.querySelectorAll("span");
