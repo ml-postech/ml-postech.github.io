@@ -13,6 +13,64 @@ from pydantic import BaseModel
 from typing import Iterator
 import base64
 import yaml
+import datetime
+
+
+class NewsItem(BaseModel):
+    title: str
+    date: datetime.date
+    content: str
+
+    def save(self, directory: Path) -> None:
+        directory.mkdir(parents=True, exist_ok=True)
+        filename = (
+            self.date.strftime("%Y-%m")
+            + "-"
+            + self.title.replace(" ", "-")[:32].lower()
+        )
+
+        if (directory / f"{filename}.md").exists():
+            raise FileExistsError(f"{directory / f'{filename}.md'} already exists")
+
+        data = self.model_dump(
+            exclude_none=True,
+        )
+        data.pop("content", None)  # Exclude content from YAML
+
+        (directory / f"{filename}.md").write_text(f"""---
+{yaml.dump(data, sort_keys=False)}---
+{self.content}
+""")
+
+
+class News(list[NewsItem]):
+    """
+        <div class="row news-item">
+      <div class="col-sm-2 text-small-caps">
+        <span class="badge badge-info">Aug. 2025</span>
+      </div>
+      <div class="col-sm-10">
+        Sangdon Park, Minjae Gwon and Minjae Lee has won <a href="https://aicyberchallenge.com/">DARPA AIxCC</a> as a part of team Atlanta!
+      </div>
+    </div>"""
+
+    @staticmethod
+    def from_index_html_string(html_string: str) -> Iterator[NewsItem]:
+        soup = BeautifulSoup(html_string, "html.parser")
+        divs = soup.select("div.news-item")
+        for div in divs:
+            date_str: str = div.select_one("div.col-sm-2").span.contents[0].strip()
+            try:
+                date = datetime.datetime.strptime(date_str, "%b. %Y").date()
+            except ValueError:
+                continue
+            content: str = div.select_one("div.col-sm-10").decode_contents().strip()
+            title = div.select_one("div.col-sm-10").text.strip()
+            yield NewsItem(
+                title=title,
+                date=date,
+                content=content,
+            )
 
 
 class Profile(BaseModel):
@@ -261,5 +319,14 @@ def export_profiles():
         person.save(Path(__file__).parent / "people")
 
 
+def export_news():
+    index_html_string = (Path(__file__).parent / "home.html").read_text()
+    news_items = News.from_index_html_string(index_html_string)
+    news = News(news_items)
+    for item in news:
+        item.save(Path(__file__).parent / "news")
+
+
 if __name__ == "__main__":
+    export_news()
     export_profiles()
