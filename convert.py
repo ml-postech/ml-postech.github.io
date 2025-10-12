@@ -25,12 +25,14 @@ class Profile(BaseModel):
 
     def save(self, directory: Path) -> None:
         directory.mkdir(parents=True, exist_ok=True)
-        filename = self.name.replace(" ", "-").lower()
+        filename = self.category + "-" + self.name.replace(" ", "-").lower()
 
         if (directory / f"{filename}.md").exists():
             raise FileExistsError(f"{directory / f'{filename}.md'} already exists")
 
-        data = self.model_dump()
+        data = self.model_dump(
+            exclude_none=True,
+        )
         data.pop("image_base64_url", None)  # Exclude image data from YAML
 
         if "jpg" in self.image_base64_url or "jpeg" in self.image_base64_url:
@@ -74,7 +76,7 @@ class Professors(list[Professor]):
                 role=role,
                 email=email,
                 webpage=webpage,
-                category="advisors",
+                category="advisor",
                 image_base64_url=image_base64_url,
             )
 
@@ -100,7 +102,7 @@ class Students(list[Student]):
                 degree = "Ph.D./M.S."
             elif "Ph.D." in course_info:
                 degree = "Ph.D."
-            elif "M.S." in course_info:
+            elif "Master" in course_info:
                 degree = "M.S."
 
             name: str = div.h4.contents[0].strip()
@@ -125,7 +127,7 @@ class Students(list[Student]):
                 role=degree,
                 email=email,
                 webpage=webpage,
-                category="students",
+                category="student",
                 image_base64_url=image_base64_url,
                 enrollment_year=enrollment_year,
                 areas_of_interest=areas_of_interest,
@@ -227,7 +229,7 @@ class Officers(list[Officer]):
                 role=role,
                 email=email,
                 webpage=webpage,
-                category="officers",
+                category="officer",
                 image_base64_url=image_base64_url,
             )
 
