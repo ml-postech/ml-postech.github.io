@@ -30,7 +30,7 @@ const research = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    advisor: reference("faculty"),
+    advisor: reference("advisors"),
     mentor: reference("students").optional(),
   }),
 });
