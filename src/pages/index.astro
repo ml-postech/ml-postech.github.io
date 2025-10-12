@@ -16,7 +16,7 @@ const news = (await getCollection("news"))
 
 <Layout transparentHeaderOnTop>
   <main class:list={[]}>
-    <div class:list={["w-full", "h-screen", "relative"]}>
+    <div class:list={["w-full", "h-100 md:h-screen", "relative"]}>
       <h1
         class:list={[
           "text-white",
@@ -38,8 +38,7 @@ const news = (await getCollection("news"))
         src={coverImage}
         alt="Cover Image"
         class:list={[
-          "w-full",
-          "h-full",
+          "w-full h-full",
           "object-cover",
           "object-bottom",
           "brightness-50",
