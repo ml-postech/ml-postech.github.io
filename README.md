@@ -57,48 +57,57 @@ This website is built with modern web technologies:
 
 This website uses Astro's Content Collections for type-safe content management. All content is stored in markdown files with frontmatter metadata.
 
-### 👨‍🏫 Faculty
+### 👥 People
 
-Faculty member profiles are located in the `faculty/` directory. Each profile is a Markdown file with the following frontmatter structure:
+All people profiles (advisors, students, alumni, and officers) are stored in the `people/` directory at the project root. Files are named with prefixes to indicate their role:
+
+**Advisors** (`advisor-*.md`):
 
 ```yaml
-email: <email>
-image: <image-path>
 name: <name>
 role: <role>
-website: <url>
+email: <email>
+webpage: <url>
+image: <image-path>
 ```
 
-### 🎓 Students
-
-Current student profiles are in the `students/` directory. Each profile follows this frontmatter format:
+**Students** (`student-*.md`):
 
 ```yaml
-course: <M.S., M.S./Ph.D., or Ph.D.>
-email: <email>
-enrollment: <YYYY-MM-DD>
-image: <image-path>
-interest: <interest>
 name: <name>
-website: <url>
+role: <role>
+email: <email>
+webpage: <url>
+enrollment_year: <YYYY>
+areas_of_interest: [<interest1>, <interest2>, ...]
+image: <image-path>
 ```
 
-### 🎖️ Alumni
-
-Alumni profiles are stored in the `alumni/` directory with the following structure:
+**Alumni** (`alumni-*.md`):
 
 ```yaml
-course: <M.S. or Ph.D.>
-email: <email>
-graduate: <YYYY-MM-DD>
-image: <image-path>
 name: <name>
-status: <current-job>
+role: <role>
+email: <email>
+webpage: <url>
+graduation_year: <YYYY>
+current_position: <current-job>
+image: <image-path>
+```
+
+**Officers** (`officer-*.md`):
+
+```yaml
+name: <name>
+role: <role>
+email: <email>
+webpage: <url>
+image: <image-path>
 ```
 
 ### 📰 News
 
-News articles are in the `news/` directory. Each article uses this frontmatter:
+News articles are in the `news/` directory at the project root. Each article uses this frontmatter:
 
 ```yaml
 title: <article-title>
@@ -107,32 +116,31 @@ date: <YYYY-MM-DD>
 
 ### 🔬 Research
 
-Research topics are documented in the `research/` directory with the following frontmatter:
+Research topics are documented in the `research/` directory at the project root with the following frontmatter:
 
 ```yaml
 title: <topic-title>
-advisor: <id-of-faculty-member>
-mentor: <id-of-student-member>
+advisor: <id-of-advisor>
+mentor: <id-of-student> # optional
 ```
 
-*Note: The `advisor` and `mentor` fields use Astro's [content references](https://docs.astro.build/en/guides/content-collections/#accessing-referenced-data) for type-safe relationships.*
+*Note: The `advisor` and `mentor` fields use Astro's [content references](https://docs.astro.build/en/guides/content-collections/#accessing-referenced-data) for type-safe relationships. The `advisor` field references the `advisors` collection, and the optional `mentor` field references the `students` collection.*
 
 ### 📚 Publications
 
-Academic publications are managed through a BibTeX file located at `publications/publications.bib`. All publication entries should follow standard BibTeX formatting and will be automatically processed using Citation.js.
+Academic publications are managed through a BibTeX file located at `publications/publications.bib` at the project root. All publication entries should follow standard BibTeX formatting and will be automatically processed using Citation.js.
 
 ## 📁 Project Structure
 
 ```text
 ├── src/
+│   ├── assets/         # Images and other assets
 │   ├── components/     # Reusable UI components
 │   ├── layouts/        # Page layout templates
 │   ├── pages/          # Route pages
 │   ├── styles/         # Global styles
 │   └── content.config.ts # Content collection configuration
-├── alumni/             # Alumni profiles (markdown)
-├── faculty/            # Faculty profiles (markdown)
-├── students/           # Student profiles (markdown)
+├── people/             # People profiles (advisors, students, alumni, officers)
 ├── news/               # News articles (markdown)
 ├── research/           # Research topics (markdown)
 ├── publications/       # Academic publications (BibTeX)
