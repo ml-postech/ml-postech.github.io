@@ -47,7 +47,7 @@ const { transparentOnTop = false } = Astro.props;
         <a class:list={["underline"]} href="/people">People</a>
       </li>
       <li>
-        <a class:list={["underline"]} href="/publications">Publications</a>
+        <a class:list={["underline"]} href="/publications/all">Publications</a>
       </li>
       <li>
         <a class:list={["underline"]} href="/news">News</a>
@@ -152,7 +152,7 @@ const { transparentOnTop = false } = Astro.props;
         <a class:list={["text-2xl", "underline"]} href="/people">People</a>
       </li>
       <li>
-        <a class:list={["text-2xl", "underline"]} href="/publications"
+        <a class:list={["text-2xl", "underline"]} href="/publications/all"
           >Publications</a
         >
       </li>
@@ -213,7 +213,7 @@ const { transparentOnTop = false } = Astro.props;
         mobileMenu.classList.remove(
           "border-b",
           "border-black",
-          "border-black/50"
+          "border-black/50",
         );
       }
 
