@@ -122,7 +122,18 @@ const categories = [
                         data-category={publication.data.category}
                     >
                         <h2 class:list={["font-medium", "text-xl"]}>
-                            {publication.data.title}
+                            {publication.data.url ? (
+                                <a
+                                    href={publication.data.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class:list={["underline"]}
+                                >
+                                    {publication.data.title}
+                                </a>
+                            ) : (
+                                <span>{publication.data.title}</span>
+                            )}
                         </h2>
                         <p class:list={["text-sm"]}>
                             {publication.data.containerTitle}
