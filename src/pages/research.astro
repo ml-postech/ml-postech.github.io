@@ -19,7 +19,7 @@ const researchTopics = (
         },
         Content,
       };
-    })
+    }),
   )
 ).toSorted((a, b) => {
   if (a.data.advisor.data.name !== b.data.advisor.data.name) {
@@ -64,7 +64,7 @@ const researchTopics = (
             class:list={[
               "border-t border-black/50",
               "col-span-12 md:col-span-6",
-              "max-sm:mb-10",
+              "max-md:mb-10",
             ]}
           >
             <h2
