@@ -3,7 +3,7 @@
         author = "Proutiere, Alexandre and Talebi, Sadegh and Ok, Jungseul",
         title = "Reinforcement learning"
     }
-  category: Theory
+  category: theory
   id: proutierereinforcement
 - bibtex: |
     @inproceedings{heo2025influence,
@@ -13,7 +13,7 @@
         year = "2025",
         url = "https://arxiv.org/abs/2506.04694"
     }
-  category: Graph
+  category: graph
   id: heo2025influence
   url: https://arxiv.org/abs/2506.04694
 - bibtex: |
@@ -24,7 +24,7 @@
         year = "2025",
         url = "https://arxiv.org/abs/2505.18817"
     }
-  category: Science
+  category: science
   id: kim2025highorder
   url: https://arxiv.org/abs/2505.18817
 - bibtex: |
@@ -34,7 +34,7 @@
         booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
         year = "2025"
     }
-  category: Acceleration
+  category: acceleration
   id: lee2025AMQ
 - bibtex: |
     @inproceedings{yu2025prunecd,
@@ -43,7 +43,7 @@
         booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: yu2025prunecd
 - bibtex: |
     @inproceedings{choi2025copl,
@@ -52,7 +52,7 @@
         booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: choi2025copl
   url: https://arxiv.org/abs/2503.01658
 - bibtex: |
@@ -62,7 +62,7 @@
         booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: hwang2025retrieval
   url: https://arxiv.org/abs/2410.22954
 - bibtex: |
@@ -72,7 +72,7 @@
         booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: kim2025milq
   url: https://arxiv.org/abs/2505.16631
 - bibtex: |
@@ -82,7 +82,7 @@
         booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: jang2025self
   url: https://arxiv.org/abs/2505.17454
 - bibtex: |
@@ -92,7 +92,7 @@
         booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
         year = "2025"
     }
-  category: Language
+  category: language
   id: lee2025efficient
   url: https://arxiv.org/abs/2506.00344
 - bibtex: |
@@ -102,6 +102,6 @@
         booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
         year = "2025"
     }
-  category: Vision
+  category: vision
   id: cho2025geodano
   url: https://arxiv.org/abs/2502.11360
