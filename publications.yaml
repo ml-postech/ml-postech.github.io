@@ -1,0 +1,107 @@
+- bibtex: |
+    @article{proutierereinforcement,
+        author = "Proutiere, Alexandre and Talebi, Sadegh and Ok, Jungseul",
+        title = "Reinforcement learning"
+    }
+  category: Theory
+  id: proutierereinforcement
+- bibtex: |
+    @inproceedings{heo2025influence,
+        author = "Heo, Jaeseung and Yun, Kyeongheung and Yoon, Seokwon and Park, MoonJeong and Ok, Jungseul and Kim, Dongwoo",
+        title = "Influence Functions for Edge Edits in Non-Convex Graph Neural Networks",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2025",
+        url = "https://arxiv.org/abs/2506.04694"
+    }
+  category: Graph
+  id: heo2025influence
+  url: https://arxiv.org/abs/2506.04694
+- bibtex: |
+    @inproceedings{kim2025highorder,
+        author = "Kim, Seongsu and Kim, Nayoung and Kim, Dongwoo and Ahn, Sungsoo",
+        title = "High-order Equivariant Flow Matching for Density Functional Theory Hamiltonian Prediction",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2025",
+        url = "https://arxiv.org/abs/2505.18817"
+    }
+  category: Science
+  id: kim2025highorder
+  url: https://arxiv.org/abs/2505.18817
+- bibtex: |
+    @inproceedings{lee2025AMQ,
+        author = "Lee*, Sangjun and Woo*, Seung-taek and Jin, Jun-gyu and Lee, Changhun and Park, Eunhyeok",
+        title = "AMQ: Enabling AutoML for Mixed-precision Weight-Only Quantization of Large Language Models",
+        booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+        year = "2025"
+    }
+  category: Acceleration
+  id: lee2025AMQ
+- bibtex: |
+    @inproceedings{yu2025prunecd,
+        author = "Yu*, Byeongho and Lee*, Changhun and Jin, Jun-gyu and Park, Eunhyeok",
+        title = "PruneCD: Contrasting Pruned Self Model to Improve Decoding Factuality",
+        booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+        year = "2025"
+    }
+  category: Language
+  id: yu2025prunecd
+- bibtex: |
+    @inproceedings{choi2025copl,
+        author = "Choi, Youngbin and Cho, Seunghyuk and Lee, Minjong and Park, MoonJeong and Ko, Yesong and Ok, Jungseul and Kim, Dongwoo",
+        title = "{CoPL}: Collaborative Preference Learning for Personalizing Large Language Models",
+        booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+        year = "2025"
+    }
+  category: Language
+  id: choi2025copl
+  url: https://arxiv.org/abs/2503.01658
+- bibtex: |
+    @inproceedings{hwang2025retrieval,
+        author = "Hwang, Jeongyeon and Park, Junyoung and Park, Hyejin and Kim, Dongwoo and Park, Sangdon and Ok, Jungseul",
+        title = "Retrieval-Augmented Generation with Estimation of Source Reliability",
+        booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+        year = "2025"
+    }
+  category: Language
+  id: hwang2025retrieval
+  url: https://arxiv.org/abs/2410.22954
+- bibtex: |
+    @inproceedings{kim2025milq,
+        author = "Kim, Jonghwi and Kang, Deokhyung and Hwang, Seonjeong and Kim, Yunsu and Ok, Jungseul and Lee, Gary",
+        title = "{MiLQ}: Benchmarking {IR} Models for Bilingual Web Search with Mixed Language Queries",
+        booktitle = "Empirical Methods in Natural Language Processing (EMNLP)",
+        year = "2025"
+    }
+  category: Language
+  id: kim2025milq
+  url: https://arxiv.org/abs/2505.16631
+- bibtex: |
+    @inproceedings{jang2025self,
+        author = "Jang, Hyosoon and Jang, Yunhui and Lee, Sungjae and Ok, Jungseul and Ahn, Sungsoo",
+        title = "Self-Training Large Language Models with Confident Reasoning",
+        booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
+        year = "2025"
+    }
+  category: Language
+  id: jang2025self
+  url: https://arxiv.org/abs/2505.17454
+- bibtex: |
+    @inproceedings{lee2025efficient,
+        author = "Lee, Sungjae and Kim, Hoyoung and Hwang, Jeongyeon and Park, Eunhyeok and Ok, Jungseul",
+        title = "Efficient Latent Semantic Clustering for Scaling Test-Time Computation of {LLMs}",
+        booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
+        year = "2025"
+    }
+  category: Language
+  id: lee2025efficient
+  url: https://arxiv.org/abs/2506.00344
+- bibtex: |
+    @inproceedings{cho2025geodano,
+        author = "Cho, Seunghyuk and Qin, Zhenyue and Liu, Yang and Choi, Youngbin and Lee, Seungbeom and Kim, Dongwoo",
+        title = "{GeoDANO}: Geometric {VLM} with Domain Agnostic Vision Encoder",
+        booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
+        year = "2025"
+    }
+  category: Vision
+  id: cho2025geodano
+  url: https://arxiv.org/abs/2502.11360

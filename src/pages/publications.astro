@@ -1,23 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import { Cite } from "@citation-js/core";
 import "@citation-js/plugin-bibtex";
 import "@citation-js/plugin-csl";
 
-const publications = (await getCollection("publications"))
-  .toSorted((a, b) => {
-    if (a.data.issued && b.data.issued && a.data.issued !== b.data.issued) {
-      return (
-        new Date(b.data.issued["date-parts"][0][0]).getTime() -
-        new Date(a.data.issued["date-parts"][0][0]).getTime()
-      );
-    }
-    return a.data.title.localeCompare(b.data.title);
-  })
-  .map((item) => new Cite(item.data));
+const publications = (await getCollection("publications")).toSorted((a, b) => {
+  if (a.data.issued && b.data.issued && a.data.issued !== b.data.issued) {
+    return b.data.issued.getTime() - a.data.issued.getTime();
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
 
-const tags = ["all", "vision", "language", "decision", "theory", "systems"];
+const categories = [
+  "All",
+  ...[
+    ...new Set(
+      publications.flatMap((publication) => publication.data.category),
+    ),
+  ].sort(),
+];
 ---
 
 <Layout>
@@ -47,10 +48,10 @@ const tags = ["all", "vision", "language", "decision", "theory", "systems"];
     </div>
     <ul class:list={["px-6 md:px-10", "flex", "gap-4", "mb-4", "flex-wrap"]}>
       {
-        tags.map((tag) => (
+        categories.map((category) => (
           <li class:list={["inline", "text-sm"]}>
             <a
-              href={`#${tag}`}
+              href={`#${category}`}
               class:list={[
                 "border border-black/50",
                 "px-2",
@@ -58,24 +59,32 @@ const tags = ["all", "vision", "language", "decision", "theory", "systems"];
                 "capitalize",
               ]}
             >
-              {tag}
+              {category}
             </a>
           </li>
         ))
       }
     </ul>
-    <ul class:list={["px-6 md:px-10", "space-y-10", "mb-20"]}>
+    <ul
+      class:list={["px-6 md:px-10", "space-y-10", "mb-20"]}
+      id="publications-list"
+    >
       {
         publications.map((publication) => (
-          <li class:list={["border-t border-black/50", "pt-4"]}>
+          <li
+            class:list={[
+              "border-t border-black/50",
+              "pt-4",
+              "publication-item",
+            ]}
+            data-category={publication.data.category}
+          >
             <h2 class:list={["font-medium", "text-xl"]}>
-              {publication.data[0].title}
+              {publication.data.title}
             </h2>
-            <p class:list={["text-sm"]}>
-              {publication.data[0]["container-title"]}
-            </p>
+            <p class:list={["text-sm"]}>{publication.data.containerTitle}</p>
             <p class:list={["text-sm", "italic"]}>
-              {publication.data[0].author
+              {publication.data.authors
                 .map((a: any) => `${a.given} ${a.family}`)
                 .join(", ")}
             </p>
@@ -87,17 +96,45 @@ const tags = ["all", "vision", "language", "decision", "theory", "systems"];
 </Layout>
 
 <script>
+  // Filter publications based on selected category
+  function filterPublications() {
+    const hash = window.location.hash.substring(1) || "All";
+    const selectedCategory = hash.toLowerCase();
+    const publications = document.querySelectorAll(".publication-item");
+
+    publications.forEach((pub) => {
+      const element = pub as HTMLElement;
+      const category = element.getAttribute("data-category") || "";
+
+      if (
+        selectedCategory === "all" ||
+        category.toLowerCase() === selectedCategory
+      ) {
+        element.style.display = "";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+
   // Fill black tag background if hash matches, on hash change or page load
   function updateTagHighlight() {
-    const hash = window.location.hash.substring(1) || "all";
+    const hash = window.location.hash.substring(1) || "All";
     document.querySelectorAll("ul li a").forEach((el) => {
-      if (el.getAttribute("href") === `#${hash}`) {
+      const href = el.getAttribute("href");
+      if (href === `#${hash}`) {
         el.classList.add("bg-black", "text-white");
       } else {
         el.classList.remove("bg-black", "text-white");
       }
     });
   }
-  window.addEventListener("hashchange", updateTagHighlight);
-  window.addEventListener("load", updateTagHighlight);
+
+  function updatePage() {
+    updateTagHighlight();
+    filterPublications();
+  }
+
+  window.addEventListener("hashchange", updatePage);
+  window.addEventListener("load", updatePage);
 </script>

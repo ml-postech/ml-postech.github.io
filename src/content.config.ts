@@ -15,12 +15,22 @@ const news = defineCollection({
 });
 
 const publications = defineCollection({
-  loader: file("publications/publications.bib", {
-    parser: (fileContent) => {
-      const cite = new Cite(fileContent);
-      return cite.get();
-    },
-  }),
+  loader: file("publications.yaml"),
+  schema: z.object({
+    bibtex: z.string(),
+    category: z.string(),
+    url: z.string().url().optional(),
+  }).transform(({ bibtex, ...data }) => {
+    const entry = new Cite(bibtex).get()[0] as Record<string, any>;
+
+    return {
+      ...data,
+      title: entry.title,
+      containerTitle: entry["container-title"],
+      authors: entry.author,
+      issued: entry.issued ? new Date(entry.issued["date-parts"][0][0]) : undefined,
+    };
+  })
 });
 
 const research = defineCollection({
