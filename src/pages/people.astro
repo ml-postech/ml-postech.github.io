@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 
 const advisors = (await getCollection("advisors")).toSorted((a, b) =>
-  a.data.name.localeCompare(b.data.name)
+  a.data.name.localeCompare(b.data.name),
 );
 
 const students = (await getCollection("students")).toSorted((a, b) => {
@@ -36,7 +36,7 @@ const alumni = (await getCollection("alumnis")).toSorted((a, b) => {
 });
 
 const officers = (await getCollection("officers")).toSorted((a, b) =>
-  a.data.name.localeCompare(b.data.name)
+  a.data.name.localeCompare(b.data.name),
 );
 ---
 
@@ -69,7 +69,7 @@ const officers = (await getCollection("officers")).toSorted((a, b) =>
     </div>
     <ul
       class:list={[
-        "max-sm:space-y-10",
+        "max-md:space-y-10",
         "md:grid",
         "grid-cols-3",
         "gap-10",
@@ -129,7 +129,7 @@ const officers = (await getCollection("officers")).toSorted((a, b) =>
     </ul>
     <ul
       class:list={[
-        "max-sm:space-y-10",
+        "max-md:space-y-10",
         "md:grid",
         "grid-cols-3",
         "gap-10",
@@ -198,7 +198,7 @@ const officers = (await getCollection("officers")).toSorted((a, b) =>
     </ul>
     <ul
       class:list={[
-        "max-sm:space-y-10",
+        "max-md:space-y-10",
         "md:grid",
         "grid-cols-3",
         "gap-10",
@@ -253,7 +253,7 @@ const officers = (await getCollection("officers")).toSorted((a, b) =>
     </ul>
     <ul
       class:list={[
-        "max-sm:space-y-10",
+        "max-md:space-y-10",
         "md:grid",
         "grid-cols-3",
         "gap-10",
