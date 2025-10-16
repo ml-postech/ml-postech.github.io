@@ -128,7 +128,25 @@ mentor: <id-of-student> # optional
 
 ### 📚 Publications
 
-Academic publications are managed through a BibTeX file located at `publications/publications.bib` at the project root. All publication entries should follow standard BibTeX formatting and will be automatically processed using Citation.js.
+Academic publications are managed through a YAML file located at `publications.yaml` at the project root. Each publication entry includes:
+
+```yaml
+- bibtex: |
+    @inproceedings{authorYYYYkeyword,
+        author = "Last, First and ...",
+        title = "Publication Title",
+        booktitle = "Conference/Journal Name",
+        year = "YYYY",
+        url = "https://..."  # optional
+    }
+  category: <category-name>  # e.g., theory, graph, science, acceleration, language, vision
+  id: authorYYYYkeyword
+  url: https://...  # optional, for direct linking
+```
+
+**Categories**: Publications are organized into categories such as `theory`, `graph`, `science`, `acceleration`, `language`, and `vision` for filtering and organization.
+
+**Source BibTeX**: The original BibTeX file is maintained at `publications/publications.bib` for reference and import purposes.
 
 ## 📁 Project Structure
 
@@ -143,7 +161,7 @@ Academic publications are managed through a BibTeX file located at `publications
 ├── people/             # People profiles (advisors, students, alumni, officers)
 ├── news/               # News articles (markdown)
 ├── research/           # Research topics (markdown)
-├── publications/       # Academic publications (BibTeX)
+├── publications.yaml   # Publications data (YAML format with categories)
 └── public/             # Static assets
 ```
 
