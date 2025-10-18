@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 
 const news = (await getCollection("news")).toSorted(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
 ---
 
@@ -56,7 +56,42 @@ const news = (await getCollection("news")).toSorted(
             <p class:list={["from-them"]}>{item.data.title}</p>
             <p class:list={["from-me"]}>
               {(() => {
-                const emojis = ["😊", "🚀", "🔥", "💡", "🎉", "🤖", "📢", "📰"];
+                const emojis = [
+                  "😊",
+                  "🚀",
+                  "🔥",
+                  "💡",
+                  "🎉",
+                  "🤖",
+                  "📢",
+                  "📰",
+                  "✨",
+                  "🎯",
+                  "🏆",
+                  "🌟",
+                  "💫",
+                  "🎊",
+                  "🔬",
+                  "📊",
+                  "💻",
+                  "🧠",
+                  "⚡",
+                  "🎮",
+                  "🏅",
+                  "🎭",
+                  "🎪",
+                  "🎨",
+                  "🎵",
+                  "🎸",
+                  "🎺",
+                  "🎷",
+                  "🥳",
+                  "🤩",
+                  "😎",
+                  "🔮",
+                  "🎲",
+                  "🎳",
+                ];
                 // Fisher–Yates shuffle
                 for (let i = emojis.length - 1; i > 0; i--) {
                   const j = Math.floor(Math.random() * (i + 1));
