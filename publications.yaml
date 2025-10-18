@@ -105,3 +105,1648 @@
   category: vision
   id: cho2025geodano
   url: https://arxiv.org/abs/2502.11360
+- bibtex: |
+    @inproceedings{kim2025chronobias,
+        author = "Kim, Kyungmin and Choi, Youngbin and Kim, Hyounghun and Kim, Dongwoo and Park, Sangdon",
+        title = "{ChronoBias}: A Benchmark for Evaluating Temporal Group Bias in Retrieval-augmented Language Models",
+        booktitle = "Findings of Empirical Methods in Natural Language Processing (EMNLP-Findings)",
+        year = "2025"
+    }
+  id: kim2025chronobias
+- bibtex: |
+    @inproceedings{so2025grouped,
+        author = "So, Junhyuk and Shin, Juncheol and Kook, Hyunho and Park, Eunhyeok",
+        title = "Grouped Speculative Decoding for Autoregressive Image Generation",
+        booktitle = "International Conference on Computer Vision (ICCV)",
+        year = "2025"
+    }
+  category: acceleration
+  id: so2025grouped
+- bibtex: |
+    @inproceedings{moon2025holistic,
+        author = "Moon*, Saemi and Lee*, Minjong and Park, Sangdon and Kim, Dongwoo",
+        title = "Holistic Unlearning Benchmark: A Multi-Faceted Evaluation for Text-to-Image Diffusion Model Unlearning",
+        booktitle = "International Conference on Computer Vision (ICCV)",
+        year = "2025"
+    }
+  category: unlearning
+  id: moon2025holistic
+  url: https://arxiv.org/abs/2410.05664
+- bibtex: |
+    @inproceedings{mun2025addressing,
+        author = "Mun*, Sunung and Nam*, Jinhwan and Cho, Sunghyun and Ok, Jungseul",
+        title = "Addressing Attribute Leakage in Text Embeddings for Image Editing with Diffusion Models",
+        booktitle = "International Conference on Computer Vision (ICCV)",
+        year = "2025"
+    }
+  category: vision
+  id: mun2025addressing
+  url: https://arxiv.org/abs/2412.04715
+- bibtex: |
+    @inproceedings{kim2025delving,
+        author = "Kim, Suyeon and Kang, Seongku and Kim, Dongwoo and Ok, Jungseul and Yu, Hwanjo",
+        title = "Delving into Instance-Dependent Label Noise in Graph Data: A Comprehensive Study and Benchmark",
+        booktitle = "Knowledge Discovery and Data Mining (KDD)",
+        year = "2025"
+    }
+  category: theory
+  id: kim2025delving
+  url: https://arxiv.org/abs/2506.12468
+- bibtex: |
+    @inproceedings{lm2025denoising,
+        author = "Im, Solee and Lee, Wonjun and An, Jinmyeong and Kim, Yunsu and Ok, Jungseul and Lee, Gary",
+        title = "DeRAGEC: Denoising Named Entity Candidtes with Synthetic Rationale for ASR Error Correction",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2025"
+    }
+  category: language
+  id: lm2025denoising
+  url: https://aclanthology.org/2025.findings-acl.786/
+- bibtex: |
+    @inproceedings{koo2025towards,
+        author = "Koo*, Jabin and Jang*, Minwoo and Ok, Jungseul",
+        title = "Towards Robust and Efficient Federated Low-Rank Adaptation with Heterogeneous Clients",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2025"
+    }
+  category: language
+  id: koo2025towards
+  url: https://arxiv.org/abs/2410.22815
+- bibtex: |
+    @inproceedings{lee2025semantic,
+        author = "Lee*, Sungjae and Park*, Hyejin and Kim, Jaechang and Ok, Jungseul",
+        title = "Semantic Exploration with Adaptive Gating for Efficient Problem Solving with Language Models",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2025"
+    }
+  category: language
+  id: lee2025semantic
+  url: https://arxiv.org/abs/2501.05752
+- bibtex: |
+    @inproceedings{oh2025comparison,
+        author = "Oh, Minhyeon and Lee, Seungjoon and Ok, Jungseul",
+        title = "Comparison-based Active Preference Learning for Multi-dimensional Personalization",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2025"
+    }
+  category: decision
+  id: oh2025comparison
+  url: https://arxiv.org/abs/2411.00524
+- bibtex: |
+    @inproceedings{lee2025enhancing,
+        author = "Lee*, Seungbeom and Jo*, Munsun and Ok, Jungseul and Kim, Dongwoo",
+        title = "Enhancing Ligand Validity and Affinity in Structure-Based Drug Design with Multi-Reward Optimization",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2025"
+    }
+  category: science
+  id: lee2025enhancing
+  url: https://openreview.net/forum?id=gmFeso9sXJ
+- bibtex: |
+    @inproceedings{ju2025towards,
+        author = "Ju, Hyojin and Lee, Jungeun and Yang, Seungwon and Ok, Jungseul and Hwang, Inseok",
+        title = "Toward Affective Empathy via Personalized Analogy Generation: A Case Study on Microaggression",
+        booktitle = "Computer Human Interaction (CHI)",
+        year = "2025"
+    }
+  category: language
+  id: ju2025towards
+  url: https://hyojinju.com/files/papers/chi25b-sub9551-cam-i16.pdf
+- bibtex: |
+    @inproceedings{an2024an,
+        author = "An, Jinmyeong and Lee, Wonjun and Jeon, Yejin and Ok, Jungseul and Kim, Yunsu and Lee, Gary Geunbae",
+        title = "An Investigation Into Explainable Audio Hate Speech Detection",
+        booktitle = "Special Interest Group on Discourse and Dialogue (SIGDIAL)",
+        year = "2024"
+    }
+  category: language
+  id: an2024an
+  url: https://aclanthology.org/2025.naacl-long.241.pdf
+- bibtex: |
+    @inproceedings{li2025towards,
+        author = "Li, Shouheng and Geerts, Floris and Kim, Dongwoo and Wang, Qing",
+        title = "Towards Bridging Generalization and Expressivity of Graph Neural Networks",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2025"
+    }
+  category: graph
+  id: li2025towards
+  url: https://arxiv.org/abs/2410.10051
+- bibtex: |
+    @inproceedings{kim2025bridging,
+        author = "Kim, Jaechang and Goh, Jinmin and Hwang, Inseok and Cho, Jaewoong and Ok, Jungseul",
+        title = "Bridging the Gap between Expert and Language Models: Concept-guided Chess Commentary Generation and Evaluation",
+        booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)",
+        year = "2025"
+    }
+  category: language
+  id: kim2025bridging
+  url: https://arxiv.org/abs/2410.20811
+- bibtex: |
+    @inproceedings{an2025revisiting,
+        author = "An, JinMyeong and Ryu, Sangwon and Do, Heejin and Kim, Yunsu and Ok, Jungseul and Lee, Gary",
+        title = "Revisiting Early Detection of Sexual Predators via Turn-level Optimization",
+        booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)",
+        year = "2025"
+    }
+  category: language
+  id: an2025revisiting
+  url: https://arxiv.org/abs/2408.06065
+- bibtex: |
+    @inproceedings{lee2025dynamic,
+        author = "Lee, Wonjun and Im, Solee and Do, Heejin and Kim, Yunsu and Ok, Jungseul and Lee, Gary",
+        title = "DyPCL: Dynamic Phoneme-level Contrastive Learning for Dysarthric Speech Recognition",
+        booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)",
+        year = "2025"
+    }
+  category: language
+  id: lee2025dynamic
+  url: https://arxiv.org/abs/2501.19010
+- bibtex: |
+    @inproceedings{lee2024selective,
+        author = "Lee*, Minjae and Kim*, Kyungmin and Kim, Taesoo and Park, Sangdon",
+        title = "Selective Generation for Controllable Language Models",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2024"
+    }
+  id: lee2024selective
+- bibtex: |
+    @inproceedings{jang2024pessimistic,
+        author = "Jang, Hyosoon and Jang, Yunhui and Kim, Minsu and Park, Jinkyu and Ahn, Sungsoo",
+        title = "Pessimistic Backward Policy for GFlowNets",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2024"
+    }
+  id: jang2024pessimistic
+- bibtex: |
+    @inproceedings{Kang2024robust,
+        author = "Kang, Juwon and Kim, Nayeong and Ok, Jungseul and Kwak, Suha",
+        title = "MemBN: Robust Test-Time Adaptation via Batch Norm with Statistics Memory",
+        booktitle = "European Conference on Computer Vision (ECCV)",
+        year = "2024"
+    }
+  category: vision
+  id: Kang2024robust
+  url: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04143.pdf
+- bibtex: |
+    @inproceedings{ryu2024key,
+        author = "Ryu, Sangwon and Do, Heejin and Kim, Yunsu and Lee, Gary Geunbae and Ok, Jungseul",
+        title = "Key-Element-Informed sLLM Tuning for Document Summarization",
+        booktitle = "Annual Conference of the International Speech Communication Association (INTERSPEECH)",
+        year = "2024"
+    }
+  category: language
+  id: ryu2024key
+  url: https://arxiv.org/abs/2406.04625
+- bibtex: |
+    @inproceedings{ryu2024multi,
+        author = "Ryu*, Sangwon and Do*, Heejin and Kim, Yunsu and Lee, Gary and Ok, Jungseul",
+        title = "Multi-Dimensional Optimization for Text Summarization via Reinforcement Learning",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2024"
+    }
+  category: language
+  id: ryu2024multi
+  url: https://aclanthology.org/2024.acl-long.319/
+- bibtex: |
+    @inproceedings{park2024mitigating,
+        author = "Park, MoonJeong and Heo, Jaeseung and Kim, Dongwoo",
+        title = "Mitigating Over-smoothing through Reverse Process GNN for Heterophilic Graphs",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  category: graph
+  id: park2024mitigating
+  url: https://arxiv.org/abs/2403.10543
+- bibtex: |
+    @inproceedings{kim2024hybrid,
+        author = "Kim, Hyomin and Jang, Yunhui and Lee, Jaeho and Ahn, Sungsoo",
+        title = "Hybrid Neural Representation for Spherical Data",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  id: kim2024hybrid
+- bibtex: |
+    @inproceedings{kim2024gaussian,
+        author = "Kim, Seongsu and Ahn, Sungsoo",
+        title = "Gaussian Plane-Wave Neural Operator for Electron Density Estimation",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  id: kim2024gaussian
+- bibtex: |
+    @inproceedings{kim2024enhancing,
+        author = "Kim, Hyeonah and Kim, Minsu and Ahn, Sungsoo and Park, Jinkyoo",
+        title = "Enhancing Sample Efficiency in Black-box Combinatorial Optimization via Symmetric Replay Training",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  id: kim2024enhancing
+- bibtex: |
+    @inproceedings{bu2024tackling,
+        author = "Bu, Fanchen and Jo, Hyeonsoo and Lee, Soo Yong and Ahn, Sungsoo and Shin, Kijung",
+        title = "Tackling Complex Conditions in Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  id: bu2024tackling
+- bibtex: |
+    @inproceedings{kim2024active,
+        author = "Kim, Hoyoung and Hwang, Sehyun and Kwak, Suha and Ok, Jungseul",
+        title = "Active Label Correction for Semantic Segmentation with Foundation Models",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2403.10820"
+    }
+  category: vision
+  id: kim2024active
+- bibtex: |
+    @inproceedings{yoon2024beag,
+        author = "Yoon, Youngsik and Lee, Gangbok and Ahn, Sungsoo and Ok, Jungseul",
+        title = "Breadth-First Exploration in Adaptive Grid-based Reinforcement Learning",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  category: decision
+  id: yoon2024beag
+- bibtex: |
+    @inproceedings{kim2024improving,
+        author = "Kim, Nayeong and Kang, Juwon and Ahn, Sungsoo and Ok, Jungseul and Kwak, Suha",
+        title = "Improving Robustness to Multiple Spurious Correlations by Multi-Objective Optimization",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2024"
+    }
+  category: vision
+  id: kim2024improving
+- bibtex: |
+    @inproceedings{ariu2024optimal,
+        author = "Ariu, Kaito and Ok, Jungseul and Proutiere, Alexandre and Yun, Seyoung",
+        title = "Optimal Clustering from Noisy Binary Feedback",
+        booktitle = "Machine Learning",
+        year = "2024",
+        url = "https://link.springer.com/article/10.1007/s10994-024-06532-z"
+    }
+  category: theory
+  id: ariu2024optimal
+- bibtex: |
+    @article{kim2024fragment,
+        author = "Kim, Seojin and Nam, Jaehyun and Kim, Junsu and Lee, Hankook and Ahn, Sungsoo and Shin, Jinwoo",
+        title = "Fragment-based Multi-view Molecular Contrastive Learning",
+        journal = "Transactions on Machine Learning Research",
+        issn = "2835-8856",
+        year = "2024",
+        url = "https://openreview.net/forum?id=oyISaaeHwD",
+        note = ""
+    }
+  id: kim2024fragment
+- bibtex: |
+    @inproceedings{yoon2024few,
+        author = "Yoon*, Youngsik and Nam*, Jinhwan and Yun, Hyojeong and Lee, Jaeho and Kim, Dongwoo and Ok, Jungseul",
+        title = "Few-shot Unlearning",
+        booktitle = "IEEE Symposium on Security and Privacy (S\\&P)",
+        year = "2024"
+    }
+  category: unlearning
+  id: yoon2024few
+- bibtex: |
+    @inproceedings{heo2024epic,
+        author = "Heo*, Jaeseung and Lee*, Seungbeom and Ahn, Sungsoo and Kim, Dongwoo",
+        title = "EPIC: Graph Augmentation with Edit Path Interpolation via Learnable Cost",
+        booktitle = "International Joint Conference on Artificial Intelligence (IJCAI)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2306.01310"
+    }
+  category: graph
+  id: heo2024epic
+  url: https://arxiv.org/abs/2306.01310
+- bibtex: |
+    @article{zhang2024pos,
+        author = "Zhang, Yiqun and Qin, Zhenyue and Anwar, Saeed and Kim, Dongwoo and Liu, Yang and Ji, Pan and Gedeon, Tom",
+        journal = "IEEE Transactions on Neural Networks and Learning Systems (TNNLS)",
+        title = "Position-Sensing Graph Neural Networks: Proactively Learning Nodes Relative Positions",
+        year = "2024",
+        volume = "",
+        number = "",
+        pages = "1-8",
+        keywords = "Australia;Aggregates;Task analysis;Message passing;Graph neural networks;Feature extraction;Scalability;Graph neural networks (GNNs);position-aware",
+        doi = "10.1109/TNNLS.2024.3374464"
+    }
+  category: graph
+  id: zhang2024pos
+  url: https://ieeexplore.ieee.org/document/10478451
+- bibtex: |
+    @inproceedings{li2024traq,
+        author = "Li, Shuo and Park, Sangdon and Lee, Insup and Bastani, Osbert",
+        title = "TRAQ: Trustworthy Retrieval Augmented Question Answering via Conformal Prediction",
+        booktitle = "Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)",
+        year = "2024"
+    }
+  id: li2024traq
+- bibtex: |
+    @inproceedings{park2024medbn,
+        author = "Park*, Hyejin and Hwang*, Jeongyeon and Mun, Sunung and Park, Sangdon and Ok, Jungseul",
+        title = "MedBN: Robust Test-Time Adaptation against Malicious Test Samples",
+        booktitle = "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2403.19326"
+    }
+  category: vision
+  id: park2024medbn
+- bibtex: |
+    @inproceedings{lee2024cliptone,
+        author = "Lee, Hyeongmin and Kang, Kyoungkook and Ok, Jungseul and Cho, Sunghyun",
+        title = "CLIPtone: Unsupervised Learning for Text-based Image Tone Adjustment",
+        booktitle = "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+        year = "2024"
+    }
+  category: vision
+  id: lee2024cliptone
+- bibtex: |
+    @inproceedings{si2024pac,
+        author = "Si, Wenwen and Park, Sangdon and Lee, Insup and Dobriban, Edgar and Bastani, Osbert",
+        title = "PAC Prediction Sets Under Label Shift",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2310.12964"
+    }
+  id: si2024pac
+- bibtex: |
+    @inproceedings{jang2024learning,
+        author = "Jang, Hyosoon and Kim, Minsoo and Ahn, Sungsoo",
+        title = "Learning Energy Decompositions for Partial Inference in GFlowNets",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2310.03301"
+    }
+  id: jang2024learning
+- bibtex: |
+    @inproceedings{jang2024simple,
+        author = "Jang, Yunhui and Lee, Seul and Ahn, Sungsoo",
+        title = "A Simple and Scalable Representation for Graph Generation",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2312.02230"
+    }
+  id: jang2024simple
+- bibtex: |
+    @inproceedings{jang2024hierarchical,
+        author = "Jang, Yunhui and Kim, Dongwoo and Ahn, Sungsoo",
+        title = "Graph Generation with K2 Trees",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2305.19125"
+    }
+  id: jang2024hierarchical
+- bibtex: |
+    @inproceedings{kim2024local,
+        author = "Kim, Minsu and Yun, Taeyoung and Bengio, Emmanuel and Zhang, Dinghuai and Bengio, Yoshua and Ahn, Sungsoo and Park, Jinkyoo",
+        title = "Local Search GFlowNets",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2303.05699"
+    }
+  id: kim2024local
+- bibtex: |
+    @inproceedings{moon2024feature,
+        author = "Moon, Saemi and Cho, Seunghyuk and Kim, Dongwoo",
+        title = "Feature Unlearning for Pre-trained GANs and VAEs",
+        booktitle = "AAAI Conference on Artificial Intelligence (AAAI)",
+        year = "2024",
+        url = "https://arxiv.org/abs/2303.05699"
+    }
+  category: unlearning
+  id: moon2024feature
+  url: https://arxiv.org/abs/2303.05699
+- bibtex: |
+    @inproceedings{park2023non,
+        author = "Park, Seonghyun and Ryu, Narae and Kim, Gahee and Woo, Dongyeop and Yun, Se-Young and Ahn, Sungsoo",
+        title = "Non-backtracking Graph Neural Networks",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS), Workshop on New Frontiers in Graph Learning",
+        year = "2023",
+        url = "https://arxiv.org/abs/2310.07430"
+    }
+  id: park2023non
+- bibtex: |
+    @inproceedings{jang2023ksimple,
+        author = "Jang, Yunhui and Lee, Seul and Ahn, Sungsoo",
+        title = "A Simple and Scalable Representation for Graph Generation",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS), Workshop on New Frontiers in Graph Learning",
+        year = "2023",
+        url = "https://arxiv.org/abs/2312.02230"
+    }
+  id: jang2023ksimple
+- bibtex: |
+    @inproceedings{cho2023hvae,
+        author = "Cho, Seunghyuk and Lee, Juyong and Kim, Dongwoo",
+        title = "Hyperbolic VAE via Latent Gaussian Distributions",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2209.15217"
+    }
+  category: hyperbolic
+  id: cho2023hvae
+  url: https://arxiv.org/abs/2209.15217
+- bibtex: |
+    @inproceedings{jang2023diffusion2,
+        author = "Jang, Hyosoon and Park, Seonghyun and Mo, Sangwoo and Ahn, Sungsoo",
+        title = "Diffusion Probabilistic Models for Structured Node Classification",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2302.10506"
+    }
+  id: jang2023diffusion2
+- bibtex: |
+    @inproceedings{kim2023bootstrapped2,
+        author = "Kim, Minsu and Berto, Federico and Ahn, Sungsoo and Park, Jinkyoo",
+        title = "Bootstrapped Training of Score-Conditioned Generator for Offline Design of Biological Sequences",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2306.03111"
+    }
+  id: kim2023bootstrapped2
+- bibtex: |
+    @inproceedings{cho2023multires,
+        author = "Cho, Hyuna and Jeong, Minjae and Jeon, Sooyeon and Ahn, Sungsoo and Kim, Wonhwa",
+        title = "Multi-resolution Spectral Coherence for Graph Generation with Score-based Diffusion",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2023"
+    }
+  id: cho2023multires
+- bibtex: |
+    @inproceedings{hwang2023active,
+        author = "Hwang, Sehyun and Lee, Sohyun and Kim, Hoyoung and Oh, Minhyeon and Ok, Jungseul and Kwak, Suha",
+        title = "Active Learning for Semantic Segmentation with Multi-class Label Query",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2309.09319"
+    }
+  category: vision
+  id: hwang2023active
+- bibtex: |
+    @inproceedings{kim2023test,
+        author = "Kim*, Dain and Park*, Jinhyeok and Kim, Dongwoo",
+        title = "Test Time Normalization for Popularity Bias Mitigation",
+        booktitle = "The ACM Conference on Information and Knowledge Management (CIKM)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2308.11288"
+    }
+  category: recommendation system
+  id: kim2023test
+  url: https://arxiv.org/abs/2308.11288
+- bibtex: |
+    @inproceedings{kim2023adaptive,
+        author = "Kim, Hoyoung and Oh, Minhyeon and Hwang, Sehyun and Kwak, Suha and Ok, Jungseul",
+        title = "Adaptive Superpixel for Active Learning in Semantic Segmentation",
+        booktitle = "International Conference on Computer Vision (ICCV)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2303.16817"
+    }
+  category: vision
+  id: kim2023adaptive
+- bibtex: |
+    @inproceedings{lee2023eval,
+        author = "Lee, Minjong and Kim, Dongwoo",
+        title = "Robust Evaluation of Diffusion-Based Adversarial Purification",
+        booktitle = "International Conference on Computer Vision (ICCV)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2303.09051"
+    }
+  category: vision
+  id: lee2023eval
+  url: https://arxiv.org/abs/2303.09051
+- bibtex: |
+    @inproceedings{kim2023symmetric,
+        author = "Kim, Hyeonah and Kim, Minsu and Ahn, Sungsoo and Park, Jinkyoo",
+        title = "Symmetric Exploration in Combinatorial Optimization is Free!",
+        booktitle = "International Conference on Machine Learning, Workshop on Sampling and Optimization in Discrete Space",
+        year = "2023"
+    }
+  id: kim2023symmetric
+- bibtex: |
+    @inproceedings{kim2023removing,
+        author = "Kim, Nayeong and Kang, Juwon and Ahn, Sungsoo and Ok, Jungseul and Kwak, Suha",
+        title = "Removing Multiple Biases through the Lens of Multi-task Learning",
+        booktitle = "International Conference on Machine Learning, Workshop on Spurious Correlations, Invariance and Stability",
+        year = "2023"
+    }
+  category: vision
+  id: kim2023removing
+- bibtex: |
+    @inproceedings{heo2023epic,
+        author = "Heo, Jaeseung and Lee, Seungbeom and Ahn, Sungsoo and Kim, Dongwoo",
+        title = "EPIC: Graph Augmentation with Edit Path Interpolation via Learnable Cost",
+        booktitle = "International Conference on Machine Learning, Workshop on Data-centric Machine Learning Research",
+        year = "2023"
+    }
+  category: graph
+  id: heo2023epic
+  url: https://arxiv.org/abs/2306.01310
+- bibtex: |
+    @inproceedings{kim2023bootstrapped,
+        author = "Kim, Minsu and Berto, Federico and Ahn, Sungsoo and Park, Jinkyoo",
+        title = "Bootstrapped Training of Score-Conditioned Generator for Offline Design of Biological Sequences",
+        booktitle = "International Conference on Machine Learning, Workshop on Structured Probabilistic Inference and Generative Modeling",
+        year = "2023"
+    }
+  id: kim2023bootstrapped
+- bibtex: |
+    @inproceedings{jang2023hierarchical,
+        author = "Jang, Yunhui and Kim, Dongwoo and Ahn, Sungsoo",
+        title = "Hierarchical Graph Generation with K2 Trees",
+        booktitle = "International Conference on Machine Learning, Workshop on Structured Probabilistic Inference and Generative Modeling",
+        year = "2023"
+    }
+  id: jang2023hierarchical
+- bibtex: |
+    @inproceedings{jang2023diffusion,
+        author = "Jang, Hyosoon and Park, Seonghyun and Mo, Sangwoo and Ahn, Sungsoo",
+        title = "Diffusion Probabilistic Models for Structured Node Classification",
+        booktitle = "International Conference on Machine Learning, Workshop on Structured Probabilistic Inference and Generative Modeling",
+        year = "2023"
+    }
+  id: jang2023diffusion
+- bibtex: |
+    @inproceedings{shin2023closer,
+        author = "Shin, Sungbin and Jo, Yohan and Ahn, Sungsoo and Lee, Namhoon",
+        title = "A Closer Look at the Intervention Procedure of Concept Bottleneck Models",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2023"
+    }
+  id: shin2023closer
+- bibtex: |
+    @inproceedings{li2023local,
+        author = "Li, Shouheng and Kim, Dongwoo and Wang, Qing",
+        title = "Local Vertex Colouring Graph Neural Network",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2023"
+    }
+  category: graph
+  id: li2023local
+  url: https://arxiv.org/abs/2403.06080
+- bibtex: |
+    @inproceedings{kang2023leveraging,
+        author = "Kang, Juwon and Kim, Nayeong and Kwon, Donghyeon and Ok, Jungseul and Kwak, Suha",
+        title = "Leveraging Proxy of Training Data for Test-Time Adaptation",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2023"
+    }
+  category: vision
+  id: kang2023leveraging
+- bibtex: |
+    @misc{kim2023contrastive,
+        author = "Kim, Seojin and Nam, Jaehyun and Kim, Junsu and Lee, Hankook and Ahn, Sungsoo and Shin, Jinwoo",
+        title = "Contrastive Learning of Molecular Representation with Fragmented Views",
+        booktitle = "International Conference on Learning Representations, Machine Learning for Materials Workshop",
+        year = "2023"
+    }
+  id: kim2023contrastive
+- bibtex: |
+    @inproceedings{kim2023activity,
+        author = "Kim*, Jaechang and Lee*, Yunjoo and Cho, Hyun Mi and Kim, Dong Woo and Song, Chi Hoon and Ok, Jungseul",
+        title = "Activity-informed Industrial Audio Anomaly Detection via Source Separation",
+        booktitle = "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        year = "2023"
+    }
+  category: systems
+  id: kim2023activity
+- bibtex: |
+    @inproceedings{kim2023imitating,
+        author = "Kim, Junsu and Seo, Younggyo and Ahn, Sungsoo and Son, Kyunghwan and Shin, Jinwoo",
+        title = "Imitating Graph-Based Planning with Goal-Conditioned Policies",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2023",
+        url = "https://openreview.net/forum?id=6lUEy1J5R7p"
+    }
+  id: kim2023imitating
+- bibtex: |
+    @inproceedings{park2023SpReME,
+        author = "Park*, Moonjeong and Choi*, Youngbin and Kim, Dongwoo",
+        title = "SpReME: Sparse Regression for Multi-Environment Dynamic Systems",
+        booktitle = "AAAI Conference on Artificial Intelligence, Workshop on When Machine Learning meets Dynamical Systems: Theory and Applications (MLmDS)",
+        year = "2023",
+        url = ""
+    }
+  category: dynamic systems
+  id: park2023SpReME
+  url: https://arxiv.org/abs/2302.05942
+- bibtex: |
+    @inproceedings{li2023restructuring,
+        author = "Li, Shouheng and Kim, Dongwoo and Wang, Qing",
+        title = "Restructuring Graph for Higher Homophily via Learnable Spectral Clustering",
+        booktitle = "AAAI Conference on Artificial Intelligence (AAAI)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2206.02386"
+    }
+  category: graph
+  id: li2023restructuring
+  url: https://arxiv.org/abs/2206.02386
+- bibtex: |
+    @inproceedings{moon2023anonymize,
+        author = "Moon*, Saemi and Kim*, Myeonghyeon and Qin, Zhenyue and Liu, Yang and Kim, Dongwoo",
+        title = "Anonymization for Skeleton Action Recognition",
+        booktitle = "AAAI Conference on Artificial Intelligence (AAAI)",
+        year = "2023",
+        url = "https://arxiv.org/abs/2111.15129"
+    }
+  category: vision
+  id: moon2023anonymize
+  url: https://arxiv.org/abs/2111.15129
+- bibtex: |
+    @article{jang2023machine,
+        author = "Yang*, Songsoo and Jang*, Hyosoon and Park*, Inkyu and Lee, Sunhye and Oh, Gaeul and Chihyun, Park and Kang, Jeonghyun",
+        title = "Machine learning algorithms using systemic inflammatory markers for predicting the oncological outcomes of colorectal cancer after surgery",
+        journal = "Annals of Surgical Oncology",
+        volume = "30",
+        number = "13",
+        year = "2023",
+        publisher = "Springer"
+    }
+  id: jang2023machine
+- bibtex: |
+    @inproceedings{moon2022anonymize,
+        author = "Moon*, Saemi and Kim*, Myeonghyeon and Qin, Zhenyue and Liu, Yang and Kim, Dongwoo",
+        title = "Anonymization for Skeleton Action Recognition",
+        booktitle = "Advances in Neural Information Processing Systems, Workshop on Trustworthy and Socially Responsible Machine Learning (TSRML)",
+        pages = "",
+        year = "2022",
+        url = "https://arxiv.org/abs/2111.15129"
+    }
+  category: vision
+  id: moon2022anonymize
+  url: https://arxiv.org/abs/2111.15129
+- bibtex: |
+    @inproceedings{kim2022saca,
+        author = "Kim*, Jiye and Lee*, Seungbeom and Kim, Dongwoo and Ahn, Sungsoo and Park, Jaesik",
+        title = "Substructure-Atom Cross Attention for Molecular Representation Learning",
+        booktitle = "Advances in Neural Information Processing Systems, Workshop on AI for Science",
+        pages = "",
+        year = "2022",
+        url = "https://arxiv.org/abs/2210.08243"
+    }
+  category: science
+  id: kim2022saca
+  url: https://arxiv.org/abs/2210.08243
+- bibtex: |
+    @inproceedings{sin2022cbm,
+        author = "Shin, Sungbin and Jo, Yohan and Ahn, Sungsoo and Lee, Namhoon",
+        title = "A Closer Look at the Intervention Procedure of Concept Bottleneck Models",
+        booktitle = "Advances in Neural Information Processing Systems, Workshop on Trustworthy and Socially Responsible Machine Learning (TSRML)",
+        pages = "",
+        year = "2022"
+    }
+  id: sin2022cbm
+- bibtex: |
+    @article{Qin2022fusing,
+        author = "Qin, Zhenyue and Liu, Yang and Ji, Pan and Kim, Dongwoo and Wang, Lei and McKay, R. I. and Anwar, Saeed and Gedeon, Tom",
+        journal = "IEEE Transactions on Neural Networks and Learning Systems (TNNLS)",
+        title = "Fusing Higher-Order Features in Graph Neural Networks for Skeleton-Based Action Recognition",
+        year = "2022",
+        doi = "10.1109/TNNLS.2022.3201518",
+        url = "https://ieeexplore.ieee.org/document/9895208"
+    }
+  category: graph
+  id: Qin2022fusing
+  url: https://arxiv.org/abs/2105.01563
+- bibtex: |
+    @inproceedings{ko2022esda,
+        author = "Ko, Byungchan and Ok, Jungseul",
+        title = "Efficient Scheduling of Data Augmentation for Deep Reinforcement Learning",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "",
+        year = "2022"
+    }
+  category: decision
+  id: ko2022esda
+- bibtex: |
+    @inproceedings{cho2022rown,
+        author = "Cho, Seunghyuk and Lee, Juyong and Park, Jaesik and Kim, Dongwoo",
+        title = "A Rotated Hyperbolic Wrapped Normal Distribution for Hierarchical Representation Learning",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "",
+        year = "2022",
+        url = "https://arxiv.org/abs/2205.13371"
+    }
+  category: hyperbolic
+  id: cho2022rown
+  url: https://arxiv.org/abs/2205.13371
+- bibtex: |
+    @inproceedings{kim2022learning2,
+        author = "Kim, Nayeong and Hwang, Sehyun and Ahn, Sungsoo and Park, Jaesik and Kwak, Suha",
+        title = "Learning Debiased Classifier with Biased Committee",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "",
+        year = "2022"
+    }
+  id: kim2022learning2
+- bibtex: |
+    @inproceedings{kim2022towards,
+        author = "Kim, Minji and Lee, Seungkwan and Ok, Jungseul and Han, Bohyung and Cho, Minsu",
+        title = "Towards Sequence-Level Training for Visual Tracking",
+        booktitle = "European Conference on Computer Vision (ECCV)",
+        year = "2022"
+    }
+  category: vision
+  id: kim2022towards
+- bibtex: |
+    @inproceedings{hwang2022combating,
+        author = "Hwang, Sehyun and Lee, Sohyun and Kim, Sungyeon and Ok, Jungseul and Kwak, Suha",
+        title = "Combating Label Distribution Shift for Active Domain Adaptation",
+        booktitle = "European Conference on Computer Vision (ECCV)",
+        year = "2022"
+    }
+  category: vision
+  id: hwang2022combating
+- bibtex: |
+    @inproceedings{qin2022strengthen,
+        author = "Qin, Zhenyue and Ji, Pan and Kim, Dongwoo and Liu, Yang and Anwar, Saeed and Gedeon, Tom",
+        title = "Strengthening Skeletal Action Recognizers via Leveraging Temporal Patterns",
+        booktitle = "European Conference on Computer Vision, Workshop on Real-World Surveillance (RWS)",
+        pages = "",
+        year = "2022",
+        url = "https://arxiv.org/abs/2205.14405"
+    }
+  category: vision
+  id: qin2022strengthen
+  url: https://arxiv.org/abs/2205.14405
+- bibtex: |
+    @inproceedings{kim2022learning,
+        author = "Kim, Nayeong and Hwang, Sehyun and Ahn, Sungsoo and Park, Jaesik and Kwak, Suha",
+        title = "Learning Debiased Classifier with Biased Committee",
+        booktitle = "International Conference on Machine Learning, Workshop on Spurious Correlations, Invariance, and Stability",
+        pages = "",
+        year = "2022"
+    }
+  id: kim2022learning
+- bibtex: |
+    @inproceedings{son2022disentangling,
+        author = "Son, Kyunghwan and Kim, Junsu and Ahn, Sungsoo and Reyes, Roben Delos and Yi, Yung and Shin, Jinwoo",
+        title = "Disentangling Sources of Risk for Distributional Multi-Agent Reinforcement Learning",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2022"
+    }
+  id: son2022disentangling
+- bibtex: |
+    @inproceedings{mjeong2022detection,
+        author = "Park, Moon Jeong and Ok, Jungseul and Jeon, Yo-Seb and Kim, Dongwoo",
+        title = "MetaSSD: Meta-Learned Self-Supervised Detection",
+        booktitle = "IEEE International Symposium on Information Theory (ISIT)",
+        year = "2022",
+        url = "http://arxiv.org/abs/2205.15271"
+    }
+  category: communication systems
+  id: mjeong2022detection
+  url: https://arxiv.org/abs/2205.15271
+- bibtex: |
+    @inproceedings{jae2022audio-sp,
+        author = "Kim*, Jaechang and Lee*, Yunjoo and Hong, Seunghoon and Ok, Jungseul",
+        title = "Learning Continuous Representation of Audio for Arbitrary Scale Super Resolution",
+        booktitle = "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        year = "2022",
+        url = "https://arxiv.org/abs/2111.00195"
+    }
+  category: vision
+  id: jae2022audio-sp
+- bibtex: |
+    @inproceedings{ahn2022spanning,
+        author = "Ahn, Sungsoo and Chen, Binghong and Wang, Tianzhe and Song, Le",
+        title = "Spanning Tree-based Graph Generation for Molecules",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2022",
+        url = "https://openreview.net/forum?id=H6ATjJ0TKdf"
+    }
+  id: ahn2022spanning
+- bibtex: |
+    @inproceedings{kim2022what,
+        author = "Kim, Jaehyung and Kang, Dongyeop and Ahn, Sungsoo and Shin, Jinwoo",
+        title = "What Makes Better Augmentation Strategies? Augment Difficult but Not too Different",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2022",
+        url = "https://openreview.net/forum?id=Ucx3DQbC9GH"
+    }
+  id: kim2022what
+- bibtex: |
+    @inproceedings{ho2022crowds,
+        author = "Kim*, Hoyoung and Cho*, Seunghyuk and Kim, Dongwoo and Ok, Jungseul",
+        title = "Robust Deep Learning from Crowds with Belief Propagation",
+        booktitle = "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+        year = "2022",
+        url = "https://arxiv.org/abs/2111.00734"
+    }
+  category: communication systems
+  id: ho2022crowds
+- bibtex: |
+    @inproceedings{suho2022band,
+        author = "Shin, Suho and Lee, Seungjoon and Ok, Jungseul",
+        title = "Multi-armed Bandit Algorithm against Strategic Replication",
+        booktitle = "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+        year = "2022",
+        url = "https://arxiv.org/abs/2110.12160"
+    }
+  category: theory
+  id: suho2022band
+- bibtex: |
+    @inproceedings{ahn2017gauging,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Shin, Jinwoo",
+        title = "Gauging variational inference",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "2881--2890",
+        year = "2017"
+    }
+  id: ahn2017gauging
+- bibtex: |
+    @article{ahn2017maximum,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Gelfand, Andrew E and Park, Sejun and Shin, Jinwoo",
+        title = "Maximum weight matching using odd-sized cycles: Max-product belief propagation and half-integrality",
+        journal = "IEEE Transactions on Information Theory",
+        volume = "64",
+        number = "3",
+        pages = "1471--1480",
+        year = "2017",
+        publisher = "IEEE"
+    }
+  id: ahn2017maximum
+- bibtex: |
+    @inproceedings{ahn2018bucket,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Weller, Adrian and Shin, Jinwoo",
+        title = "Bucket renormalization for approximate inference",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        pages = "109--118",
+        year = "2018"
+    }
+  id: ahn2018bucket
+- bibtex: |
+    @inproceedings{ahn2016synthesis,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Shin, Jinwoo",
+        title = "Synthesis of {MCMC} and belief propagation",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "1453--1461",
+        year = "2016"
+    }
+  id: ahn2016synthesis
+- bibtex: |
+    @inproceedings{ahn2019variational,
+        author = "Ahn, Sungsoo and Hu, Shell Xu and Damianou, Andreas and Lawrence, Neil D and Dai, Zhenwen",
+        title = "Variational information distillation for knowledge transfer",
+        booktitle = "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+        pages = "9163--9171",
+        year = "2019"
+    }
+  id: ahn2019variational
+- bibtex: |
+    @inproceedings{ahn2015minimum,
+        author = "Ahn, Sungsoo and Park, Sejun and Chertkov, Michael and Shin, Jinwoo",
+        title = "Minimum weight perfect matching via blossom belief propagation",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "1288--1296",
+        year = "2015"
+    }
+  id: ahn2015minimum
+- bibtex: |
+    @inproceedings{ahn2018gauged,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Shin, Jinwoo and Weller, Adrian",
+        title = "Gauged Mini-Bucket Elimination for Approximate Inference",
+        booktitle = "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+        pages = "10--19",
+        year = "2018"
+    }
+  id: ahn2018gauged
+- bibtex: |
+    @inproceedings{ahn2020learning,
+        author = "Ahn, Sungsoo and Seo, Younggyo and Shin, Jinwoo",
+        title = "Learning What to Defer for Maximum Independent Sets",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        pages = "134--144",
+        year = "2020"
+    }
+  id: ahn2020learning
+- bibtex: |
+    @article{son2020qopt,
+        author = "Son, Kyunghwan and Ahn, Sungsoo and Reyes, Roben Delos and Shin, Jinwoo and Yi, Yung",
+        title = "{QOPT}: Optimistic Value Function Decentralization for Cooperative Multi-Agent Reinforcement Learning",
+        journal = "arXiv preprint arXiv:2006.12010",
+        year = "2020"
+    }
+  id: son2020qopt
+- bibtex: |
+    @article{nam2020learning,
+        author = "Nam, Junhyun and Cha, Hyuntak and Ahn, Sungsoo and Lee, Jaeho and Shin, Jinwoo",
+        title = "Learning from Failure: De-biasing Classifier from Biased Classifier",
+        journal = "Advances in Neural Information Processing Systems (NeurIPS)",
+        volume = "33",
+        year = "2020"
+    }
+  id: nam2020learning
+- bibtex: |
+    @article{ahn2020guiding,
+        author = "Ahn, Sungsoo and Kim, Junsu and Lee, Hankook and Shin, Jinwoo",
+        title = "Guiding Deep Molecular Optimization with Genetic Exploration",
+        journal = "Advances in Neural Information Processing Systems (NeurIPS)",
+        volume = "33",
+        year = "2020"
+    }
+  id: ahn2020guiding
+- bibtex: |
+    @inproceedings{kim2021self,
+        author = "Kim, Junsu and Ahn, Sungsoo and Lee, Hankook and Shin, Jinwoo",
+        title = "Self-Improved Retrosynthetic Planning",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        pages = "5486--5495",
+        year = "2021"
+    }
+  id: kim2021self
+- bibtex: |
+    @inproceedings{lee2021retcl,
+        author = "Lee, Hankook and Ahn, Sungsoo and Seo, Seung-Woo and Song, You Young and Hwang, Sung-Ju and Yang, Eunho and Shin, Jinwoo",
+        title = "Ret{CL}: A Selection-based Approach for Retrosynthesis via Contrastive Learning",
+        booktitle = "International Joint Conference on Artificial Intelligence (IJCAI)",
+        pages = "2673--2679",
+        year = "2021"
+    }
+  id: lee2021retcl
+- bibtex: |
+    @article{ahn2019gauging,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Shin, Jinwoo",
+        title = "Gauging variational inference",
+        journal = "Journal of Statistical Mechanics: Theory and Experiment",
+        volume = "2019",
+        number = "12",
+        pages = "124015",
+        year = "2019",
+        publisher = "Institute of Physics and IOP Publishing Limited"
+    }
+  id: ahn2019gauging
+- bibtex: |
+    @article{ahn2019bucket,
+        author = "Ahn, Sungsoo and Chertkov, Michael and Shin, Jinwoo",
+        title = "Bucket renormalization for approximate inference",
+        journal = "Journal of Statistical Mechanics: Theory and Experiment",
+        volume = "2019",
+        number = "12",
+        pages = "124022",
+        year = "2019",
+        publisher = "Institute of Physics and IOP Publishing Limited"
+    }
+  id: ahn2019bucket
+- bibtex: |
+    @inproceedings{ahn2018variational,
+        author = "Ahn, Sungsoo and Hu, Shell Xu and Damianou, Andreas and Lawrence, Neil D and Dai, Zhenwen",
+        title = "Variational mutual information distillation for transfer learning",
+        booktitle = "Neural Information Processing Systems, Workshop on Continual Learning",
+        pages = "",
+        year = "2018"
+    }
+  id: ahn2018variational
+- bibtex: |
+    @inproceedings{lee2020retcl,
+        author = "Lee, Hankook and Ahn, Sungsoo and Seo, Seung-Woo and Song, You Young and Hwang, Sung-Ju and Yang, Eunho and Shin, Jinwoo",
+        title = "Ret{CL}: A Selection-based Approach for Retrosynthesis via Contrastive Learning",
+        booktitle = "Neural Information Processing Systems, Workshop on Machine Learning for Molecules",
+        pages = "",
+        year = "2020"
+    }
+  id: lee2020retcl
+- bibtex: |
+    @article{yu2021visual,
+        author = "Yu, Sihyun and Mo, Sangwoo and Ahn, Sungsoo and Shin, Jinwoo and Yi, Yung",
+        title = "Visual Abstract Reasoning via Logic-guided Generation",
+        journal = "ICML Workshop on Self-Supervised Learning for Reasoning and Perception",
+        year = "2021"
+    }
+  id: yu2021visual
+- bibtex: |
+    @inproceedings{yu2021roma,
+        author = "Yu, Sihyun and Ahn, Sungsoo and Song, Le and Shin, Jinwoo",
+        title = "Ro{MA}: Robust Model Adaptation for Offline Model-based Optimization",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2021",
+        url = "https://openreview.net/forum?id=VH0TRmnqUc"
+    }
+  id: yu2021roma
+- bibtex: |
+    @inproceedings{lee2021layeradaptive,
+        author = "Lee, Jaeho and Park, Sejun and Mo, Sangwoo and Ahn, Sungsoo and Shin, Jinwoo",
+        title = "Layer-adaptive Sparsity for the Magnitude-based Pruning",
+        booktitle = "International Conference on Learning Representations (ICLR)",
+        year = "2021",
+        url = "https://openreview.net/forum?id=H6ATjJ0TKdf"
+    }
+  id: lee2021layeradaptive
+- bibtex: |
+    @inproceedings{ok2019aistats,
+        author = "Ok, Jungseul and Oh, Sewoong and Jang, Yunhun and Shin, Jinwoo and Yi, Yung",
+        title = "Iterative Bayesian Learning for Crowdsourced Regression",
+        booktitle = "International Conference on Artificial Intelligence and Statistics (AISTATS)",
+        year = "2019",
+        url = "https://arxiv.org/abs/1702.08840"
+    }
+  category: communication systems
+  id: ok2019aistats
+- bibtex: |
+    @inproceedings{shin2022acm,
+        author = "Shin, Suho and Choi, Hoyong and Yi, Yung and Ok, Jungseul",
+        title = "Power of Bonus in Pricing for Crowdsourcing",
+        booktitle = "ACM SIGMETRICS",
+        year = "2022",
+        url = "https://arxiv.org/abs/1804.03178"
+    }
+  category: communication systems
+  id: shin2022acm
+- bibtex: |
+    @inproceedings{jj2021nips,
+        author = "Jeon*, Jinwoo and Kim*, Jaechang and Lee, Kangwook and Oh, Sewoong and Ok, Jungseul",
+        title = "Gradient Inversion with Generative Image Prior",
+        journal = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2110.14962"
+    }
+  category: unlearning
+  id: jj2021nips
+- bibtex: |
+    @inproceedings{flicml2021,
+        author = "Jeon*, Jinwoo and Kim*, Jaechang and Lee, Kangwook and Oh, Sewoong and Ok, Jungseul",
+        title = "Gradient Inversion with Generative Image Prior",
+        journal = "International Workshop on Federated Learning for User Privacy and Data Confidentiality in Conjunction with ICML 2021 (FL-ICML'21)",
+        year = "2021"
+    }
+  category: unlearning
+  id: flicml2021
+- bibtex: |
+    @article{icmlxai2021b,
+        author = "Qin, Zhenyue and Kim, Dongwoo and Tom, Gedeon",
+        title = "Informative Class Activation Maps",
+        journal = "2021 International Conference on Machine Learning XAI-Workshop (ICML-XAI)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2106.10472"
+    }
+  id: icmlxai2021b
+- bibtex: |
+    @article{icmlxai2021a,
+        author = "Qin, Zhenyue and Kim, Dongwoo and Tom, Gedeon",
+        title = "Neural Network Classifier as Mutual Information Evaluator",
+        journal = "2021 International Conference on Machine Learning XAI-Workshop (ICML-XAI)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2106.10471"
+    }
+  id: icmlxai2021a
+- bibtex: |
+    @inproceedings{sean2021,
+        author = "Li, Sean and Kim, Dongwoo and Wang, Qing",
+        title = "Beyond Low-Pass Filters: Adaptive Feature Propagation on Graphs",
+        booktitle = "The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2103.14187"
+    }
+  id: sean2021
+- bibtex: |
+    @inproceedings{park2021transfer,
+        author = "Park, Hyejin and Shin, Seiyun and Jun, Kwang-Sung and Ok, Jungseul",
+        title = "Transfer Learning in Bandits with Latent Continuity",
+        booktitle = "IEEE International Symposium on Information Theory (ISIT)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2102.02472"
+    }
+  category: theory
+  id: park2021transfer
+  url: https://arxiv.org/abs/2102.02472
+- bibtex: |
+    @inproceedings{CVPR2021,
+        author = "Liu, Yang and Qin, Zhenyue and Anwar, Saeed and Ji, Pan and Kim, Dongwoo and Caldwell, Sabrina and Gedeon, Tom",
+        title = "Invertible Denoising Network: A Light Solution for Real Noise Removal",
+        booktitle = "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+        year = "2021",
+        url = "https://arxiv.org/abs/2104.10546"
+    }
+  id: CVPR2021
+- bibtex: |
+    @inproceedings{OkReconstruct,
+        author = "Woo, Jiin and Ok, Jungseul and Yi, Yung",
+        title = "Iterative Learning of Graph Connectivity from Partially-Observed Cascade Samples",
+        booktitle = "Proceedings of ACM MobiHoc",
+        year = "2020",
+        publisher = "ACM"
+    }
+  id: OkReconstruct
+  url: https://dl.acm.org/doi/10.1145/3397166.3409130
+- bibtex: |
+    @inproceedings{jin2013impact,
+        author = "Jin, Youngmi and Ok, Jungseul and Yi, Yung and Shin, Jinwoo",
+        title = "On the impact of global information on diffusion of innovations over social networks",
+        booktitle = "IEEE Conference on Computer Communications",
+        pages = "3267--3272",
+        year = "2013",
+        organization = "IEEE"
+    }
+  id: jin2013impact
+  url: https://ieeexplore.ieee.org/document/6562881
+- bibtex: |
+    @article{yun2013embedding,
+        author = "Yun, Donggyu and Ok, Jungseul and Shin, Bongjhin and Park, Soobum and Yi, Yung",
+        title = "Embedding of virtual network requests over static wireless multihop networks",
+        journal = "Computer Networks",
+        volume = "57",
+        number = "5",
+        pages = "1139--1152",
+        year = "2013",
+        publisher = "Elsevier"
+    }
+  id: yun2013embedding
+  url: https://arxiv.org/abs/1207.1878
+- bibtex: |
+    @incollection{woo2013development,
+        author = "Woo, Seung Je and Lee, Sung G and Ok, Jung Seul and Kim, Jong Hwan",
+        title = "Development and Implementation of Break Falling System for a Biped Robot",
+        booktitle = "Robot Intelligence Technology and Applications 2012",
+        pages = "315--325",
+        year = "2013",
+        publisher = "Springer, Berlin, Heidelberg"
+    }
+  id: woo2013development
+  url: https://link.springer.com/chapter/10.1007/978-3-642-37374-9_31
+- bibtex: |
+    @inproceedings{combes2014optimal,
+        author = "Combes, Richard and Proutiere, Alexandre and Yun, Donggyu and Ok, Jungseul and Yi, Yung",
+        title = "Optimal rate sampling in 802.11 systems",
+        booktitle = "IEEE Conference on Computer Communications",
+        pages = "2760--2767",
+        year = "2014",
+        organization = "IEEE"
+    }
+  id: combes2014optimal
+  url: https://arxiv.org/abs/1307.7309
+- bibtex: |
+    @inproceedings{ok2014influence,
+        author = "Ok, Jungseul and Jin, Youngmi and Choi, Jaeyoung and Shin, Jinwoo and Yi, Yung",
+        title = "Influence maximization over strategic diffusion in social networks",
+        booktitle = "Annual Conference on Information Sciences and Systems",
+        pages = "1--5",
+        year = "2014",
+        organization = "IEEE"
+    }
+  id: ok2014influence
+  url: https://ieeexplore.ieee.org/document/6814155
+- bibtex: |
+    @inproceedings{ok2015progressive,
+        author = "Ok, Jungseul and Shin, Jinwoo and Yi, Yung",
+        title = "On the progressive spread over strategic diffusion: Asymptotic and computation",
+        booktitle = "IEEE Conference on Computer Communications",
+        pages = "1562--1570",
+        year = "2015",
+        organization = "IEEE"
+    }
+  id: ok2015progressive
+  url: https://ieeexplore.ieee.org/document/7218535
+- bibtex: |
+    @inproceedings{ok2016optimality,
+        author = "Ok, Jungseul and Oh, Sewoong and Shin, Jinwoo and Yi, Yung",
+        title = "Optimality of belief propagation for crowdsourced classification",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        pages = "535--544",
+        year = "2016"
+    }
+  id: ok2016optimality
+  url: https://dl.acm.org/doi/10.5555/3045390.3045448
+- bibtex: |
+    @inproceedings{lee2015vertical,
+        author = "Lee, Chulhee and Ok, Jiheon and Woo, S and Baek, J",
+        title = "Vertical resolution loss and perceptual 3D video quality",
+        booktitle = "International Conference on Information, Intelligence, Systems and Applications",
+        pages = "1--3",
+        year = "2015",
+        organization = "IEEE"
+    }
+  id: lee2015vertical
+- bibtex: |
+    @article{ok2018optimal,
+        author = "Ok, Jungseul and Oh, Sewoong and Shin, Jinwoo and Yi, Yung",
+        title = "Optimal inference in crowdsourced classification via belief propagation",
+        journal = "IEEE Transactions on Information Theory",
+        volume = "64",
+        number = "9",
+        pages = "6127--6138",
+        year = "2018",
+        publisher = "IEEE"
+    }
+  id: ok2018optimal
+  url: https://arxiv.org/abs/1602.03619
+- bibtex: |
+    @article{ok2017iterative,
+        author = "Ok, Jungseul and Oh, Sewoong and Jang, Yunhun and Shin, Jinwoo and Yi, Yung",
+        title = "Iterative Bayesian Learning for Crowdsourced Regression",
+        journal = "arXiv preprint arXiv:1702.08840",
+        year = "2017"
+    }
+  id: ok2017iterative
+  url: https://arxiv.org/abs/1702.08840
+- bibtex: |
+    @article{ok2016maximizing,
+        author = "Ok, Jungseul and Jin, Youngmi and Shin, Jinwoo and Yi, Yung",
+        title = "On maximizing diffusion speed over social networks with strategic users",
+        journal = "IEEE/ACM Transactions on Networking",
+        volume = "24",
+        number = "6",
+        pages = "3798--3811",
+        year = "2016",
+        publisher = "IEEE"
+    }
+  id: ok2016maximizing
+  url: https://ieeexplore.ieee.org/document/7478634
+- bibtex: |
+    @inproceedings{ok2014maximizing,
+        author = "Ok, Jungseul and Jin, Youngmi and Shin, Jinwoo and Yi, Yung",
+        title = "On maximizing diffusion speed in social networks: impact of random seeding and clustering",
+        booktitle = "ACM SIGMETRICS Performance Evaluation Review",
+        volume = "42",
+        number = "1",
+        pages = "301--313",
+        year = "2014",
+        organization = "ACM"
+    }
+  id: ok2014maximizing
+  url: https://dl.acm.org/doi/10.1145/2637364.2591991
+- bibtex: |
+    @inproceedings{ok2017incentivizing,
+        author = "Ok, Jungseul and Shin, Jinwoo and Yi, Yung",
+        title = "Incentivizing strategic users for social diffusion: Quantity or quality?",
+        booktitle = "IEEE Conference on Computer Communications",
+        pages = "1--9",
+        year = "2017",
+        organization = "IEEE"
+    }
+  id: ok2017incentivizing
+  url: https://ieeexplore.ieee.org/document/8056958
+- bibtex: |
+    @inproceedings{ok2017collaborative,
+        author = "Ok, Jungseul and Yun, Se-Young and Proutiere, Alexandre and Mochaourab, Rami",
+        title = "Collaborative clustering: Sample complexity and efficient algorithms",
+        booktitle = "International Conference on Algorithmic Learning Theory",
+        pages = "288--329",
+        year = "2017"
+    }
+  id: ok2017collaborative
+  url: https://proceedings.mlr.press/v76/ok17a.html
+- bibtex: |
+    @article{shin2018posted,
+        author = "Shin, Suho and Ok, Jungseul and Choi, Hoyong and Yi, Yung",
+        title = "On the Posted Pricing in Crowdsourcing: Power of Bonus",
+        journal = "arXiv preprint arXiv:1804.03178",
+        year = "2018"
+    }
+  id: shin2018posted
+  url: https://arxiv.org/abs/1804.03178
+- bibtex: |
+    @inproceedings{ok2018exploration,
+        author = "Ok, Jungseul and Proutiere, Alexandre and Tranos, Damianos",
+        title = "Exploration in structured reinforcement learning",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        pages = "8874--8882",
+        year = "2018"
+    }
+  id: ok2018exploration
+  url: https://arxiv.org/abs/1806.00775
+- bibtex: |
+    @inproceedings{huang2018combinatorial,
+        author = "Huang, Weiran and Ok, Jungseul and Li, Liang and Chen, Wei",
+        title = "Combinatorial Pure Exploration with Continuous and Separable Reward Functions and Its Applications.",
+        booktitle = "International Joint Conference on Artificial Intelligence (IJCAI)",
+        volume = "18",
+        pages = "2291--2297",
+        year = "2018"
+    }
+  id: huang2018combinatorial
+  url: https://arxiv.org/abs/1805.01685
+- bibtex: |
+    @article{combes2018optimal,
+        author = "Combes, Richard and Ok, Jungseul and Proutiere, Alexandre and Yun, Donggyu and Yi, Yung",
+        title = "Optimal Rate Sampling in 802.11 Systems: Theory, Design, and Implementation",
+        journal = "IEEE Transactions on Mobile Computing",
+        volume = "18",
+        number = "5",
+        pages = "1145--1158",
+        year = "2019",
+        publisher = "IEEE"
+    }
+  id: combes2018optimal
+  url: https://ieeexplore.ieee.org/document/8409322
+- bibtex: |
+    @article{Kim2019,
+        author = "Kim, Dongwoo and Graham, Timothy and Wan, Zimin and Rizoiu, Marian-Andrei",
+        title = "Analysing user identity via time-sensitive semantic edit distance (t-SED): a case study of Russian trolls on Twitter",
+        journal = "Journal of Computational Social Science",
+        year = "2019",
+        month = "Jul",
+        day = "01",
+        volume = "2",
+        number = "2",
+        pages = "331--351",
+        abstract = "In the digital era, individuals are increasingly profiled and grouped based on the traces that they leave behind in online social networks such as Twitter and Facebook. In this paper, we develop and evaluate a novel text analysis approach for studying user identity and social roles by redefining identity as a sequence of timestamped items (e.g., tweet texts). We operationalise this idea by developing a novel text distance metric, the time-sensitive semantic edit distance (t-SED), which accounts for the temporal context across multiple traces. To evaluate this method, we undertake a case study of Russian online-troll activity within US political discourse. The novel metric allows us to classify the social roles of trolls based on their traces, in this case tweets, into one of the predefined categories left-leaning, right-leaning, and news feed. We show the effectiveness of the t-SED metric to measure the similarities between tweets while accounting for the temporal context, and we use novel data visualisation techniques and qualitative analysis to uncover new empirical insights into Russian troll activity that have not been identified in the previous work. In addition, we highlight a connection with the field of actor--network theory and the related hypotheses of Gabriel Tarde, and we discuss how social sequence analysis using t-SED may provide new avenues for tackling a longstanding problem in social theory: how to analyse society without separating reality into micro vs. macro-levels.",
+        issn = "2432-2725",
+        doi = "10.1007/s42001-019-00051-x",
+        url = "https://doi.org/10.1007/s42001-019-00051-x"
+    }
+  id: Kim2019
+- bibtex: |
+    @inproceedings{Shin:2019:VGD:3289600.3290616,
+        author = "Shin, Minjeong and Kim, Dongwoo and Lee, Jae Hee and Bista, Umanga and Xie, Lexing",
+        title = "Visualizing Graph Differences from Social Media Streams",
+        booktitle = "Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining",
+        series = "WSDM '19",
+        year = "2019",
+        isbn = "978-1-4503-5940-5",
+        location = "Melbourne VIC, Australia",
+        pages = "806--809",
+        numpages = "4",
+        url = "http://doi.acm.org/10.1145/3289600.3290616",
+        doi = "10.1145/3289600.3290616",
+        acmid = "3290616",
+        publisher = "ACM",
+        address = "New York, NY, USA",
+        keywords = "graph diff, relation extraction, relational data comparison"
+    }
+  id: Shin:2019:VGD:3289600.3290616
+- bibtex: "@inproceedings{walder18a,\n    author = \"Walder, Christian and Kim, Dongwoo\"\
+    ,\n    editor = \"Dy, Jennifer and Krause, Andreas\",\n    title = \"Neural Dynamic\
+    \ Programming for Musical Self Similarity\",\n    booktitle = \"Proceedings of\
+    \ the 35th International Conference on Machine Learning\",\n    pages = \"5105--5113\"\
+    ,\n    year = \"2018\",\n    volume = \"80\",\n    series = \"Proceedings of Machine\
+    \ Learning Research\",\n    address = \"Stockholmsm\xC3\u20ACssan, Stockholm Sweden\"\
+    ,\n    month = \"10--15 Jul\",\n    publisher = \"PMLR\",\n    pdf = \"http://proceedings.mlr.press/v80/walder18a/walder18a.pdf\"\
+    ,\n    url = \"http://proceedings.mlr.press/v80/walder18a.html\",\n    abstract\
+    \ = \"We present a neural sequence model designed specifically for symbolic music.\
+    \ The model is based on a learned edit distance mechanism which generalises a\
+    \ classic recursion from computer science, leading to a neural dynamic program.\
+    \ Repeated motifs are detected by learning the transformations between them. We\
+    \ represent the arising computational dependencies using a novel data structure,\
+    \ the edit tree; this perspective suggests natural approximations which afford\
+    \ the scaling up of our otherwise cubic time algorithm. We demonstrate our model\
+    \ on real and synthetic data; in all cases it out-performs a strong stacked long\
+    \ short-term memory benchmark.\"\n}\n"
+  id: walder18a
+- bibtex: "@inproceedings{kim18c,\n    author = \"Kim, Dongwoo and Walder, Christian\"\
+    ,\n    editor = \"Dy, Jennifer and Krause, Andreas\",\n    title = \"Self-Bounded\
+    \ Prediction Suffix Tree via Approximate String Matching\",\n    booktitle = \"\
+    Proceedings of the 35th International Conference on Machine Learning\",\n    pages\
+    \ = \"2659--2667\",\n    year = \"2018\",\n    volume = \"80\",\n    series =\
+    \ \"Proceedings of Machine Learning Research\",\n    address = \"Stockholmsm\xC3\
+    \u20ACssan, Stockholm Sweden\",\n    month = \"10--15 Jul\",\n    publisher =\
+    \ \"PMLR\",\n    pdf = \"http://proceedings.mlr.press/v80/kim18c/kim18c.pdf\"\
+    ,\n    url = \"http://proceedings.mlr.press/v80/kim18c.html\",\n    abstract =\
+    \ \"Prediction suffix trees (PST) provide an effective tool for sequence modelling\
+    \ and prediction. Current prediction techniques for PSTs rely on exact matching\
+    \ between the suffix of the current sequence and the previously observed sequence.\
+    \ We present a provably correct algorithm for learning a PST with approximate\
+    \ suffix matching by relaxing the exact matching condition. We then present a\
+    \ self-bounded enhancement of our algorithm where the depth of suffix tree grows\
+    \ automatically in response to the model performance on a training sequence. Through\
+    \ experiments on synthetic datasets as well as three real-world datasets, we show\
+    \ that the approximate matching PST results in better predictive performance than\
+    \ the other variants of PST.\"\n}\n"
+  id: kim18c
+- bibtex: |
+    @article{Kim2017,
+        author = "Kim, Dongwoo and Oh, Alice",
+        title = "Hierarchical Dirichlet scaling process",
+        journal = "Machine Learning",
+        year = "2017",
+        volume = "106",
+        number = "3",
+        pages = "387--418",
+        abstract = "We present the hierarchical Dirichlet scaling process (HDSP), a Bayesian nonparametric mixed membership model. The HDSP generalizes the hierarchical Dirichlet process to model the correlation structure between metadata in the corpus and mixture components. We construct the HDSP based on the normalized gamma representation of the Dirichlet process, and this construction allows incorporating a scaling function that controls the membership probabilities of the mixture components. We develop two scaling methods to demonstrate that different modeling assumptions can be expressed in the HDSP. We also derive the corresponding approximate posterior inference algorithms using variational Bayes. Through experiments on datasets of newswire, medical journal articles, conference proceedings, and product reviews, we show that the HDSP results in a better predictive performance than labeled LDA, partially labeled LDA, and author topic model and a better negative review classification performance than the supervised topic model and SVM.",
+        issn = "1573-0565",
+        doi = "10.1007/s10994-016-5621-5",
+        url = "http://dx.doi.org/10.1007/s10994-016-5621-5"
+    }
+  id: Kim2017
+- bibtex: |
+    @article{Q17-1014,
+        author = "Kim, Jooyeon and Kim, Dongwoo and Oh, Alice",
+        title = "Joint Modeling of Topics, Citations, and Topical Authority in Academic Corpora",
+        journal = "Transactions of the Association for Computational Linguistics",
+        year = "2017",
+        volume = "5",
+        pages = "191--204",
+        url = "http://aclweb.org/anthology/Q17-1014"
+    }
+  id: Q17-1014
+- bibtex: |
+    @inproceedings{jin2017hcomp,
+        author = "Jin, Yuan and Carman, Mark and Kim, Dongwoo and Xie, Lexing",
+        title = "Leveraging Side Information to Improve Crowd-sourcing",
+        booktitle = "The fifth AAAI Conference on Human Computation and Crowdsourcing (HCOMP)",
+        year = "2017"
+    }
+  id: jin2017hcomp
+- bibtex: |
+    @inproceedings{chen2017recsys,
+        author = "Chen, Dawei and Kim, Dongwoo and Xie, Lexing and Shin, Minjeong and Menon, Aditya and Ong, Cheng Soon and Avazpour, Iman and Grundy, John",
+        title = "PathRec: Visual Analysis of Travel Route Recommendations",
+        booktitle = "The ACM Conference on Recommender Systems (RecSys)",
+        year = "2017"
+    }
+  id: chen2017recsys
+- bibtex: |
+    @inproceedings{kim2016cikm,
+        author = "Kim, Dongwoo and Xie, Lexing and Ong, Cheng Soon",
+        title = "Probabilistic Knowledge Graph Construction: Compositional and Incremental Approaches",
+        booktitle = "The ACM Conference on Information and Knowledge Management (CIKM)",
+        year = "2016"
+    }
+  id: kim2016cikm
+- bibtex: |
+    @inproceedings{walder17a,
+        author = "Walder, Christian and Kim, Dongwoo",
+        editor = "Zhang, Min-Ling and Noh, Yung-Kyun",
+        title = "Computer Assisted Composition with Recurrent Neural Networks",
+        booktitle = "Proceedings of the Ninth Asian Conference on Machine Learning",
+        pages = "359--374",
+        year = "2017",
+        volume = "77",
+        series = "Proceedings of Machine Learning Research",
+        address = "",
+        month = "15--17 Nov",
+        publisher = "PMLR",
+        pdf = "http://proceedings.mlr.press/v77/walder17a/walder17a.pdf",
+        url = "http://proceedings.mlr.press/v77/walder17a.html",
+        abstract = "Sequence modeling with neural networks has lead to powerful models of symbolic music data. We address the problem of exploiting these models to reach creative musical goals, by combining with human input. To this end we generalise previous work, which sampled Markovian sequence models under the constraint that the sequence belong to the language of a given finite state machine provided by the human. We consider more expressive non-Markov models, thereby requiring approximate sampling which we provide in the form of an efficient sequential Monte Carlo method. In addition we provide and compare with a beam search strategy for conditional probability maximisation. Our algorithms are capable of convincingly re-harmonising famous musical works. To demonstrate this we provide visualisations, quantitative experiments, a human listening test and audio examples. We find both the sampling and optimisation procedures to be effective, yet complementary in character. For the case of highly permissive constraint sets, we find that sampling is to be preferred due to the overly regular nature of the optimisation based results. The generality of our algorithms permits countless other creative applications."
+    }
+  id: walder17a
+- bibtex: |
+    @inproceedings{jojic2016hierarchical,
+        author = "Jojic, Nebojsa and Perina, Alessandro and Kim, Dongwoo",
+        title = "Hierarchical learning of grids of microtopics",
+        booktitle = "The Conference on Uncertainty in Artificial Intelligence (UAI)",
+        year = "2016"
+    }
+  id: jojic2016hierarchical
+- bibtex: |
+    @inproceedings{kim2014icml,
+        author = "Kim, Dongwoo and Oh, Alice",
+        title = "Hierarchical Dirichlet Scaling Process",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2014"
+    }
+  id: kim2014icml
+- bibtex: |
+    @inproceedings{jooyeon2014,
+        author = "Kim, Jooyeon and Kim, Joon Hee and Kim, Dongwoo and Oh, Alice",
+        title = "Diversity-seeking users and their influence on social news sites",
+        booktitle = "Workshop on Data Science for News Publishing (NewsKDD) at KDD 2014",
+        year = "2014"
+    }
+  id: jooyeon2014
+- bibtex: |
+    @inproceedings{alessandro2014a,
+        author = "Perina, Alessandro and Kim, Dongwoo and Turski, Andrzej and Jojic, Nebojssa",
+        title = "Skim-reading thousands of documents in one minute: Data indexing and visualization for multifarious search",
+        booktitle = "Workshop on Interactive Data Exploration and Analytics (IDEA'14) at KDD 2014",
+        year = "2014"
+    }
+  id: alessandro2014a
+- bibtex: |
+    @inproceedings{kim2013ijcai,
+        author = "Kim, Dongwoo and Wang, Haixun and Oh, Alice",
+        title = "Context-Dependent Conceptualization",
+        booktitle = "International Joint Conference on Artificial Intelligence (IJCAI)",
+        year = "2013"
+    }
+  id: kim2013ijcai
+- bibtex: |
+    @inproceedings{bak2012distributed,
+        author = "Bak, JinYeong and Kim, Dongwoo and Oh, Alice",
+        title = "Distributed Online Learning for Latent Dirichlet Allocation",
+        booktitle = "Workshop on Big Learning : Algorithms, Systems, and Tools at the NIPS.",
+        year = "2012"
+    }
+  id: bak2012distributed
+- bibtex: |
+    @inproceedings{kim2012icml,
+        author = "Kim, Dongwoo and Kim, Suin and Oh, Alice",
+        title = "Dirichlet Process with Mixed Random Measures: a Nonparametric Topic Model for Labeled Data",
+        booktitle = "Proceedings of the 29th International Conference on Machine Learning (ICML)",
+        year = "2012"
+    }
+  id: kim2012icml
+- bibtex: |
+    @inproceedings{kim2012cikm,
+        author = "Kim, Joon Hee and Kim, Dongwoo and Kim, Suin and Oh, Alice",
+        title = "Modeling topic hierarchies with the recursive Chinese restaurant process",
+        booktitle = "The ACM Conference on Information and Knowledge Management (CIKM)",
+        year = "2012"
+    }
+  id: kim2012cikm
+- bibtex: |
+    @article{kim2012arxiv,
+        author = "Kim, Dongwoo and Chung, Yeonseung and Oh, Alice",
+        title = "Variable Selection for Latent Dirichlet Allocation",
+        journal = "arXiv ePrints:1205.1053",
+        year = "2012"
+    }
+  id: kim2012arxiv
+- bibtex: |
+    @inproceedings{kim2011cikm,
+        author = "Kim, Dongwoo and Oh, Alice",
+        title = "Accounting for Data Dependencies within a Hierarchical Dirichlet Process Mixture Model",
+        booktitle = "The ACM Conference on Information and Knowledge Management (CIKM)",
+        year = "2011"
+    }
+  id: kim2011cikm
+- bibtex: |
+    @inproceedings{kim2011cicling,
+        author = "Kim, Dongwoo and Oh, Alice",
+        title = "Topic Chains for Understanding a News Corpus",
+        booktitle = "International Conference on Intelligent Text Processing and Computational Linguistics",
+        year = "2011"
+    }
+  id: kim2011cicling
+- bibtex: |
+    @inproceedings{kim2010chi,
+        author = "Kim, Dongwoo and Jo, Yohan and Moon, Il-Chul and Oh, Alice",
+        title = "Analysis of Twitter Lists as a potential source for discovering latent characteristics of users",
+        booktitle = "Workshop on Microblogging at the ACM Conference on Human Factors in Computer Systems",
+        year = "2010"
+    }
+  id: kim2010chi
+- bibtex: |
+    @inproceedings{moon2010learning,
+        author = "Moon, Il-Chul and Kim, Dongwoo and Jo, Yohan and Oh, Alice",
+        title = "Learning Influence Propagation of Personal Blogs with Content and Network Analyses",
+        booktitle = "2010 IEEE Second International Conference on Social Computing (SocialCom)",
+        pages = "669--674",
+        year = "2010",
+        organization = "IEEE"
+    }
+  id: moon2010learning
+- bibtex: |
+    @inproceedings{gwon2025enhancing,
+        author = "Gwon, Yeho and Hwang, Sehyun and Kim, Hoyoung and Ok, Jungseul and Kwak, Suha",
+        title = "Enhancing Cost Efficiency in Active Learning with Candidate Set Query",
+        booktitle = "Transactions on Machine Learning Research (TMLR)",
+        year = "2025",
+        url = "https://arxiv.org/abs/2502.06209"
+    }
+  category: vision
+  id: gwon2025enhancing
+  url: https://arxiv.org/abs/2502.06209
+- bibtex: |
+    @inproceedings{kim2025prompt,
+        author = "Kim, Hoyoung and Jin, Seokhee and Sung, Changhwan and Kim, Jaechang and Ok, Jungseul",
+        title = "Active Prompt Learning with Vision-Language Model Priors",
+        booktitle = "Transactions on Machine Learning Research (TMLR)",
+        year = "2025",
+        url = "https://arxiv.org/abs/2411.16722"
+    }
+  category: vision
+  id: kim2025prompt
+  url: https://arxiv.org/abs/2411.16722
+- bibtex: |
+    @inproceedings{so2025improving,
+        author = "Jang, Hyosoon and Jang, Yunhui and Kim, Minsu and Park, Jinkyu and Ahn, Sungsoo",
+        title = "Pessimistic Backward Policy for GFlowNets",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2024"
+    }
+  id: so2025improving
+- bibtex: |
+    @inproceedings{so2025improving,
+        author = "Jung, Yeonjoon and Ahn, Daehyun and Kim, Hyungjun and Kim, Taesu and Park, Eunhyeok",
+        title = "GraLoRA: Granular Low-Rank Adaptation for Parameter-Efficient Fine-Tuning",
+        booktitle = "Advances in Neural Information Processing Systems (NeurIPS)",
+        year = "2025"
+    }
+  category: acceleration
+  id: so2025improving
+- bibtex: |
+    @inproceedings{lee2025seal,
+        author = "Lee, Changhun and Seok, Minsang and Jin, Jun-gyu and Cho, Younghyun and Park, Eunhyeok",
+        title = "SEAL: Scaling to emphasize attention for long-context retrieval",
+        booktitle = "Annual Meeting of the Association for Computational Linguistics (ACL)",
+        year = "2025"
+    }
+  category: language
+  id: lee2025seal
+- bibtex: |
+    @inproceedings{shin2025merge,
+        author = "Shin, Juncheol and Seok, Minsang and Kim, Seonggon and Park, Eunhyeok",
+        title = "Merge-Friendly Post-Training Quantization for Multi-Target Domain Adaptation",
+        booktitle = "International Conference on Machine Learning (ICML)",
+        year = "2025"
+    }
+  category: acceleration
+  id: shin2025merge
+- bibtex: |
+    @inproceedings{so2025pcm,
+        author = "So, Junhyuk and Shin, Jiwoong and Jang, Chaeyeon and Park, Eunhyeok",
+        title = "PCM: Picard Consistency Model for Fast Parallel Sampling of Diffusion Models",
+        booktitle = "Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)",
+        year = "2025"
+    }
+  category: acceleration
+  id: so2025pcm
+- bibtex: |
+    @inproceedings{kim2025hot,
+        author = "Kim, Seonggon and Shin, Juncheol and Woo, Seung-taek and Park, Eunhyeok",
+        title = "HOT: Hadamard-based Optimized Training",
+        booktitle = "Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)",
+        year = "2025"
+    }
+  category: acceleration
+  id: kim2025hot

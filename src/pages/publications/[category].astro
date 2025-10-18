@@ -16,10 +16,12 @@ export const getStaticPaths = () => {
                 ),
             ],
         ];
-        return categories.map((category) => ({
-            params: { category: category.toLowerCase() },
-            props: { selectedCategory: category },
-        }));
+        return categories
+            .filter((categoryOrUndefined) => categoryOrUndefined !== undefined)
+            .map((category) => ({
+                params: { category: category.toLowerCase() },
+                props: { selectedCategory: category },
+            }));
     });
 };
 
@@ -85,26 +87,31 @@ const categories = [
             class:list={["px-6 md:px-10", "flex", "gap-4", "mb-4", "flex-wrap"]}
         >
             {
-                categories.map((category) => (
-                    <li class:list={["inline", "text-sm"]}>
-                        <a
-                            href={`/publications/${category.toLowerCase()}`}
-                            class:list={[
-                                "border border-black/50",
-                                "px-2",
-                                "py-1",
-                                "capitalize",
-                                selectedCategory.toLowerCase() ===
-                                category.toLowerCase()
-                                    ? "bg-black text-white"
-                                    : "hover:bg-black/10",
-                                "transition-colors",
-                            ]}
-                        >
-                            {category}
-                        </a>
-                    </li>
-                ))
+                categories
+                    .filter(
+                        (categoryOrUndefined) =>
+                            categoryOrUndefined !== undefined,
+                    )
+                    .map((category) => (
+                        <li class:list={["inline", "text-sm"]}>
+                            <a
+                                href={`/publications/${category.toLowerCase()}`}
+                                class:list={[
+                                    "border border-black/50",
+                                    "px-2",
+                                    "py-1",
+                                    "capitalize",
+                                    selectedCategory.toLowerCase() ===
+                                    category.toLowerCase()
+                                        ? "bg-black text-white"
+                                        : "hover:bg-black/10",
+                                    "transition-colors",
+                                ]}
+                            >
+                                {category}
+                            </a>
+                        </li>
+                    ))
             }
         </ul>
         <ul

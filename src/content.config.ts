@@ -18,7 +18,7 @@ const publications = defineCollection({
   loader: file("publications.yaml"),
   schema: z.object({
     bibtex: z.string(),
-    category: z.string(),
+    category: z.string().optional(),
     url: z.string().url().optional(),
   }).transform(({ bibtex, ...data }) => {
     const entry = new Cite(bibtex).get()[0] as Record<string, any>;
