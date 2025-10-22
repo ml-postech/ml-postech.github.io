@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection, getEntry, render } from "astro:content";
+import { getCollection, getEntry, render, getEntries } from "astro:content";
 
 const researchTopics = (
   await Promise.all(
     (await getCollection("research")).map(async (item) => {
       const advisor = await getEntry(item.data.advisor);
-      const mentor = item.data.mentor
-        ? await getEntry(item.data.mentor)
+      console.log(item.data);
+      const mentors = item.data.mentors
+        ? await getEntries(item.data.mentors)
         : undefined;
       const { Content } = await render(item);
       return {
@@ -15,7 +16,7 @@ const researchTopics = (
         data: {
           ...item.data,
           advisor,
-          mentor,
+          mentors,
         },
         Content,
       };
@@ -80,7 +81,9 @@ const researchTopics = (
             </h2>
             <p class:list={["text-sm", "text-gray-700", "text-center", "mb-4"]}>
               {item.data.advisor.data.name}
-              {item.data.mentor ? ` · ${item.data.mentor.data.name}` : ""}
+              {item.data.mentors
+                ? ` · ${item.data.mentors.map((mentor) => mentor.data.name).join(" · ")}`
+                : ""}
             </p>
             <item.Content class:list={["prose", "max-w-none"]} />
           </div>

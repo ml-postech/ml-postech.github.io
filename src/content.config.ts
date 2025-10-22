@@ -41,7 +41,7 @@ const research = defineCollection({
   schema: z.object({
     title: z.string(),
     advisor: reference("advisors"),
-    mentor: reference("students").optional(),
+    mentors: z.array(reference("students")).optional(),
   }),
 });
 
