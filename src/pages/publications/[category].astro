@@ -5,154 +5,223 @@ import "@citation-js/plugin-bibtex";
 import "@citation-js/plugin-csl";
 
 export const getStaticPaths = () => {
-    return getCollection("publications").then((publications) => {
-        const categories = [
-            "all",
-            ...[
-                ...new Set(
-                    publications.flatMap(
-                        (publication) => publication.data.category,
-                    ),
-                ),
-            ],
-        ];
-        return categories
-            .filter((categoryOrUndefined) => categoryOrUndefined !== undefined)
-            .map((category) => ({
-                params: { category: category.toLowerCase() },
-                props: { selectedCategory: category },
-            }));
-    });
+  return getCollection("publications").then((publications) => {
+    const categories = [
+      "all",
+      ...[
+        ...new Set(
+          publications.flatMap((publication) => publication.data.category)
+        ),
+      ],
+    ];
+    return categories
+      .filter((categoryOrUndefined) => categoryOrUndefined !== undefined)
+      .map((category) => ({
+        params: { category: category.toLowerCase() },
+        props: { selectedCategory: category },
+      }));
+  });
 };
 
 interface Props {
-    selectedCategory: string;
+  selectedCategory: string;
 }
 
 const { selectedCategory } = Astro.props as Props;
 
 const publications = (
-    await getCollection("publications", ({ data }) => {
-        if (selectedCategory === "all") {
-            return true;
-        } else {
-            return data.category === selectedCategory;
-        }
-    })
-).toSorted((a, b) => {
-    if (a.data.issued && b.data.issued && a.data.issued !== b.data.issued) {
-        return b.data.issued.getTime() - a.data.issued.getTime();
+  await getCollection("publications", ({ data }) => {
+    if (selectedCategory === "all") {
+      return true;
+    } else {
+      return data.category === selectedCategory;
     }
-    return a.data.title.localeCompare(b.data.title);
+  })
+).toSorted((a, b) => {
+  if (a.data.issued && b.data.issued && a.data.issued !== b.data.issued) {
+    return b.data.issued.getTime() - a.data.issued.getTime();
+  }
+  return a.data.title.localeCompare(b.data.title);
 });
 
 const categories = [
-    "all",
-    ...[
-        ...new Set(
-            (await getCollection("publications")).flatMap(
-                (publication) => publication.data.category,
-            ),
-        ),
-    ].sort(),
+  "all",
+  ...[
+    ...new Set(
+      (await getCollection("publications")).flatMap(
+        (publication) => publication.data.category
+      )
+    ),
+  ].sort(),
 ];
 ---
 
 <Layout>
-    <main class:list={[]}>
-        <div
-            class:list={[
-                "px-6 md:px-10",
-                "mt-[160px] mb-[80px] md:mb-[128px]",
-                "grid grid-cols-1 md:grid-cols-12 gap-4",
-            ]}
-        >
-            <h1
+  <main class:list={[]}>
+    <div
+      class:list={[
+        "px-6 md:px-10",
+        "mt-[160px] mb-[80px] md:mb-[128px]",
+        "grid grid-cols-1 md:grid-cols-12 gap-4",
+      ]}
+    >
+      <h1
+        class:list={[
+          "col-span-8",
+          "font-serif",
+          "text-[60px] md:text-[120px]",
+          "font-bold",
+          "-mt-8",
+        ]}
+      >
+        Publications
+      </h1>
+      <p class:list={["col-span-4", "text-2xl"]}>
+        From core algorithms and theoretical insights to applied systems
+        tackling perception, language, and decision making.
+      </p>
+    </div>
+    <div class:list={["px-6 md:px-10", "mb-4"]}>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search publications by title, author, or venue..."
+        class:list={[
+          "w-full",
+          "px-4 py-3",
+          "border border-black/50",
+          "focus:outline-none focus:ring-2 focus:ring-black/20",
+          "text-base",
+        ]}
+      />
+      <p
+        id="search-results-count"
+        class:list={["text-sm text-gray-600 mt-2 hidden"]}
+      >
+        Found <span id="results-number">0</span> publication(s)
+      </p>
+    </div>
+    <ul class:list={["px-6 md:px-10", "flex", "gap-4", "mb-4", "flex-wrap"]}>
+      {
+        categories
+          .filter((categoryOrUndefined) => categoryOrUndefined !== undefined)
+          .map((category) => (
+            <li class:list={["inline", "text-sm"]}>
+              <a
+                href={`/publications/${category.toLowerCase()}`}
                 class:list={[
-                    "col-span-8",
-                    "font-serif",
-                    "text-[60px] md:text-[120px]",
-                    "font-bold",
-                    "-mt-8",
+                  "border border-black/50",
+                  "px-2",
+                  "py-1",
+                  "capitalize",
+                  selectedCategory.toLowerCase() === category.toLowerCase()
+                    ? "bg-black text-white"
+                    : "hover:bg-black/10",
+                  "transition-colors",
                 ]}
-            >
-                Publications
-            </h1>
-            <p class:list={["col-span-4", "text-2xl"]}>
-                From core algorithms and theoretical insights to applied systems
-                tackling perception, language, and decision making.
+              >
+                {category}
+              </a>
+            </li>
+          ))
+      }
+    </ul>
+    <ul
+      class:list={["px-6 md:px-10", "space-y-10", "mb-20"]}
+      id="publications-list"
+    >
+      {
+        publications.map((publication) => (
+          <li
+            class:list={[
+              "border-t border-black/50",
+              "pt-4",
+              "publication-item",
+            ]}
+            data-category={publication.data.category}
+            data-title={publication.data.title.toLowerCase()}
+            data-authors={publication.data.authors
+              .map((a: any) => `${a.given} ${a.family}`)
+              .join(", ")
+              .toLowerCase()}
+            data-container={
+              publication.data.containerTitle?.toLowerCase() || ""
+            }
+          >
+            <h2 class:list={["font-medium", "text-xl"]}>
+              {publication.data.url ? (
+                <a
+                  href={publication.data.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class:list={["underline"]}
+                >
+                  {publication.data.title}
+                </a>
+              ) : (
+                <span>{publication.data.title}</span>
+              )}
+            </h2>
+            <p class:list={["text-sm"]}>{publication.data.containerTitle}</p>
+            <p class:list={["text-sm", "italic"]}>
+              {publication.data.authors
+                .map((a: any) => `${a.given} ${a.family}`)
+                .join(", ")}
             </p>
-        </div>
-        <ul
-            class:list={["px-6 md:px-10", "flex", "gap-4", "mb-4", "flex-wrap"]}
-        >
-            {
-                categories
-                    .filter(
-                        (categoryOrUndefined) =>
-                            categoryOrUndefined !== undefined,
-                    )
-                    .map((category) => (
-                        <li class:list={["inline", "text-sm"]}>
-                            <a
-                                href={`/publications/${category.toLowerCase()}`}
-                                class:list={[
-                                    "border border-black/50",
-                                    "px-2",
-                                    "py-1",
-                                    "capitalize",
-                                    selectedCategory.toLowerCase() ===
-                                    category.toLowerCase()
-                                        ? "bg-black text-white"
-                                        : "hover:bg-black/10",
-                                    "transition-colors",
-                                ]}
-                            >
-                                {category}
-                            </a>
-                        </li>
-                    ))
-            }
-        </ul>
-        <ul
-            class:list={["px-6 md:px-10", "space-y-10", "mb-20"]}
-            id="publications-list"
-        >
-            {
-                publications.map((publication) => (
-                    <li
-                        class:list={[
-                            "border-t border-black/50",
-                            "pt-4",
-                            "publication-item",
-                        ]}
-                        data-category={publication.data.category}
-                    >
-                        <h2 class:list={["font-medium", "text-xl"]}>
-                            {publication.data.url ? (
-                                <a
-                                    href={publication.data.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class:list={["underline"]}
-                                >
-                                    {publication.data.title}
-                                </a>
-                            ) : (
-                                <span>{publication.data.title}</span>
-                            )}
-                        </h2>
-                        <p class:list={["text-sm"]}>
-                            {publication.data.containerTitle}
-                        </p>
-                        <p class:list={["text-sm", "italic"]}>
-                            {publication.data.authors
-                                .map((a: any) => `${a.given} ${a.family}`)
-                                .join(", ")}
-                        </p>
-                    </li>
-                ))
-            }
-        </ul>
-    </main>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>
+
+<script>
+  const searchInput = document.getElementById(
+    "search-input"
+  ) as HTMLInputElement;
+  const publicationItems = document.querySelectorAll(".publication-item");
+  const resultsCount = document.getElementById("search-results-count");
+  const resultsNumber = document.getElementById("results-number");
+
+  function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    publicationItems.forEach((item) => {
+      const title = item.getAttribute("data-title") || "";
+      const authors = item.getAttribute("data-authors") || "";
+      const container = item.getAttribute("data-container") || "";
+
+      const matches =
+        title.includes(searchTerm) ||
+        authors.includes(searchTerm) ||
+        container.includes(searchTerm);
+
+      if (matches || searchTerm === "") {
+        (item as HTMLElement).style.display = "";
+        visibleCount++;
+      } else {
+        (item as HTMLElement).style.display = "none";
+      }
+    });
+
+    // Update results count
+    if (searchTerm !== "") {
+      if (resultsNumber) {
+        resultsNumber.textContent = visibleCount.toString();
+      }
+      if (resultsCount) {
+        resultsCount.classList.remove("hidden");
+      }
+    } else {
+      if (resultsCount) {
+        resultsCount.classList.add("hidden");
+      }
+    }
+  }
+
+  // Add event listener for search input
+  if (searchInput) {
+    searchInput.addEventListener("input", performSearch);
+  }
+</script>
