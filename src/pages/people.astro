@@ -354,7 +354,7 @@ const officers = (await getCollection("officers")).toSorted((a, b) =>
               {item.data.currentPosition ? (
                 <li>{item.data.currentPosition}</li>
               ) : (
-                <li>N/A</li>
+                <li />
               )}
             </ul>
           </li>
