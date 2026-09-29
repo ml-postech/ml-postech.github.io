@@ -422,3 +422,22 @@ ul.a {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.badge-oral,
+.badge-spotlight {
+  margin-left: 4px;
+  font-size: 0.75em;
+  font-weight: bold;
+  line-height: 1.2;
+  vertical-align: 0.15em;
+  border: 1px solid #ebb810;
+}
+
+.badge-oral {
+  color: #fff;
+  background-color: #ebb810;
+}
+
+.badge-spotlight {
+  color: #b38b00;
+  background-color: #fff;
+}
