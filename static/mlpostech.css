@@ -362,6 +362,19 @@ ul.a {
   /*60px 10px 60px 50px;*/
 }
 
+/* slightly larger header image for illustrations with small content */
+.img-header-lg {
+  padding: 22% 0% 22% 10%;
+}
+
+/* wide illustrations: use the full column width and spill slightly into the gutter */
+.img-header-xl {
+  padding: 12% 0% 12% 0%;
+  width: 112%;
+  max-width: 112%;
+  margin-left: -6%;
+}
+
 
 .bibtexentry {
   text-align: justify;

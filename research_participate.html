@@ -95,7 +95,7 @@
 </li>
 -->
 
-  <li>
+<li>
     <div class="row" style="padding-top: 40px;">
       <div class="col-sm-2" >
           <img class="img-responsive img-header" src="img/reseach_participate/unlearning.png" alt=""  />
@@ -114,6 +114,143 @@
       </div>
   </div>
 </li>
+
+<li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header img-header-lg" src="img/reseach_participate/editing.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Controllable Visual Content Generation and Editing - Advisor: Jungseul Ok, Mentor: Sunung Mun </h4>
+          <p class="normal-text">
+            Recent advances in generative AI have enabled realistic image and video synthesis and editing, yet precise control remains challenging. Existing models often introduce unintended changes during editing, struggle with complex instructions, or fail to preserve fine-grained details of reference objects. We aim to develop more controllable and reliable generative models, focusing on (1) precise and localized visual editing, (2) compositional content generation, and (3) reference-based generation with fine-grained detail and identity preservation. We explore diffusion models, vision-language models, and inference-time verification and refinement to improve generation fidelity and controllability.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Mun, Sunung, et al. <a href="https://arxiv.org/abs/2605.11722">"EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"</a> NeurIPS 2026. </li>
+              <li> Mun, Sunung, et al. <a href="https://mtablo.github.io/ALE_Edit_page/">"Addressing Text Embedding Leakage in Diffusion-based Image Editing"</a> ICCV 2025. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header" src="img/reseach_participate/model_protection.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Model IP Protection - Advisor: Jungseul Ok, Mentor: Minwoo Jang </h4>
+          <p class="normal-text">
+            AI models are valuable assets built with substantial GPU resources, large-scale datasets, and considerable time and effort. Techniques such as model merging, distillation, and fine-tuning have enabled efficient model adaptation and reuse, but they can also be exploited to modify or reproduce models without authorization from the original developers. Our research focuses on protecting model intellectual property (IP) by preventing and/or detecting unauthorized model reuse. Through these efforts, we aim to establish the technical foundations for model provenance and sovereignty.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Jang, Minwoo, et al. <a href="https://arxiv.org/abs/2609.32749">"Retrospective Distillation Attribution via Normalized Response Similarity"</a> arXiv 2026. </li>
+              <li> Sakamoto, Keitaro, et al. <a href="https://arxiv.org/abs/2605.10777">"Locking Pretrained Weights via Deep Low-Rank Residual Distillation"</a> NeurIPS 2026. </li>
+              <li> Jang, Minwoo, et al. <a href="https://proceedings.mlr.press/v306/jang26e.html">"Making Models Unmergeable via Scaling-Sensitive Loss Landscape"</a> ICML 2026. </li>
+              <li> Savani, Yash, et al. <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/aad5e2a483869d9ba3fab491686c3bf2-Abstract-Conference.html">"Antidistillation Sampling"</a> NeurIPS 2025. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header img-header-lg" src="img/reseach_participate/bandit.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Theoretical Analysis for Online Learning - Advisor: Jungseul Ok, Mentor: Seockbean Song </h4>
+          <p class="normal-text">
+            Online learning involves algorithms that make decisions and learn from data sequentially. We aim to develop a solid theoretical foundation to understand and evaluate the performance of these methods. In this project, students will study the core principles of online learning, including performance analysis, regret minimization, and the development of provably efficient algorithms.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Song, Seockbean, et al. <a href="https://arxiv.org/abs/2602.10727">"Rising Multi-Armed Bandits with Known Horizons"</a> arXiv 2026. </li>
+              <li> Song, Seockbean, et al. <a href="https://arxiv.org/abs/2412.00798">"Combinatorial Rising Bandits"</a> ICLR 2026. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header" src="img/reseach_participate/moe_fed.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Towards Efficient Distributed LLMs: Mixture-of-Experts, Multi-Agent Systems and Federated Learning - Advisor: Jungseul Ok, Mentor: Jabin Koo </h4>
+          <p class="normal-text">
+            As large language models (LLMs) grow to hundreds of billions of parameters, they must be trained and served across many GPUs, making the efficiency of the underlying distributed system as important as the model itself. Mixture-of-Experts (MoE) architectures scale models by activating only a few experts per token, while multi-agent systems divide complex tasks among specialized agents running on a shared backbone. For example, in multi-agent workflows, each agent's role determines which experts it actually needs, so far fewer experts can be kept in memory, while in large-scale training and serving, how experts and tokens are distributed across devices decides how much time is lost to communication. This approach is particularly important at scale, where memory, inter-GPU communication, and load imbalance, rather than raw computation, become the main bottlenecks. In this study, we explore how to co-design model architectures, algorithms, and distributed systems to make LLMs faster, cheaper, and more scalable.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Koo, Jabin, et al. <a href="https://arxiv.org/abs/2610.02951">"Dynamic Expert Pruning for Multi-Agent Systems"</a> arXiv 2026. </li>
+              <li> Koo, Jabin, et al. <a href="https://arxiv.org/abs/2605.30873">"Federated Variational Preference Alignment with Gumbel-Softmax Prior for Personalized User Preferences"</a> ICML 2026. </li>
+              <li> Koo, Jabin, et al. <a href="https://arxiv.org/abs/2410.22815">"Towards Robust and Efficient Federated Low-Rank Adaptation with Heterogeneous Clients"</a> ACL 2025. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header img-header-lg" src="img/reseach_participate/agent.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># From Uncertainty to Better Decision - Advisor: Jungseul Ok, Mentor: Minhyeon Oh </h4>
+          <p class="normal-text">
+            Making informed decisions under uncertainty is a fundamental challenge for AI systems operating in real-world environments. Critical information is often missing or cannot be directly observed, requiring AI systems to actively determine what they need to know before making decisions. This research explores how AI systems can identify decision-relevant information, acquire it efficiently through interaction, and use the resulting evidence to make more reliable decisions.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Oh, Minhyeon, et al. "Action Verification through Conjecture and Refutation for Language Model Agents" Preprint. </li>
+              <li> Oh, Minhyeon, et al. <a href="https://arxiv.org/abs/2411.00524">"Comparison-based Active Preference Learning for Multi-dimensional Personalization"</a> ACL 2025. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header img-header-xl" src="img/reseach_participate/robot_plan.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Experience-Driven Self-Evolving Robotic Planning - Advisor: Jungseul Ok, Mentor: Seungjoon Lee </h4>
+          <p class="normal-text">
+            Large Language Models (LLMs) have enabled robots to autonomously generate and refine action plans and control programs. However, existing approaches often suffer from unreliable knowledge accumulated through experience, costly trial-and-error, and excessive LLM inference overhead. We aim to develop robotic planning agents that continuously improve from their own experiences while minimizing computational costs. Our research focuses on (1) learning from successes and failures while correcting erroneous knowledge, (2) improving token efficiency in failure analysis and plan code generation, and (3) minimizing runtime latency to enable fast and responsive execution when deployed on real-world robots. Through these efforts, we seek to build robust and efficient robotic agents that autonomously evolve their planning capabilities across diverse tasks and environments.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Lu, Runyu, et al. <a href="https://arxiv.org/abs/2607.00272">"ASPIRE: Agentic Skills Discovery for Robotics"</a> arXiv 2026. </li>
+              <li> Lee, Seungjoon, et al. <a href="https://arxiv.org/abs/2505.24157">"Experience-based Knowledge Correction for Robust Planning in Minecraft"</a> ICLR 2026. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
+  <li>
+    <div class="row" style="padding-top: 40px;">
+      <div class="col-sm-2" >
+          <img class="img-responsive img-header img-header-xl" src="img/reseach_participate/reasoning.png" alt=""  />
+      </div>
+      <div class="col-sm-10">
+          <h4 class="header"># Reasoning and Discovery with LLMs - Advisor: Jungseul Ok, Mentor: Sungjae Lee </h4>
+          <p class="normal-text">
+            We study how large language models (LLMs) reason through challenging problems and discover new insights and solutions. Our interests range from mathematical reasoning and program synthesis to agentic tasks involving tools and external environments. We investigate how individual models explore and refine ideas, as well as new ways for multiple agents to interact. This includes studying how agents exchange partial insights, challenge assumptions, and build on one another's reasoning. Participants will develop and analyze reasoning methods, exploring how these processes can support the discovery of new knowledge and solutions while improving reliability and efficiency.
+          </p>
+          <span class="sub-text"> References </span>
+          <ol class="sub-text">
+              <li> Lee, Sungjae, et al. <a href="https://aclanthology.org/2025.acl-long.29/">"Semantic Exploration with Adaptive Gating for Efficient Problem Solving with Language Models"</a> ACL 2025. </li>
+              <li> Lee, Sungjae, et al. "Bias Control and Injection for Multi-Agent Aggregation" Preprint. </li>
+          </ol>
+      </div>
+  </div>
+</li>
+
 
 <!--
 <li>
@@ -135,7 +272,7 @@
 </li>
 -->
 
-<li>
+<!-- <li>
   <div class="row" style="padding-top: 40px;">
     <div class="col-sm-2">
         <img class="img-responsive img-header" src="img/reseach_participate/robot.png" alt=""  />
@@ -270,7 +407,7 @@
         </ol>        
     </div>
   </div>
-</li>
+</li> -->
 
 <!--
 <li>
@@ -317,7 +454,7 @@
 </li>
 -->
 
-<li>
+<!-- <li>
     <div class="row" style="padding-top: 40px;">
        <div class="col-sm-2">
            <img class="img-responsive img-header" src="img/reseach_participate/rl_exploration.png" alt=""  />
@@ -335,7 +472,7 @@
            </ol>
        </div>    
    </div> 
-</li>
+</li> -->
 
 <!--
 <li>
